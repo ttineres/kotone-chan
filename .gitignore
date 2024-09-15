@@ -7,3 +7,6 @@ __pycache__/
 config.py
 
 .env
+
+build/
+kotone.egg-info/
