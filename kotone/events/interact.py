@@ -4,8 +4,9 @@
 
 
 from discord.ext import commands
-from utils.emoji import KOTONE2
-from cogs.misc import greeting
+
+from kotone.utils.emoji import KOTONE_2
+from kotone.cogs.misc import greeting
 
 
 class Interact(commands.Cog):
@@ -18,7 +19,7 @@ class Interact(commands.Cog):
         channel = member.guild.system_channel
         if channel:
             await channel.send(f"{member.mention}さん、{greeting()}！")
-            await channel.send(KOTONE2)
+            await channel.send(KOTONE_2)
 
 
 async def setup(bot):
