@@ -7,6 +7,7 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 
 # Retrieve token from environment variable
@@ -32,4 +33,5 @@ async def on_ready():
     await bot.tree.sync(guild=guild)
     print("Updated all commands successfully.")
 
+keep_alive()
 bot.run(TOKEN)
