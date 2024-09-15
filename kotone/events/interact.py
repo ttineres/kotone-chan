@@ -3,7 +3,6 @@
 #
 
 
-import discord
 from discord.ext import commands
 from utils.emoji import KOTONE2
 from cogs.misc import greeting
@@ -16,9 +15,10 @@ class Interact(commands.Cog):
     
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        channel = discord.utils.get(member.guild.channels, name="herehere")
+        channel = member.guild.system_channel
         if channel:
-            await channel.send(f"{member.mention}さん、{greeting()}！{KOTONE2}")
+            await channel.send(f"{member.mention}さん、{greeting()}！")
+            await channel.send(KOTONE2)
 
 
 async def setup(bot):
