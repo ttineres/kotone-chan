@@ -5,17 +5,13 @@
 
 import discord
 import math
-import random
 
-from utils.emoji import KOTONE
+from utils.emoji import get_kotone
 
 
 A_PLUS = 11500
 S = 13000
 S_PLUS = 14500
-
-def get_kotone():
-    return random.choice(KOTONE)
 
 def param_to_score(param, rank):
     """ Returns the scores needed for the specified rank. """

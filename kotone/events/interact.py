@@ -5,7 +5,7 @@
 
 from discord.ext import commands
 
-from utils.emoji import KOTONE_2
+from utils.emoji import KOTONE_EMOJI
 
 
 class Interact(commands.Cog):
@@ -18,7 +18,7 @@ class Interact(commands.Cog):
         channel = member.guild.system_channel
         if channel:
             await channel.send(f"{member.mention}さん、いらっしゃい～♪")
-            await channel.send(KOTONE_2)
+            await channel.send(KOTONE_EMOJI["KOTONE_2"])
 
 
 async def setup(bot):
