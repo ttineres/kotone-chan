@@ -14,6 +14,7 @@ from keep_alive import keep_alive
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 TEST_GUILD = os.getenv("TEST_GUILD")
+DEBUGGING = os.getenv("DEBUGGING")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -36,11 +37,14 @@ async def on_ready():
         if f.endswith(".py") and f != "__init__.py":
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"events.{f[:-3]}")
-    # guild is for testing on a personal server
-    #guild = discord.Object(id=TEST_GUILD)
-    #ot.tree.copy_global_to(guild=guild)
-    #await bot.tree.sync(guild=guild)
-    await bot.tree.sync()
+    if DEBUGGING == "TRUE":
+        # immediately synchronize commands to a personal guild for debugging
+        guild = discord.Object(id=TEST_GUILD)
+        await bot.tree.copy_global_to(guild=guild)
+        await bot.tree.sync(guild=guild)
+        print(f"DEBUGGING: Updated commands to personal guild successfully.")
+    else:
+        await bot.tree.sync()
     print("Updated all commands successfully.")
 
 keep_alive()
