@@ -20,11 +20,11 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
-    for f in os.listdir("./cogs"):
+    for f in os.listdir("kotone/cogs"):
         if f.endswith(".py") and f != "__init__.py":
             await bot.load_extension(f"cogs.{f[:-3]}")
     print("Loaded all cogs successfully.")
-    for f in os.listdir("./slash"):
+    for f in os.listdir("kotone/slash"):
         if f.endswith(".py") and f != "__init__.py":
             await bot.load_extension(f"slash.{f[:-3]}")
     guild = discord.Object(id=1215942055667171388)
