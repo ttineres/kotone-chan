@@ -32,7 +32,7 @@ async def setup(bot):
     
     @bot.tree.command(
         name="kotone-hello",
-        description="ことねちゃんと挨拶する"
+        description="ことねちゃんに挨拶する"
     )
     async def kotone_hello(interaction: discord.Interaction):
         """ Greets the user. """
