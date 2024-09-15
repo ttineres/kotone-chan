@@ -6,7 +6,7 @@
 import discord
 import math
 
-from utils.emoji import get_kotone
+from utils.emoji import get_kotone_emoji
 
 
 A_PLUS = 11500
@@ -51,7 +51,7 @@ async def setup(bot):
         new_sum = new_vocal+new_dance+new_visual
         await interaction.response.send_message(
             f"試験前パラメータ合計：`{vo+da+vi}`\n"
-            f"試験後パラメータ合計：`{new_sum}`{get_kotone()}\n"
+            f"試験後パラメータ合計：`{new_sum}`{get_kotone_emoji()}\n"
             f"* S+: `{param_to_score(new_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(new_sum, S)}`\n"
             f"* A+: `{param_to_score(new_sum, A_PLUS)}`\n",
@@ -73,7 +73,7 @@ async def setup(bot):
         """
         param_sum = vo+da+vi
         await interaction.response.send_message(
-            f"試験後パラメータ合計：`{param_sum}` {get_kotone()}\n"
+            f"試験後パラメータ合計：`{param_sum}` {get_kotone_emoji()}\n"
             f"* S+: `{param_to_score(param_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(param_sum, S)}`\n"
             f"* A+: `{param_to_score(param_sum, A_PLUS)}`\n",

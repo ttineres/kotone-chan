@@ -13,7 +13,7 @@ KOTONE_EMOJI = {
     "SITUREI" : "<:siturei:1284666348374593619>",
 }
 
-def get_kotone():
+def get_kotone_emoji():
     """ Returns a random Kotone emoji. """
     random_key = random.choice([*KOTONE_EMOJI.keys()])
     return KOTONE_EMOJI[random_key]
@@ -35,6 +35,6 @@ KOTONE = [
 
 if __name__ == "__main__":
     print("Examples of emoji:")
-    print(get_kotone())
-    print(get_kotone())
-    print(get_kotone())
+    print(get_kotone_emoji())
+    print(get_kotone_emoji())
+    print(get_kotone_emoji())
