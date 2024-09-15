@@ -5,8 +5,8 @@
 
 from discord.ext import commands
 
-from kotone.utils.emoji import KOTONE_2
-from kotone.cogs.misc import greeting
+from utils.emoji import KOTONE_2
+from cogs.misc import greeting
 
 
 class Interact(commands.Cog):

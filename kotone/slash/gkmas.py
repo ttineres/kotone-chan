@@ -7,7 +7,7 @@ import discord
 import math
 import random
 
-from kotone.utils.emoji import KOTONE
+from utils.emoji import KOTONE
 
 
 A_PLUS = 11500

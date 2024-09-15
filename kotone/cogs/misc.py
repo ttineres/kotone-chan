@@ -6,8 +6,8 @@
 from discord.ext import commands
 import random
 
-from kotone.utils.emoji import KOTONE
-from kotone.utils.voiceline import greeting
+from utils.emoji import KOTONE
+from utils.voiceline import greeting
 
 
 class Miscellaneous(commands.Cog):
