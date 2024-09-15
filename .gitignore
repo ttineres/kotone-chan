@@ -10,3 +10,5 @@ config.py
 
 build/
 kotone.egg-info/
+
+temp.py

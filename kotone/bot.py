@@ -25,18 +25,24 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f"Logged in as {bot.user}")
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="世界一可愛い私"))
+
+    ignored_files = ["__init__.py"]
+    if DEBUGGING != "TRUE":
+        ignored_files.append("temp.py")
+    
     for f in os.listdir("kotone/cogs"):
-        if f.endswith(".py") and f != "__init__.py":
+        if f.endswith(".py") and f not in ignored_files:
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"cogs.{f[:-3]}")
     for f in os.listdir("kotone/slash"):
-        if f.endswith(".py") and f != "__init__.py":
+        if f.endswith(".py") and f not in ignored_files:
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"slash.{f[:-3]}")
     for f in os.listdir("kotone/events"):
-        if f.endswith(".py") and f != "__init__.py":
+        if f.endswith(".py") and f not in ignored_files:
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"events.{f[:-3]}")
+    
     if DEBUGGING == "TRUE":
         # immediately synchronize commands to a personal guild for debugging
         guild = discord.Object(id=TEST_GUILD)
@@ -45,7 +51,9 @@ async def on_ready():
         print(f"DEBUGGING: Updated commands to personal guild successfully.")
     else:
         await bot.tree.sync()
+    
     print("Updated all commands successfully.")
+
 
 keep_alive()
 bot.run(TOKEN)
