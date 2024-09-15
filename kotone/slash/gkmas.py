@@ -55,8 +55,8 @@ async def setup(bot):
         new_visual = min(visual+30, cap)
         new_sum = new_vocal+new_dance+new_visual
         await interaction.response.send_message(
-            f"Parameter sum before exam: `{vocal+dance+visual}`. {get_kotone()}\n"
-            f"Parameter sum after exam: `{new_sum}`.\n"
+            f"試験前：`{vocal+dance+visual}`. {get_kotone()}\n"
+            f"試験後：`{new_sum}`.\n"
             f"* S+: `{param_to_score(new_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(new_sum, S)}`\n"
             f"* A+: `{param_to_score(new_sum, A_PLUS)}`\n",
@@ -78,7 +78,7 @@ async def setup(bot):
         """
         param_sum = vocal+dance+visual
         await interaction.response.send_message(
-            f"Parameter sum after exam: `{param_sum}`. {get_kotone()}\n"
+            f"試験後：`{param_sum}`. {get_kotone()}\n"
             f"* S+: `{param_to_score(param_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(param_sum, S)}`\n"
             f"* A+: `{param_to_score(param_sum, A_PLUS)}`\n",
