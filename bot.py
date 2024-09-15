@@ -2,14 +2,16 @@
 # bot.py
 #
 
+
 import discord
 from discord.ext import commands
 import os
+from dotenv import load_dotenv
 
-# Retrieve token from private config file
-import config
-TOKEN = config.DISCORD_TOKEN
 
+# Retrieve token from environment variable
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True

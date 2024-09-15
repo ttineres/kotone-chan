@@ -1,0 +1,12 @@
+[project]
+name = "kotone-chan"
+version = "1.0.0"
+description = "A custom Discord app for Gakumas."
+dependencies = [
+    "discord.py",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
