@@ -85,13 +85,13 @@ def aisatu(name):
 def season_aisatu(name):
     """ Returns greeting that changes based on season. """
     now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(JAPAN_TIMEZONE)
-    if now.month <= 3:
+    if 3 <= now.month < 6:
         return random.choice([
             "来ました……春限定メニューという名の、繁忙期がぁ～！",
             f"{name}さん、お花見いきましょうよ～",
             "もう外でレッスンしても、寒くなさそうですね！",
         ])
-    if now.month <= 6:
+    if 6 <= now.month < 9:
         return random.choice([
             f"{name}さん、もっと冷房強くなんないんですか～？",
             "真夏の着ぐるみバイト……さすがに……",
