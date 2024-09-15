@@ -29,6 +29,9 @@ async def on_ready():
     for f in os.listdir("kotone/slash"):
         if f.endswith(".py") and f != "__init__.py":
             await bot.load_extension(f"slash.{f[:-3]}")
+    for f in os.listdir("kotone/events"):
+        if f.endswith(".py") and f != "__init__.py":
+            await bot.load_extension(f"events.{f[:-3]}")
     # guild is for testing on a personal server
     # guild = discord.Object(id=1215942055667171388)
     # bot.tree.copy_global_to(guild=guild)
