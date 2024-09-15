@@ -40,7 +40,7 @@ async def setup(bot):
         description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/calculate vo:1000 da:1000 vi:1000"
     )
     async def calculate(
-        interaction: discord.Integration,
+        interaction: discord.Interaction,
         vo: int,
         da: int,
         vi: int,
@@ -66,8 +66,8 @@ async def setup(bot):
         name="c",
         description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/c vo:1000 da:1000 vi:1000"
     )
-    async def calculate(
-        interaction: discord.Integration,
+    async def calculate_post_exam(
+        interaction: discord.Interaction,
         vo: int,
         da: int,
         vi: int,

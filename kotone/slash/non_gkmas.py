@@ -18,7 +18,7 @@ async def setup(bot):
         name="kotone-help",
         description="ことねちゃんのコマンドを解説する"
     )
-    async def kotone_help(interaction):
+    async def kotone_help(interaction: discord.Interaction):
         """ Provides helpful information on using Kotone-chan commands.
         """
         await interaction.response.send_message(
@@ -34,7 +34,7 @@ async def setup(bot):
         name="kotone-hello",
         description="ことねちゃんと挨拶する"
     )
-    async def kotone_hello(interaction):
+    async def kotone_hello(interaction: discord.Interaction):
         """ Greets the user. """
         await interaction.response.send_message(
             f"{greeting(interaction.user.mention)}"
