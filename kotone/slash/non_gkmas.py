@@ -4,7 +4,6 @@
 
 
 import discord
-from discord import app_commands
 import random
 
 from utils.emoji import KOTONE

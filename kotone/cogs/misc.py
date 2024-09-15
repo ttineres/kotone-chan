@@ -5,7 +5,6 @@
 
 from discord.ext import commands
 import random
-from datetime import datetime, timezone
 
 from utils.emoji import KOTONE
 from utils.voice import greeting

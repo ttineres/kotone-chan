@@ -3,7 +3,8 @@
 #
 
 
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 import random
 
 
@@ -58,18 +59,18 @@ def greeting(name):
 
 def aisatu(name):
     """ Returns greeting that changes based on the time of day. """
-    now = datetime.now(timezone.utc)
-    if 21 <= now.hour or now.hour < 2:
+    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    if 6 <= now.hour < 11:
         return random.choice([
             f"おっはようございまーす、{name}さん！",
             "今日も一日頑張りましょう！",
         ])
-    if 2 <= now.hour < 5:
+    if 11 <= now.hour < 14:
         return random.choice([
             f"どーも！　{name}さんもお昼です？",
             "お弁当で元気チャージしてぇ、午後も頑張りまーす！",
         ])
-    if 5 <= now.hour < 9:
+    if 14 <= now.hour < 18:
         return random.choice([
             "さてさて、こっからが本番ですよね！",
             "可愛いことねちゃんとの時間が始まりますよぉ～",
@@ -82,7 +83,7 @@ def aisatu(name):
 
 def season_aisatu(name):
     """ Returns greeting that changes based on season. """
-    now = datetime.now(timezone.utc)
+    now = datetime.now(ZoneInfo("Asia/Tokyo"))
     if now.month <= 3:
         return random.choice([
             "来ました……春限定メニューという名の、繁忙期がぁ～！",
