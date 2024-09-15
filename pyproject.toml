@@ -4,5 +4,6 @@ version = "1.0.0"
 description = "A custom Discord app for Gakumas."
 dependencies = [
     "discord.py",
+    "flask",
     "python-dotenv",
 ]
