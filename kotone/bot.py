@@ -37,10 +37,10 @@ async def on_ready():
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"events.{f[:-3]}")
     # guild is for testing on a personal server
-    guild = discord.Object(id=TEST_GUILD)
-    bot.tree.copy_global_to(guild=guild)
-    await bot.tree.sync(guild=guild)
-    #await bot.tree.sync()
+    #guild = discord.Object(id=TEST_GUILD)
+    #ot.tree.copy_global_to(guild=guild)
+    #await bot.tree.sync(guild=guild)
+    await bot.tree.sync()
     print("Updated all commands successfully.")
 
 keep_alive()
