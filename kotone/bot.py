@@ -40,7 +40,7 @@ async def on_ready():
     if DEBUGGING == "TRUE":
         # immediately synchronize commands to a personal guild for debugging
         guild = discord.Object(id=TEST_GUILD)
-        await bot.tree.copy_global_to(guild=guild)
+        bot.tree.copy_global_to(guild=guild)
         await bot.tree.sync(guild=guild)
         print(f"DEBUGGING: Updated commands to personal guild successfully.")
     else:
