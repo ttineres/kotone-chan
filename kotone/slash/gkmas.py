@@ -38,25 +38,25 @@ def param_to_score(param, rank):
 async def setup(bot):
     @bot.tree.command(
         name="calculate",
-        description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/calculate 1000 1000 1000"
+        description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/calculate vo:1000 da:1000 vi:1000"
     )
     async def calculate(
         interaction: discord.Integration,
-        vocal: int,
-        dance: int,
-        visual: int,
+        vo: int,
+        da: int,
+        vi: int,
         cap: int = 1500,
     ):
         """ Calculates score required for ranks.
             Parameters are BEFORE exam.
         """
-        new_vocal = min(vocal+30, cap)
-        new_dance = min(dance+30, cap)
-        new_visual = min(visual+30, cap)
+        new_vocal = min(vo+30, cap)
+        new_dance = min(da+30, cap)
+        new_visual = min(vi+30, cap)
         new_sum = new_vocal+new_dance+new_visual
         await interaction.response.send_message(
-            f"試験前パラメータ合計：`{vocal+dance+visual}` {get_kotone()}\n"
-            f"試験後パラメータ合計：`{new_sum}`.\n"
+            f"試験前パラメータ合計：`{vo+da+vi}`\n"
+            f"試験後パラメータ合計：`{new_sum}`{get_kotone()}\n"
             f"* S+: `{param_to_score(new_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(new_sum, S)}`\n"
             f"* A+: `{param_to_score(new_sum, A_PLUS)}`\n",
@@ -65,18 +65,18 @@ async def setup(bot):
     
     @bot.tree.command(
         name="c",
-        description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/c 1000 1000 1000"
+        description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/c vo:1000 da:1000 vi:1000"
     )
     async def calculate(
         interaction: discord.Integration,
-        vocal: int,
-        dance: int,
-        visual: int,
+        vo: int,
+        da: int,
+        vi: int,
     ):
         """ Calculates score required for ranks.
             Parameters are AFTER exam.
         """
-        param_sum = vocal+dance+visual
+        param_sum = vo+da+vi
         await interaction.response.send_message(
             f"試験後パラメータ合計：`{param_sum}` {get_kotone()}\n"
             f"* S+: `{param_to_score(param_sum, S_PLUS)}`\n"

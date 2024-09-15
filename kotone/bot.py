@@ -13,6 +13,7 @@ from keep_alive import keep_alive
 # Retrieve token from environment variable
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
+TEST_GUILD = os.getenv("TEST_GUILD")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -36,9 +37,9 @@ async def on_ready():
             print(f"Adding kotone/{f}")
             await bot.load_extension(f"events.{f[:-3]}")
     # guild is for testing on a personal server
-    # guild = discord.Object(id=1215942055667171388)
-    # bot.tree.copy_global_to(guild=guild)
-    # await bot.tree.sync(guild=guild)
+    #guild = discord.Object(id=TEST_GUILD)
+    #bot.tree.copy_global_to(guild=guild)
+    #await bot.tree.sync(guild=guild)
     await bot.tree.sync()
     print("Updated all commands successfully.")
 
