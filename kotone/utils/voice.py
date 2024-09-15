@@ -3,8 +3,7 @@
 #
 
 
-from datetime import datetime
-from zoneinfo import ZoneInfo
+from datetime import datetime, timezone, timedelta
 import random
 
 
@@ -48,6 +47,8 @@ HOME_VOICE = [
     HOME_18,
 ]
 
+JAPAN_TIMEZONE = timezone(timedelta(hours=9))
+
 def greeting(name):
     """ Randomly generates greeting. """
     rand = random.random()
@@ -59,7 +60,7 @@ def greeting(name):
 
 def aisatu(name):
     """ Returns greeting that changes based on the time of day. """
-    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(JAPAN_TIMEZONE)
     if 6 <= now.hour < 11:
         return random.choice([
             f"おっはようございまーす、{name}さん！",
@@ -83,7 +84,7 @@ def aisatu(name):
 
 def season_aisatu(name):
     """ Returns greeting that changes based on season. """
-    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(JAPAN_TIMEZONE)
     if now.month <= 3:
         return random.choice([
             "来ました……春限定メニューという名の、繁忙期がぁ～！",
