@@ -91,7 +91,7 @@ def get_greeting_new_member(name):
     return random.choice([
         f"ようこそ、{name}さん！　ここで素敵な時間を過ごしましょう～～！",
         f"{name}さん、いらっしゃい～♪",
-        f"{name}さん、ようこそ！　どうぞよろしくお願いしますね。",
+        f"{name}さん、ようこそ！　どうぞよろしくお願いしまぁーす。",
         f"{name}さん、あたしたちのサーバーへようこそ！",
         f"{name}さん、よろ～。",
         f"いらっしゃい、{name}さん！　これから一緒に頑張りましょうね！",
@@ -100,6 +100,30 @@ def get_greeting_new_member(name):
         f"{name}さん、ようこそ！　素敵な仲間が増えましたね♪",
         f"{name}さん、よろ～。",
     ])
+
+
+SPECIAL_KEYWORDS_GREETING = [
+    "奇遇ね",
+]
+
+def get_greeting_special(keyword, name):
+    match keyword:
+        case "奇遇ね":
+            return random.choice([
+                "げっ！　どうしてこんなとこまでッ！？",
+                "うぇっ。な、なんすか？",
+                "げっ……しっつれいしまぁーす！",
+                "うぇっ！　勘弁してくださぁ～い！",
+                "げっ！　なんでいるんだよ！",
+                "うげっ！　……会長かと思いましたぁ。",
+                "じゅ、十王会長！？",
+                "会長！？　とっ……とりあえず――場所！　場所変えましょう！！",
+                "お、オハヨ～ございまぁす。",
+                "……え……",
+            ])
+        case _:
+            print(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}).")
+            return get_greeting(name)
 
 
 if __name__ == "__main__":

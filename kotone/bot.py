@@ -15,6 +15,7 @@ load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 TEST_GUILD = os.getenv("TEST_GUILD")
 DEBUGGING = os.getenv("DEBUGGING")
+UPDATE_SLASH = os.getenv("UPDATE_SLASH")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -27,17 +28,21 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="世界一可愛い私"))
 
     ignored_files = ["__init__.py"]
-    if DEBUGGING != "TRUE":
-        ignored_files.append("temp.py")
     
+    # Add cogs
     for f in os.listdir("kotone/cogs"):
         if f.endswith(".py") and f not in ignored_files:
             print(f"[KOTONE] Adding kotone/{f}")
             await bot.load_extension(f"cogs.{f[:-3]}")
-    for f in os.listdir("kotone/slash"):
-        if f.endswith(".py") and f not in ignored_files:
-            print(f"[KOTONE] Adding kotone/{f}")
-            await bot.load_extension(f"slash.{f[:-3]}")
+
+    # Add slash commands
+    if not (DEBUGGING == "TRUE" and UPDATE_SLASH == "FALSE"):
+        for f in os.listdir("kotone/slash"):
+            if f.endswith(".py") and f not in ignored_files:
+                print(f"[KOTONE] Adding kotone/{f}")
+                await bot.load_extension(f"slash.{f[:-3]}")
+    
+    # Add events
     for f in os.listdir("kotone/events"):
         if f.endswith(".py") and f not in ignored_files:
             print(f"[KOTONE] Adding kotone/{f}")
