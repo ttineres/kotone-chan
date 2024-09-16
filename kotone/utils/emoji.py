@@ -18,6 +18,14 @@ def get_kotone_emoji():
     random_key = random.choice([*KOTONE_EMOJI.keys()])
     return KOTONE_EMOJI[random_key]
 
+
+if __name__ == "__main__":
+    print("Examples of emoji:")
+    print(get_kotone_emoji())
+    print(get_kotone_emoji())
+    print(get_kotone_emoji())
+
+
 # Previous implementation of emoji
 """
 KOTONE_1 = "<:kotone1:1284666285476675604>"
@@ -31,10 +39,3 @@ KOTONE = [
     SITUREI,
 ]
 """
-
-
-if __name__ == "__main__":
-    print("Examples of emoji:")
-    print(get_kotone_emoji())
-    print(get_kotone_emoji())
-    print(get_kotone_emoji())

@@ -7,7 +7,7 @@ import discord
 import random
 
 from utils.emoji import get_kotone_emoji
-from utils.voiceline import greeting
+from utils.voiceline import get_greeting
 
 
 async def setup(bot):
@@ -34,6 +34,6 @@ async def setup(bot):
     async def kotone_hello(interaction: discord.Interaction):
         """ Greets the user. """
         await interaction.response.send_message(
-            f"{greeting(interaction.user.mention)}"
+            f"{get_greeting(interaction.user.mention)}"
             f"{get_kotone_emoji()}"
         )

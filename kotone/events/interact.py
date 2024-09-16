@@ -6,6 +6,7 @@
 from discord.ext import commands
 
 from utils.emoji import KOTONE_EMOJI
+from utils.voiceline import get_greeting_new_member
 
 
 class Interact(commands.Cog):
@@ -17,7 +18,7 @@ class Interact(commands.Cog):
     async def on_member_join(self, member):
         channel = member.guild.system_channel
         if channel:
-            await channel.send(f"{member.mention}さん、いらっしゃい～♪")
+            await channel.send(get_greeting_new_member(member.mention))
             await channel.send(KOTONE_EMOJI["KOTONE_2"])
 
 

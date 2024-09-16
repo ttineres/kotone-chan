@@ -6,7 +6,7 @@
 from discord.ext import commands
 
 from utils.emoji import get_kotone_emoji
-from utils.voiceline import greeting
+from utils.voiceline import get_greeting
 
 
 class Miscellaneous(commands.Cog):
@@ -18,7 +18,7 @@ class Miscellaneous(commands.Cog):
     async def hello(self, ctx):
         """ Greets the user. """
         await ctx.reply(
-            f"{greeting(ctx.author.mention)}"
+            f"{get_greeting(ctx.author.mention)}"
             f"{get_kotone_emoji()}"
         )
     
