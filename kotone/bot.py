@@ -54,6 +54,6 @@ async def on_ready():
     
     print("Updated all commands successfully.")
 
-
-keep_alive()
-bot.run(TOKEN)
+if __name__ == "__main__":
+    keep_alive()
+    bot.run(TOKEN)

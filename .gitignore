@@ -4,11 +4,18 @@
 __pycache__/
 *.pyc
 
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
 config.py
 
 .env
 
+dist/
 build/
-kotone.egg-info/
+*.egg-info/
 
 temp.py
