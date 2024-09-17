@@ -4,7 +4,6 @@
 
 
 import discord
-import random
 
 from utils.emoji import get_kotone_emoji
 from utils.voiceline import get_greeting
