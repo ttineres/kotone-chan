@@ -9,7 +9,7 @@ import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
 
-from utils.emoji import get_emoji, KOTONE_EMOJI
+from utils.emoji import KOTONE_EMOJI, IDOL_EMOJI
 from utils.chara_name import KOTONE_NICKNAME_OF
 
 
@@ -132,7 +132,12 @@ def get_music(chara_name):
         else:
             break
 
-    message = f"こちらが、{ KOTONE_NICKNAME_OF[chara_name] }の楽曲一覧ですよ{ KOTONE_EMOJI["KOTONE_2"] }\n"
+    message = (
+        "こちらが、"
+        f"{ KOTONE_NICKNAME_OF[chara_name] }"
+        f"{ IDOL_EMOJI[ chara_name.split()[0].upper() + "_2" ] }"
+        "の楽曲一覧でーす！\n"
+    )
     for item in music_list:
         # Add to message if the character is involved in this music
         if chara_name in item["snippet"]["description"]:
