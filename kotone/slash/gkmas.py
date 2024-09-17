@@ -5,8 +5,9 @@
 
 import discord
 import math
+import random
 
-from utils.emoji import KOTONE_EMOJI
+from utils.emoji import get_emoji, P_ITEM_EMOJI
 
 
 A_PLUS = 11500
@@ -49,9 +50,16 @@ async def setup(bot):
         new_dance = min(da+30, cap)
         new_visual = min(vi+30, cap)
         new_sum = new_vocal+new_dance+new_visual
+
+        # Retrieve unique emojis
+        p_item_emoji = P_ITEM_EMOJI.copy()
+        emoji_1_key = random.choice([*p_item_emoji.keys()])
+        emoji_1 = p_item_emoji.pop(emoji_1_key)
+        emoji_2 = get_emoji(p_item_emoji)
+
         await interaction.response.send_message(
-            f"試験前パラメータ合計：`{vo+da+vi}`{KOTONE_EMOJI["KOTONE_1"]}\n"
-            f"試験後パラメータ合計：`{new_sum}`{KOTONE_EMOJI["KOTONE_2"]}\n"
+            f"試験前パラメータ合計：`{vo+da+vi}`\t{emoji_1}\n"
+            f"試験後パラメータ合計：`{new_sum}`\t{emoji_2}\n"
             f"* S+: `{param_to_score(new_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(new_sum, S)}`\n"
             f"* A+: `{param_to_score(new_sum, A_PLUS)}`\n",
@@ -73,7 +81,7 @@ async def setup(bot):
         """
         param_sum = vo+da+vi
         await interaction.response.send_message(
-            f"試験後パラメータ合計：`{param_sum}` {KOTONE_EMOJI["KOTONE_2"]}\n"
+            f"試験後パラメータ合計：`{param_sum}`\t{get_emoji(P_ITEM_EMOJI)}\n"
             f"* S+: `{param_to_score(param_sum, S_PLUS)}`\n"
             f"* S : `{param_to_score(param_sum, S)}`\n"
             f"* A+: `{param_to_score(param_sum, A_PLUS)}`\n",

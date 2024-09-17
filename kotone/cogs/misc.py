@@ -6,7 +6,7 @@
 from discord.ext import commands
 import random
 
-from utils.emoji import get_kotone_emoji
+from utils.emoji import get_emoji, KOTONE_EMOJI
 from utils.voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
 
 
@@ -30,14 +30,14 @@ class Miscellaneous(commands.Cog):
 
         await ctx.reply(
             f"{get_greeting(ctx.author.mention)}"
-            f"{get_kotone_emoji()}"
+            f"{get_emoji(KOTONE_EMOJI)}"
         )
     
     
     @commands.command(name="kotone")
     async def kotone(self, ctx):
         """ Sends Kotone emoji. """
-        await ctx.send(get_kotone_emoji())
+        await ctx.send(get_emoji())
         await ctx.message.delete()
 
 
