@@ -2,6 +2,8 @@
 
 学マス用の機能を搭載したDiscord botです。
 
+[学園アイドルマスター](https://gakuen.idolmaster-official.jp/)の二次創作です。
+
 # 権限
 
 ことねちゃんbotを使用するには、以下の権限を付与する必要があります。
