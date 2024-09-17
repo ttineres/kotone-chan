@@ -20,6 +20,7 @@ async def setup(bot):
         await interaction.response.send_message(
             f"ことねちゃんのコマンドを解説しまーす{ get_emoji() }\n"
             "* `/kotone-help`：ことねちゃんのコマンドを教えます。\n"
+            "* `/hatsuboshi`: 初星学園の公式チャンネルから、楽曲や動画一覧が見れます！\n"
             "* `/calculate`：評価値の計算機です！　試験前のパラメータを入力してくださいね。試験後で計算したいなら`/c`を使ってね。\n"
             "* `/kotone-hello`：ことねちゃんが挨拶しますよ！\n"
             "* `!kotone`：とっておきのことねちゃんスタンプを見せちゃいます♪",
