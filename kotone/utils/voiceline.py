@@ -106,7 +106,10 @@ SPECIAL_KEYWORDS_GREETING = [
     "奇遇ね",
 ]
 
-def get_greeting_special(keyword, name):
+def get_greeting_special(name, keyword):
+    """ Greets user if special keyword is used.
+        Input keyword should be a member of SPECIAL_KEYWORDS_GREETING.
+    """
     match keyword:
         case "奇遇ね":
             return random.choice([
@@ -119,7 +122,7 @@ def get_greeting_special(keyword, name):
                 "じゅ、十王会長！？",
                 "会長！？　とっ……とりあえず――場所！　場所変えましょう！！",
                 "お、オハヨ～ございまぁす。",
-                "……え……",
+                "……え……十王会長！？",
             ])
         case _:
             print(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}).")
@@ -141,6 +144,9 @@ if __name__ == "__main__":
     print(get_greeting_new_member("username"))
     print(get_greeting_new_member("username"))
     print(get_greeting_new_member("username"))
+    print("Examples of special greeting:")
+    print(get_greeting_special("username"))
+    print(get_greeting_special("username"))
 
 
 # Previous implementation of voiceline

@@ -25,7 +25,7 @@ class Miscellaneous(commands.Cog):
             random.shuffle(keywords)
             for keyword in keywords:
                 if keyword in arg:
-                    await ctx.reply(get_greeting_special(keyword, ctx.author.mention))
+                    await ctx.reply(get_greeting_special(ctx.author.mention, keyword))
                     return
 
         await ctx.reply(
