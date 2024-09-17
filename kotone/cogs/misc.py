@@ -29,8 +29,8 @@ class Miscellaneous(commands.Cog):
                     return
 
         await ctx.reply(
-            f"{get_greeting(ctx.author.mention)}"
-            f"{get_emoji(KOTONE_EMOJI)}"
+            f"{ get_greeting(ctx.author.mention) }"
+            f"{ get_emoji(KOTONE_EMOJI) }"
         )
     
     

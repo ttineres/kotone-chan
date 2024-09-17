@@ -38,18 +38,3 @@ if __name__ == "__main__":
     print(get_emoji(KOTONE_EMOJI))
     print(get_emoji(P_ITEM_EMOJI))
     print(get_emoji(KOTONE_EMOJI, P_ITEM_EMOJI))
-
-
-# Previous implementation of emoji
-"""
-KOTONE_1 = "<:kotone1:1284666285476675604>"
-KOTONE_2 = "<:kotone2:1284666311737344043>"
-MATANE   = "<:matane:1284666329839698051>"
-SITUREI  = "<:siturei:1284666348374593619>"
-KOTONE = [
-    KOTONE_1,
-    KOTONE_2,
-    MATANE,
-    SITUREI,
-]
-"""

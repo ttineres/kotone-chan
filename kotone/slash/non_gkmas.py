@@ -18,7 +18,7 @@ async def setup(bot):
         """ Provides helpful information on using Kotone-chan commands.
         """
         await interaction.response.send_message(
-            f"ことねちゃんのコマンドを解説しまーす{get_emoji()}\n"
+            f"ことねちゃんのコマンドを解説しまーす{ get_emoji() }\n"
             "* `/kotone-help`：ことねちゃんのコマンドを教えます。\n"
             "* `/calculate`：評価値の計算機です！　試験前のパラメータを入力してくださいね。試験後で計算したいなら`/c`を使ってね。\n"
             "* `/kotone-hello`：ことねちゃんが挨拶しますよ！\n"
@@ -33,6 +33,6 @@ async def setup(bot):
     async def kotone_hello(interaction: discord.Interaction):
         """ Greets the user. """
         await interaction.response.send_message(
-            f"{get_greeting(interaction.user.mention)}"
-            f"{get_emoji(KOTONE_EMOJI)}"
+            f"{ get_greeting(interaction.user.mention) }"
+            f"{ get_emoji(KOTONE_EMOJI) }"
         )
