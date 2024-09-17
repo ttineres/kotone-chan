@@ -1,7 +1,7 @@
 # プライバシーポリシー（ことねちゃんbot）
 
 > [!Note]
-> An English version of this privacy policy can be found [later in the text](#privacy-policy-for-kotone-chan-(ことねちゃんbot)).
+> An English version of this privacy policy can be found [later in the text](#privacy-policy-for-kotone-chan-ことねちゃんbot).
 
 ## はじめに
 
