@@ -22,7 +22,7 @@ logging.basicConfig(
 
 # Retrieve token from environment variable
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 TEST_GUILD = os.getenv("TEST_GUILD")
 DEBUGGING = os.getenv("DEBUGGING")
 
@@ -71,7 +71,7 @@ async def on_ready():
 
 def main():
     keep_alive()
-    bot.run(TOKEN)
+    bot.run(DISCORD_TOKEN)
 
 if __name__ == "__main__":
     main()

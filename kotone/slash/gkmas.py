@@ -1,5 +1,5 @@
 #
-# commands/gkmas.py
+# slash/gkmas.py
 #
 
 
