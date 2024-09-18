@@ -10,7 +10,7 @@ from utils.voiceline import get_greeting_new_member
 
 
 class Interact(commands.Cog):
-    """ A class for user interactions. """
+    """ A cog for user interactions. """
     def __init__(self, bot):
         self.bot = bot
     

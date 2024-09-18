@@ -4,7 +4,9 @@
 # YouTube API reference: https://developers.google.com/youtube/v3/docs
 #
 
+
 import discord
+from discord.ext import commands
 import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
@@ -24,8 +26,13 @@ HATSUBOSHI_PLAYLIST_ID = "PL8AmPgz38WkXIiEnqf-Q5XkWpQgm5UiuF"
 # YouTube API client setup
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
-async def setup(bot: discord):
-    @bot.tree.command(
+
+class YouTubeUtils(commands.Cog):
+    """ A cog for YouTube-related commands. """
+    def __init__(self, bot):
+        self.bot = bot
+    
+    @discord.app_commands.command(
         name="hatsuboshi",
         description="初星学園公式YouTubeの楽曲や動画を表示する"
     )
@@ -68,9 +75,19 @@ async def setup(bot: discord):
             case "video":
                 message = get_latest_videos()
             case _:
-                message = get_music(media_type.value)
+                chara_name = media_type.value)
+                message = get_music(chara_name)
 
         await interaction.response.send_message(message, ephemeral=True, suppress_embeds=True)
+
+
+async def setup(bot: discord):
+    await bot.add_cog(YouTubeUtils(bot))
+
+
+#
+# Helper functions
+#
 
 
 def get_latest_music(num_music=5):

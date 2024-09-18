@@ -4,13 +4,18 @@
 
 
 import discord
+from discord.ext import commands
 
 from utils.emoji import get_emoji, KOTONE_EMOJI
 from utils.voiceline import get_greeting
 
 
-async def setup(bot):
-    @bot.tree.command(
+class NonGKMas(commands.Cog):
+    """ A cog for commands unrelated to playing Gakumas. """
+    def __init__(self, bot):
+        self.bot = bot
+
+    @discord.app_commands.command(
         name="kotone-help",
         description="ことねちゃんのコマンドを解説する"
     )
@@ -27,7 +32,7 @@ async def setup(bot):
             ephemeral=True
         )
     
-    @bot.tree.command(
+    @discord.app_commands.command(
         name="kotone-hello",
         description="ことねちゃんに挨拶する"
     )
@@ -37,3 +42,6 @@ async def setup(bot):
             f"{ get_greeting(interaction.user.mention) }"
             f"{ get_emoji(KOTONE_EMOJI) }"
         )
+
+async def setup(bot):
+   

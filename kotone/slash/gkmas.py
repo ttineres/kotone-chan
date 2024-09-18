@@ -4,6 +4,7 @@
 
 
 import discord
+from discord.ext import commands
 import math
 import random
 
@@ -31,8 +32,12 @@ def param_to_score(param, rank):
     return 40000 + math.ceil((diff-3650) / 0.01)
 
 
-async def setup(bot):
-    @bot.tree.command(
+class GKMas(commands.Cog):
+    """ A cog for commands related to playing Gakumas. """
+    def __init__(self, bot):
+        self.bot = bot
+
+    @discord.app_commands.command(
         name="calculate",
         description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/calculate vo:1000 da:1000 vi:1000"
     )
@@ -66,7 +71,7 @@ async def setup(bot):
             ephemeral=True
         )
     
-    @bot.tree.command(
+    @discord.app_commands.command(
         name="c",
         description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/c vo:1000 da:1000 vi:1000"
     )
@@ -87,3 +92,7 @@ async def setup(bot):
             f"* A+: `{ param_to_score(param_sum, A_PLUS) }`\n",
             ephemeral=True
         )
+
+
+async def setup(bot):
+    await bot.add_cog(GKMas(bot))
