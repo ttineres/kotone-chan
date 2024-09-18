@@ -75,7 +75,7 @@ class YouTubeUtils(commands.Cog):
             case "video":
                 message = get_latest_videos()
             case _:
-                chara_name = media_type.value)
+                chara_name = media_type.value
                 message = get_music(chara_name)
 
         await interaction.response.send_message(message, ephemeral=True, suppress_embeds=True)
