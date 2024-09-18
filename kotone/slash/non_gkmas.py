@@ -19,7 +19,7 @@ class NonGKMas(commands.Cog):
         name="kotone-help",
         description="ことねちゃんのコマンドを解説する"
     )
-    async def kotone_help(interaction: discord.Interaction):
+    async def kotone_help(self, interaction: discord.Interaction):
         """ Provides helpful information on using Kotone-chan commands.
         """
         await interaction.response.send_message(
@@ -36,7 +36,7 @@ class NonGKMas(commands.Cog):
         name="kotone-hello",
         description="ことねちゃんに挨拶する"
     )
-    async def kotone_hello(interaction: discord.Interaction):
+    async def kotone_hello(self, interaction: discord.Interaction):
         """ Greets the user. """
         await interaction.response.send_message(
             f"{ get_greeting(interaction.user.mention) }"
@@ -44,4 +44,4 @@ class NonGKMas(commands.Cog):
         )
 
 async def setup(bot):
-   
+    await bot.add_cog(NonGKMas(bot))

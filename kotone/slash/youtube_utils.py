@@ -53,6 +53,7 @@ class YouTubeUtils(commands.Cog):
         discord.app_commands.Choice(name="姫崎莉波", value="Rinami Himesaki"),
     ])
     async def hatsuboshi(
+        self,
         interaction: discord.Interaction,
         media_type: discord.app_commands.Choice[str] = None,
     ):
