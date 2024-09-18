@@ -40,11 +40,11 @@ async def on_ready():
 
     ignored_files = ["__init__.py"]
     
-    # Add cogs
-    for f in os.listdir("kotone/cogs"):
+    # Add exclamation commands
+    for f in os.listdir("kotone/exclamation"):
         if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/cogs/{f}")
-            await bot.load_extension(f"cogs.{f[:-3]}")
+            logging.info(f"[KOTONE] Adding kotone/exclamation/{f}")
+            await bot.load_extension(f"exclamation.{f[:-3]}")
 
     # Add slash commands
     for f in os.listdir("kotone/slash"):

@@ -1,5 +1,5 @@
 #
-# cogs/misc.py
+# exclamation/misc.py
 #
 
 
