@@ -43,19 +43,19 @@ async def on_ready():
     # Add cogs
     for f in os.listdir("kotone/cogs"):
         if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/{f}")
+            logging.info(f"[KOTONE] Adding kotone/cogs/{f}")
             await bot.load_extension(f"cogs.{f[:-3]}")
 
     # Add slash commands
     for f in os.listdir("kotone/slash"):
         if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/{f}")
+            logging.info(f"[KOTONE] Adding kotone/slash/{f}")
             await bot.load_extension(f"slash.{f[:-3]}")
     
     # Add events
     for f in os.listdir("kotone/events"):
         if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/{f}")
+            logging.info(f"[KOTONE] Adding kotone/events/{f}")
             await bot.load_extension(f"events.{f[:-3]}")
     
     if DEBUGGING == "TRUE":
