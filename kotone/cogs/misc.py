@@ -3,6 +3,7 @@
 #
 
 
+import discord
 from discord.ext import commands
 import random
 
@@ -38,7 +39,12 @@ class Miscellaneous(commands.Cog):
     async def kotone(self, ctx):
         """ Sends Kotone emoji. """
         await ctx.send(get_emoji())
-        await ctx.message.delete()
+        # Try to delete input prompt
+        # Only works if given "Manage message" permission
+        try:
+            await ctx.message.delete()
+        except discord.Forbidden:
+            pass
 
 
 async def setup(bot):
