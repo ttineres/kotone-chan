@@ -20,8 +20,7 @@ class NonGKMas(commands.Cog):
         description="ことねちゃんのコマンドを解説する"
     )
     async def kotone_help(self, interaction: discord.Interaction):
-        """ Provides helpful information on using Kotone-chan commands.
-        """
+        """ Provides helpful information on using Kotone-chan commands. """
         await interaction.response.send_message(
             f"ことねちゃんのコマンドを解説しまーす{ get_emoji() }\n"
             "* `/kotone-help`：ことねちゃんのコマンドを教えます。\n"
