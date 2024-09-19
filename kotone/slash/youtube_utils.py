@@ -7,6 +7,7 @@
 
 import discord
 from discord.ext import commands
+from discord.ui import View, Button
 import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
@@ -64,9 +65,9 @@ class YouTubeUtils(commands.Cog):
         """
         if not media_type:
             await interaction.response.send_message(
-                "このコマンド`/hatsuboshi`を使うと、[初星学園](https://www.youtube.com/@hatsuboshi_gakuen)の最新楽曲が表示されますよ！\n"
-                "また、アイドルを指定すれば特定の楽曲のみ表示されまーす！\n"
-                f"まずは`/hatsuboshi media_type:最新楽曲`を使ってみよーね{ KOTONE_EMOJI["KOTONE_2"] }",
+                "[初星学園](https://www.youtube.com/@hatsuboshi_gakuen)の楽曲ですか？\n"
+                "持ってきますよ！　どれにしますか？\n",
+                view=MediaTypeView(),
                 ephemeral=True
             )
             return
@@ -79,8 +80,108 @@ class YouTubeUtils(commands.Cog):
                 chara_name = media_type.value
                 message = get_music(chara_name)
 
+        message = "```このコマンドはアップデートされました。「/hatsuboshi」をそのまま使ってみてね！```" + message
         await interaction.response.send_message(message, ephemeral=True, suppress_embeds=True)
 
+
+class MediaTypeView(View):
+    """ A UI View for /hatsuboshi command. """
+    @discord.ui.button(label="最新楽曲", style=discord.ButtonStyle.green, row=0)
+    async def latest_music_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_latest_music(),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="最新動画", style=discord.ButtonStyle.blurple, row=0)
+    async def latest_videos_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_latest_videos(),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="花海咲季", emoji=IDOL_EMOJI["SAKI_1"], style=discord.ButtonStyle.grey, row=1)
+    async def saki_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Saki Hanami"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="月村手毬", emoji=IDOL_EMOJI["TEMARI_1"], style=discord.ButtonStyle.grey, row=1)
+    async def temari_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Temari Tsukimura"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="藤田ことね", emoji=IDOL_EMOJI["KOTONE_1"], style=discord.ButtonStyle.grey, row=1)
+    async def kotone_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Kotone Fujita"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="有村麻央", emoji=IDOL_EMOJI["MAO_1"], style=discord.ButtonStyle.grey, row=2)
+    async def mao_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Mao Arimura"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="葛城リーリヤ", emoji=IDOL_EMOJI["LILJA_1"], style=discord.ButtonStyle.grey, row=2)
+    async def lilja_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Lilja Katsuragi"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="倉本千奈", emoji=IDOL_EMOJI["CHINA_1"], style=discord.ButtonStyle.grey, row=2)
+    async def china_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("China Kuramoto"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="紫雲清夏", emoji=IDOL_EMOJI["SUMIKA_1"], style=discord.ButtonStyle.grey, row=3)
+    async def sumika_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Sumika Shiun"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="篠澤広", emoji=IDOL_EMOJI["HIRO_1"], style=discord.ButtonStyle.grey, row=3)
+    async def hiro_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Hiro Shinosawa"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="花海佑芽", emoji=IDOL_EMOJI["UME_1"], style=discord.ButtonStyle.grey, row=3)
+    async def ume_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Ume Hanami"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
+    @discord.ui.button(label="姫崎莉波", emoji=IDOL_EMOJI["RINAMI_1"], style=discord.ButtonStyle.grey, row=4)
+    async def rinami_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Rinami Himesaki"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+    
 
 async def setup(bot: discord):
     await bot.add_cog(YouTubeUtils(bot))
