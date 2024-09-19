@@ -5,6 +5,7 @@
 
 from datetime import datetime, timezone, timedelta
 import random
+import logging
 
 
 HOME_VOICE = {
@@ -125,7 +126,7 @@ def get_greeting_special(name, keyword):
                 "……え……十王会長！？",
             ])
         case _:
-            print(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}).")
+            logging.info(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}).")
             return get_greeting(name)
 
 
