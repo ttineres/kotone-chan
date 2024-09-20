@@ -47,7 +47,7 @@ class GKMas(commands.Cog):
         vo: int,
         da: int,
         vi: int,
-        cap: int = 1500,
+        cap: int = 1800,
     ):
         """ Calculates score required for ranks.
             Parameters are BEFORE exam.
