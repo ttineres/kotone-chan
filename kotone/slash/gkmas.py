@@ -14,6 +14,7 @@ from utils.emoji import get_emoji, P_ITEM_EMOJI
 A_PLUS = 11500
 S = 13000
 S_PLUS = 14500
+SS = 16000
 
 def param_to_score(param, rank):
     """ Returns the scores needed for the specified rank. """
@@ -66,6 +67,7 @@ class GKMas(commands.Cog):
         await interaction.response.send_message(
             f"試験前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
             f"試験後パラメータ合計：`{ new_sum }`\t{ emoji_2 }\n"
+            f"* SS: `{ param_to_score(new_sum, SS) }`\n"
             f"* S+: `{ param_to_score(new_sum, S_PLUS) }`\n"
             f"* S : `{ param_to_score(new_sum, S) }`\n"
             f"* A+: `{ param_to_score(new_sum, A_PLUS) }`\n",
@@ -89,6 +91,7 @@ class GKMas(commands.Cog):
         param_sum = vo+da+vi
         await interaction.response.send_message(
             f"試験後パラメータ合計：`{ param_sum }`\t{ get_emoji(P_ITEM_EMOJI) }\n"
+            f"* SS: `{ param_to_score(param_sum, SS) }`\n"
             f"* S+: `{ param_to_score(param_sum, S_PLUS) }`\n"
             f"* S : `{ param_to_score(param_sum, S) }`\n"
             f"* A+: `{ param_to_score(param_sum, A_PLUS) }`\n",
