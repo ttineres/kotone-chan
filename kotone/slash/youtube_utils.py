@@ -102,7 +102,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="花海咲季", emoji=IDOL_EMOJI["SAKI_1"], style=discord.ButtonStyle.grey, row=1)
+    @discord.ui.button(label="花海咲季", emoji=IDOL_EMOJI["saki1"], style=discord.ButtonStyle.grey, row=1)
     async def saki_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Saki Hanami"),
@@ -110,7 +110,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="月村手毬", emoji=IDOL_EMOJI["TEMARI_1"], style=discord.ButtonStyle.grey, row=1)
+    @discord.ui.button(label="月村手毬", emoji=IDOL_EMOJI["temari1"], style=discord.ButtonStyle.grey, row=1)
     async def temari_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Temari Tsukimura"),
@@ -118,7 +118,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="藤田ことね", emoji=IDOL_EMOJI["KOTONE_1"], style=discord.ButtonStyle.grey, row=1)
+    @discord.ui.button(label="藤田ことね", emoji=IDOL_EMOJI["kotone1"], style=discord.ButtonStyle.grey, row=1)
     async def kotone_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Kotone Fujita"),
@@ -126,7 +126,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="有村麻央", emoji=IDOL_EMOJI["MAO_1"], style=discord.ButtonStyle.grey, row=2)
+    @discord.ui.button(label="有村麻央", emoji=IDOL_EMOJI["mao1"], style=discord.ButtonStyle.grey, row=2)
     async def mao_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Mao Arimura"),
@@ -134,7 +134,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="葛城リーリヤ", emoji=IDOL_EMOJI["LILJA_1"], style=discord.ButtonStyle.grey, row=2)
+    @discord.ui.button(label="葛城リーリヤ", emoji=IDOL_EMOJI["lilja1"], style=discord.ButtonStyle.grey, row=2)
     async def lilja_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Lilja Katsuragi"),
@@ -142,7 +142,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="倉本千奈", emoji=IDOL_EMOJI["CHINA_1"], style=discord.ButtonStyle.grey, row=2)
+    @discord.ui.button(label="倉本千奈", emoji=IDOL_EMOJI["china1"], style=discord.ButtonStyle.grey, row=2)
     async def china_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("China Kuramoto"),
@@ -150,7 +150,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="紫雲清夏", emoji=IDOL_EMOJI["SUMIKA_1"], style=discord.ButtonStyle.grey, row=3)
+    @discord.ui.button(label="紫雲清夏", emoji=IDOL_EMOJI["sumika1"], style=discord.ButtonStyle.grey, row=3)
     async def sumika_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Sumika Shiun"),
@@ -158,7 +158,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="篠澤広", emoji=IDOL_EMOJI["HIRO_1"], style=discord.ButtonStyle.grey, row=3)
+    @discord.ui.button(label="篠澤広", emoji=IDOL_EMOJI["hiro1"], style=discord.ButtonStyle.grey, row=3)
     async def hiro_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Hiro Shinosawa"),
@@ -166,7 +166,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="花海佑芽", emoji=IDOL_EMOJI["UME_1"], style=discord.ButtonStyle.grey, row=3)
+    @discord.ui.button(label="花海佑芽", emoji=IDOL_EMOJI["ume1"], style=discord.ButtonStyle.grey, row=3)
     async def ume_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Ume Hanami"),
@@ -174,7 +174,7 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
-    @discord.ui.button(label="姫崎莉波", emoji=IDOL_EMOJI["RINAMI_1"], style=discord.ButtonStyle.grey, row=4)
+    @discord.ui.button(label="姫崎莉波", emoji=IDOL_EMOJI["rinami1"], style=discord.ButtonStyle.grey, row=4)
     async def rinami_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Rinami Himesaki"),
@@ -202,7 +202,7 @@ def get_latest_music(num_music=5):
         maxResults=num_music,
     )
     response = request.execute()
-    message = f"初星学園の最新楽曲はこちら！{ KOTONE_EMOJI["KOTONE_2"] }\n"
+    message = f"初星学園の最新楽曲はこちら！{ KOTONE_EMOJI["kotone2"] }\n"
     for item in response["items"]:
         title = item["snippet"]["title"]
         video_id = item["snippet"]["resourceId"]["videoId"]
@@ -223,7 +223,7 @@ def get_latest_videos(num_videos=5):
         type="video",
     )
     response = request.execute()
-    message = f"初星学園の最新動画はこちら！{ KOTONE_EMOJI["KOTONE_2"] }\n"
+    message = f"初星学園の最新動画はこちら！{ KOTONE_EMOJI["kotone2"] }\n"
     for item in response["items"]:
         title = item["snippet"]["title"]
         video_id = item["id"]["videoId"]
@@ -254,7 +254,7 @@ def get_music(chara_name):
     message = (
         "こちらが、"
         f"{ KOTONE_NICKNAME_OF[chara_name] }"
-        f"{ IDOL_EMOJI[ chara_name.split()[0].upper() + "_2" ] }"
+        f"{ IDOL_EMOJI[ chara_name.split()[0].lower() + "_hlw" ] }"
         "の楽曲一覧でーす！\n"
     )
     for item in music_list:

@@ -19,7 +19,7 @@ class Interact(commands.Cog):
         channel = member.guild.system_channel
         if channel:
             await channel.send(get_greeting_new_member(member.mention))
-            await channel.send(KOTONE_EMOJI["KOTONE_2"])
+            await channel.send(KOTONE_EMOJI["kotone2"])
 
 
 async def setup(bot):
