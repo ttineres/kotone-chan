@@ -46,7 +46,7 @@ class NonGKMas(commands.Cog):
         name="goldrush",
         description="学園アイドルマスター GOLD RUSH の情報はこちら！"
     )
-    @discord.app_commands.describe(ephemeral="表示設定")
+    @discord.app_commands.rename(ephemeral="表示設定")
     @discord.app_commands.choices(ephemeral=[
         discord.app_commands.Choice(name="自分だけに表示", value=1),
         discord.app_commands.Choice(name="全体表示", value=0)

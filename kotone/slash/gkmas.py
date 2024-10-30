@@ -7,6 +7,7 @@ import discord
 from discord.ext import commands
 import math
 import random
+import typing
 
 from utils.emoji import get_emoji, P_ITEM_EMOJI
 
@@ -40,15 +41,16 @@ class GKMas(commands.Cog):
 
     @discord.app_commands.command(
         name="calculate",
-        description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/calculate vo:1000 da:1000 vi:1000"
+        description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
+    @discord.app_commands.rename(vo="Vo.", da="Da.", vi="Vi.", cap="パラメータ上限")
     async def calculate(
         self,
         interaction: discord.Interaction,
         vo: int,
         da: int,
         vi: int,
-        cap: int = 1800,
+        cap: typing.Literal[1500, 1800] = 1800,
     ):
         """ Calculates score required for ranks.
             Parameters are BEFORE exam.
@@ -76,8 +78,9 @@ class GKMas(commands.Cog):
     
     @discord.app_commands.command(
         name="c",
-        description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する。使用例：/c vo:1000 da:1000 vi:1000"
+        description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
+    @discord.app_commands.rename(vo="Vo.", da="Da.", vi="Vi.")
     async def calculate_post_exam(
         self,
         interaction: discord.Interaction,

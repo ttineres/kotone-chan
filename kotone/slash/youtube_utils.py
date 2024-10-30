@@ -37,6 +37,7 @@ class YouTubeUtils(commands.Cog):
         name="hatsuboshi",
         description="初星学園公式YouTubeの楽曲や動画を表示する"
     )
+    @discord.app_commands.rename(media_type="種類")
     @discord.app_commands.choices(media_type=[
         discord.app_commands.Choice(name="最新楽曲", value="any"),
         discord.app_commands.Choice(name="最新動画", value="video"),
