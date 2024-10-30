@@ -25,8 +25,9 @@ class NonGKMas(commands.Cog):
         await interaction.response.send_message(
             f"ことねちゃんのコマンドを解説しまーす{ get_emoji() }\n"
             "* `/kotone-help`：ことねちゃんのコマンドを教えます。\n"
+            "* `/calculate`：評価値の計算機です！　試験前のパラメータを使います。試験後で計算したいなら`/c`を使ってね。\n"
             "* `/hatsuboshi`: 初星学園の公式チャンネルから、楽曲や動画一覧が見れます！\n"
-            "* `/calculate`：評価値の計算機です！　試験前のパラメータを入力してくださいね。試験後で計算したいなら`/c`を使ってね。\n"
+            "* `/goldrush`: 学園アイドルマスター GOLD RUSH の便利リンクを確認できます！\n"
             "* `/kotone-hello`：ことねちゃんが挨拶しますよ！\n"
             "* `!kotone`：とっておきのことねちゃんスタンプを見せちゃいます♪",
             ephemeral=True
@@ -58,8 +59,8 @@ class NonGKMas(commands.Cog):
         """ Provides useful links to Gold Rush"""
         await interaction.response.send_message(
             f"おっ待たせー！　学園アイドルマスター GOLD RUSH の情報でーす{ get_emoji(KOTONE_EMOJI) }\n"
-            "* [第1話や最新話はこちら！](https://championcross.jp/series/f67370b40ec1a)\n"
-            "* [掲載誌の最新情報はこちら！](https://www.akitashoten.co.jp/w-champion)\n"
+            "* [無料配信はこちらから！](https://championcross.jp/series/f67370b40ec1a)\n"
+            "* [週刊少年チャンピオンの最新情報はこちら！](https://www.akitashoten.co.jp/w-champion)\n"
             "* [公式アカウント（@gkmas_GR）はこちら！](https://x.com/gkmas_GR)",
             ephemeral=bool(ephemeral.value),
             suppress_embeds=True
