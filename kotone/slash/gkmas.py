@@ -10,6 +10,7 @@ import random
 import typing
 
 from utils.emoji import get_emoji, P_ITEM_EMOJI
+from utils.binary_enum import Ephemeral
 
 
 A_PLUS = 11500
@@ -43,7 +44,7 @@ class GKMas(commands.Cog):
         name="calculate",
         description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
-    @discord.app_commands.rename(vo="Vo", da="Da", vi="Vi", cap="パラメータ上限")
+    @discord.app_commands.rename(cap="パラメータ上限", ephemeral="表示設定")
     async def calculate(
         self,
         interaction: discord.Interaction,
@@ -51,6 +52,7 @@ class GKMas(commands.Cog):
         da: int,
         vi: int,
         cap: typing.Literal[1500, 1800] = 1800,
+        ephemeral: Ephemeral = Ephemeral.T
     ):
         """ Calculates score required for ranks.
             Parameters are BEFORE exam.
@@ -73,20 +75,21 @@ class GKMas(commands.Cog):
             f"* S+: `{ param_to_score(new_sum, S_PLUS) }`\n"
             f"* S : `{ param_to_score(new_sum, S) }`\n"
             f"* A+: `{ param_to_score(new_sum, A_PLUS) }`\n",
-            ephemeral=True
+            ephemeral=bool(ephemeral.value)
         )
     
     @discord.app_commands.command(
         name="c",
         description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
-    @discord.app_commands.rename(vo="Vo", da="Da", vi="Vi")
+    @discord.app_commands.rename(ephemeral="表示設定")
     async def calculate_post_exam(
         self,
         interaction: discord.Interaction,
         vo: int,
         da: int,
         vi: int,
+        ephemeral: Ephemeral = Ephemeral.T
     ):
         """ Calculates score required for ranks.
             Parameters are AFTER exam.
@@ -98,7 +101,7 @@ class GKMas(commands.Cog):
             f"* S+: `{ param_to_score(param_sum, S_PLUS) }`\n"
             f"* S : `{ param_to_score(param_sum, S) }`\n"
             f"* A+: `{ param_to_score(param_sum, A_PLUS) }`\n",
-            ephemeral=True
+            ephemeral=bool(ephemeral.value)
         )
 
 
