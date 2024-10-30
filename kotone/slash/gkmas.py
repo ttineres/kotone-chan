@@ -43,7 +43,7 @@ class GKMas(commands.Cog):
         name="calculate",
         description="「試験前」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
-    @discord.app_commands.rename(vo="Vo.", da="Da.", vi="Vi.", cap="パラメータ上限")
+    @discord.app_commands.rename(vo="Vo", da="Da", vi="Vi", cap="パラメータ上限")
     async def calculate(
         self,
         interaction: discord.Interaction,
@@ -80,7 +80,7 @@ class GKMas(commands.Cog):
         name="c",
         description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"
     )
-    @discord.app_commands.rename(vo="Vo.", da="Da.", vi="Vi.")
+    @discord.app_commands.rename(vo="Vo", da="Da", vi="Vi")
     async def calculate_post_exam(
         self,
         interaction: discord.Interaction,
