@@ -25,7 +25,10 @@ class Anchor(commands.Cog):
         """ A command for setting up automated anchor. """
         author = interaction.user.name
         if author in self.active_users:
-            await interaction.response.send_message("既に進行中の安価があります。キャンセルする場合は`/anchor cancel`を使ってください。")
+            await interaction.response.send_message(
+                "既に進行中の安価があります。キャンセルする場合は`/anchor cancel`を使ってください。",
+                ephemeral=True
+            )
             return
         
         if num_msg <= 0:
