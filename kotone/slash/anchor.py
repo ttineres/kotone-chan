@@ -13,6 +13,8 @@ class Anchor(commands.Cog):
         self.bot = bot
         # A set of users currently using anchor
         self.active_users = set()
+        # A dict of user-specified prompts
+        self.user_prompts = {}
 
     # Class scope command group
     group = discord.app_commands.Group(name="anchor", description="全自動安価スレ")
@@ -38,6 +40,7 @@ class Anchor(commands.Cog):
         )
 
         self.active_users.add(author)
+        self.user_prompts[author] = content
         channel = interaction.channel
         author_name = interaction.user.mention
 
@@ -53,7 +56,7 @@ class Anchor(commands.Cog):
         if author in self.active_users:
             self.active_users.remove(author)
             await channel.send(
-                f"{author_name}さん、安価「{content}」の結果が出ましたよ！\n"
+                f"{author_name}さん、安価「{self.user_prompts.pop(author, "")}」の結果が出ましたよ！\n"
                 f"結果は「{msg.content}」です。"
             )
     
@@ -62,7 +65,7 @@ class Anchor(commands.Cog):
         author = interaction.user.name
         if author in self.active_users:
             self.active_users.remove(author)
-            await interaction.response.send_message("安価をキャンセルしました。")
+            await interaction.response.send_message(f"安価「{self.user_prompts.pop(author, "")}」がキャンセルされました。")
         else:
             await interaction.response.send_message("進行中の安価はありません。")
     
