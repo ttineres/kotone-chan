@@ -81,7 +81,6 @@ class YouTubeUtils(commands.Cog):
                 chara_name = media_type.value
                 message = get_music(chara_name)
 
-        message = "```このコマンドはアップデートされました。「/hatsuboshi」をそのまま使ってみてね！```" + message
         await interaction.response.send_message(message, ephemeral=True, suppress_embeds=True)
 
 

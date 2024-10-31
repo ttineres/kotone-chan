@@ -29,6 +29,7 @@ class NonGKMas(commands.Cog):
             "* `/hatsuboshi`: 初星学園の公式チャンネルから、楽曲や動画一覧が見れます！\n"
             "* `/goldrush`: 学園アイドルマスター GOLD RUSH の便利リンクを確認できます！\n"
             "* `/kotone-hello`：ことねちゃんが挨拶しますよ！\n"
+            "* `/anchor`：`/anchor help`をご参照ください。\n"
             "* `!kotone`：とっておきのことねちゃんスタンプを見せちゃいます♪",
             ephemeral=True
         )
