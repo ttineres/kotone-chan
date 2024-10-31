@@ -23,6 +23,13 @@ class Anchor(commands.Cog):
     @discord.app_commands.rename(content="内容", num_msg="リプ数")
     async def start_anchor(self, interaction: discord.Interaction, content: str, num_msg: int):
         """ A command for setting up automated anchor. """
+        if not interaction.guild.get_channel(interaction.channel_id):
+            await interaction.response.send_message(
+                "このチャンネルにアクセスできません。チャンネル権限を調整するか、他のチャンネルでこのコマンドを使ってください。",
+                ephemeral=True
+            )
+            return
+
         author = interaction.user.name
         if author in self.active_users:
             await interaction.response.send_message(
