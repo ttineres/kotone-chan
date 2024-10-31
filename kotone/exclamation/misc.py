@@ -46,7 +46,7 @@ class Miscellaneous(commands.Cog):
         # Only works if given "Manage message" permission
         try:
             await ctx.message.delete()
-        except discord.Forbidden:
+        except discord.HTTPException:
             pass
 
 
