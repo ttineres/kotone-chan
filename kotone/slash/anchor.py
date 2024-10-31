@@ -9,7 +9,7 @@ from discord.ext import commands
 
 class Anchor(commands.Cog):
     """ A cog for anchor activities (安価スレ). """
-    def __init__(self, bot):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
         # A set of users currently using anchor
         self.active_users = set()
@@ -23,13 +23,15 @@ class Anchor(commands.Cog):
     @discord.app_commands.rename(content="内容", num_msg="リプ数")
     async def start_anchor(self, interaction: discord.Interaction, content: str, num_msg: int):
         """ A command for setting up automated anchor. """
-        if not interaction.guild.get_channel(interaction.channel_id):
+        # Check bot permission to send message in channel
+        if not interaction.channel.permissions_for(self.bot.user).send_messages:
             await interaction.response.send_message(
                 "このチャンネルにアクセスできません。チャンネル権限を調整するか、他のチャンネルでこのコマンドを使ってください。",
                 ephemeral=True
             )
             return
 
+        # Check user does not have active anchor
         author = interaction.user.name
         if author in self.active_users:
             await interaction.response.send_message(
@@ -38,6 +40,7 @@ class Anchor(commands.Cog):
             )
             return
         
+        # Check correct argument passed
         if num_msg <= 0:
             await interaction.response.send_message("リプ数を1以上に設定してください！", ephemeral=True)
             return
