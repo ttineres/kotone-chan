@@ -32,15 +32,16 @@ class Anchor(commands.Cog):
             return
         
         # Check bot is added to guild
-        bot_member = interaction.guild.get_member(self.bot.user.id)
-        if not bot_member:
+        
+        if interaction.guild not in self.bot.guilds:
             await interaction.response.send_message(
-                "このサーバーに加入していないので、安価スレを作成することはできません。",
+                "このサーバーに加入していないため、安価スレを作成することはできません。",
                 ephemeral=True
             )
             return
         
         # Check bot permission to send message in channel
+        bot_member = interaction.guild.get_member(self.bot.user.id)
         if not interaction.channel.permissions_for(bot_member).send_messages:
             await interaction.response.send_message(
                 "このチャンネルにアクセスできません。チャンネル権限を調整するか、他のチャンネルでこのコマンドを使ってください。",
