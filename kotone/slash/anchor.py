@@ -31,10 +31,10 @@ class Anchor(commands.Cog):
             return
         
         await interaction.response.send_message(
-            "安価を開始しました！\n"
+            "安価スレを開始しました！\n"
             f"内容は「{content}」\n"
             f"↓ {num_msg}\n"
-            "`長時間書き込みがない場合、コマンドが失効になる可能性があります。`"
+            "`長時間書き込みがない場合、安価スレが失効になる可能性があります。`"
         )
 
         self.active_users.add(author)
