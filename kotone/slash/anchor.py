@@ -23,6 +23,14 @@ class Anchor(commands.Cog):
     @discord.app_commands.rename(content="内容", num_msg="リプ数")
     async def start_anchor(self, interaction: discord.Interaction, content: str, num_msg: int):
         """ A command for setting up automated anchor. """
+        # Check channel is in a guild
+        if not interaction.guild:
+            await interaction.response.send_message(
+                "このチャンネルでこのコマンドを使うことはできません。",
+                ephemeral=True
+            )
+            return
+        
         # Check bot is added to guild
         bot_member = interaction.guild.get_member(self.bot.user.id)
         if not bot_member:
