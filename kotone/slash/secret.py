@@ -85,7 +85,7 @@ class Secret(commands.Cog):
         
         if interaction.channel_id != self.user_channels[author]:
             await interaction.response.send_message(
-                "秘密テキストを保管しているチャンネルが異なるため、公開できません。\n"
+                "秘密テキストは別のチャンネルで保管されているため、公開できません。\n"
                 "キャンセルする場合は`/secret cancel`を使ってください。",
                 ephemeral=True
                 )
