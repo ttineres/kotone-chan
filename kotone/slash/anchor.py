@@ -32,10 +32,9 @@ class Anchor(commands.Cog):
             return
         
         # Check bot is added to guild
-        
         if interaction.guild not in self.bot.guilds:
             await interaction.response.send_message(
-                "このサーバーに加入していないため、安価スレを作成することはできません。",
+                "このサーバーに加入していないため、安価スレを作成することができません。",
                 ephemeral=True
             )
             return
