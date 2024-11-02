@@ -6,6 +6,8 @@
 import discord
 from discord.ext import commands
 
+from utils.emoji import replace_idol_emoji
+
 
 class Secret(commands.Cog):
     """ A cog for storing secret texts to be revealed later. """
@@ -21,7 +23,7 @@ class Secret(commands.Cog):
     # Class scope command group
     group = discord.app_commands.Group(name="secret", description="秘密テキスト管理ツール")
 
-    @group.command(name="set", description="秘密テキストを入力")
+    @group.command(name="set", description="秘密テキストを設定")
     @discord.app_commands.rename(content="内容")
     async def set_secret(self, interaction: discord.Interaction, content: str):
         """ A command for storing secret texts. """
@@ -61,7 +63,7 @@ class Secret(commands.Cog):
         
         await interaction.response.send_message(
             "秘密テキストを預かりました。\n"
-            f"内容は「{content}」です。\n"
+            f"内容は「{ replace_idol_emoji(content) }」です。\n"
             "公開する際は`/secret reveal`を使ってください。\n"
             "`一定の期間内に秘密テキストを公開しない場合、コマンドが失効になる可能性があります。`",
             ephemeral=True
@@ -94,9 +96,10 @@ class Secret(commands.Cog):
         self.active_users.remove(author)
         self.user_channels.pop(author, "")
         author_name = interaction.user.mention
+        secret_text = self.user_secrets.pop(author, "")
         await interaction.response.send_message(
             f"{author_name}さんが秘密テキストを公開しました！\n"
-            f"内容は「{self.user_secrets.pop(author, "")}」でした。"
+            f"内容は「{ replace_idol_emoji(secret_text) }」でした。"
         )
 
     @group.command(name="cancel", description="秘密テキストをキャンセル")
@@ -105,8 +108,9 @@ class Secret(commands.Cog):
         if author in self.active_users:
             self.active_users.remove(author)
             self.user_channels.pop(author, "")
+            secret_text = self.user_secrets.pop(author, "")
             await interaction.response.send_message(
-                f"秘密テキスト「{self.user_secrets.pop(author, "")}」がキャンセルされました。",
+                f"秘密テキスト「{ replace_idol_emoji(secret_text) }」がキャンセルされました。",
                 ephemeral=True
                 )
         else:

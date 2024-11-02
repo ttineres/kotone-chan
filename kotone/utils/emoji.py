@@ -5,6 +5,7 @@
 
 import random
 from collections import ChainMap
+import re
 
 KOTONE_EMOJI = {
     "kotone1"    : "<:kotone1:1285561438651285545>",
@@ -112,6 +113,23 @@ def get_emoji(*emoji_dicts):
     random_key = random.choice([*emojis.keys()])
     return emojis[random_key]
 
+def replace_match(match):
+    """ Helper function for replace_idol_emoji(). """
+    emoji_name = match.group(1)
+    return IDOL_EMOJI.get(emoji_name, match.group(0))
+
+def replace_idol_emoji(message):
+    """ Replaces all instances of idol emojis formatted
+        as :emoji_name: with appropriate values in IDOL_EMOJI.
+    """
+    # Regular expression to match Discord emoji syntax
+    emoji_pattern = r"<:(\w+):\d+>"
+
+    # Replace appropriate idol emojis
+    new_message = re.sub(emoji_pattern, replace_match, message)
+
+    return new_message
+
 
 if __name__ == "__main__":
     print("Examples of emoji:")
@@ -119,3 +137,13 @@ if __name__ == "__main__":
     print(get_emoji(KOTONE_EMOJI))
     print(get_emoji(P_ITEM_EMOJI))
     print(get_emoji(KOTONE_EMOJI, P_ITEM_EMOJI))
+    print("Examples of messages with replaced idol emojis:")
+    print(replace_idol_emoji("手毬<:temari1:1240868706989641738>"))
+    print(replace_idol_emoji(
+        "俺<:TheTman:467927310184611841>:"
+        "今日は<:ques:1247745906816585729>なんだ"
+    ))
+    print(replace_idol_emoji(
+        ":happy::lucky:<:wakarimasitaka:1247746311252480070> "
+        "<:character_150KingBoo:1084132570020720701>"
+    ))

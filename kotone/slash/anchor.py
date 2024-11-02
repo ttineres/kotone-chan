@@ -6,6 +6,8 @@
 import discord
 from discord.ext import commands
 
+from utils.emoji import replace_idol_emoji
+
 
 class Anchor(commands.Cog):
     """ A cog for anchor activities (安価スレ). """
@@ -64,7 +66,7 @@ class Anchor(commands.Cog):
         
         await interaction.response.send_message(
             "安価スレを開始しました！\n"
-            f"内容は「{content}」\n"
+            f"内容は「{ replace_idol_emoji(content) }」\n"
             f"↓ {num_msg}\n"
             "`一定の期間内に書き込みがない場合、安価スレが失効になる可能性があります。`"
         )
@@ -85,9 +87,10 @@ class Anchor(commands.Cog):
         
         if author in self.active_users:
             self.active_users.remove(author)
+            anchor_prompt = self.user_prompts.pop(author, "")
             await channel.send(
-                f"{author_name}さん、安価「{self.user_prompts.pop(author, "")}」の結果が出ましたよ！\n"
-                f"結果は「{msg.content}」です。"
+                f"{author_name}さん、安価「{ replace_idol_emoji(anchor_prompt) }」の結果が出ましたよ！\n"
+                f"結果は「{ replace_idol_emoji(msg.content) }」です。"
             )
     
     @group.command(name="cancel", description="自動安価をキャンセルする")
@@ -95,7 +98,8 @@ class Anchor(commands.Cog):
         author = interaction.user.name
         if author in self.active_users:
             self.active_users.remove(author)
-            await interaction.response.send_message(f"安価「{self.user_prompts.pop(author, "")}」がキャンセルされました。")
+            anchor_prompt = self.user_prompts.pop(author, "")
+            await interaction.response.send_message(f"安価「{ replace_idol_emoji(anchor_prompt) }」がキャンセルされました。")
         else:
             await interaction.response.send_message("進行中の安価がありません。", ephemeral=True)
     
