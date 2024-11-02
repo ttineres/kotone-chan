@@ -98,7 +98,7 @@ class Anchor(commands.Cog):
             self.active_users.remove(author)
             await interaction.response.send_message(f"安価「{self.user_prompts.pop(author, "")}」がキャンセルされました。")
         else:
-            await interaction.response.send_message("進行中の安価はありません。")
+            await interaction.response.send_message("進行中の安価はありません。", ephemeral=True)
     
     @group.command(name="help", description="安価コマンドのヘルプを表示する")
     async def help_anchor(self, interaction: discord.Interaction):
