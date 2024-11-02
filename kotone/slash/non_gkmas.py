@@ -30,6 +30,7 @@ class NonGKMas(commands.Cog):
             "* `/goldrush`: 学園アイドルマスター GOLD RUSH の便利リンクを確認できます！\n"
             "* `/kotone-hello`：ことねちゃんが挨拶しますよ！\n"
             "* `/anchor`：`/anchor help`をご参照ください。\n"
+            "* `/secret`：`/secret help`をご参照ください。"
             "* `!kotone`：とっておきのことねちゃんスタンプを見せちゃいます♪",
             ephemeral=True
         )
