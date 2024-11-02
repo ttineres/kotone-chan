@@ -30,7 +30,7 @@ DEBUGGING = os.getenv("DEBUGGING")
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix="!", help_command=None, intents=intents)
 
 # Load commands once bot is ready
 @bot.event
