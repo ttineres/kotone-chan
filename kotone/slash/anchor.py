@@ -98,7 +98,7 @@ class Anchor(commands.Cog):
             self.active_users.remove(author)
             await interaction.response.send_message(f"安価「{self.user_prompts.pop(author, "")}」がキャンセルされました。")
         else:
-            await interaction.response.send_message("進行中の安価はありません。", ephemeral=True)
+            await interaction.response.send_message("進行中の安価がありません。", ephemeral=True)
     
     @group.command(name="help", description="安価コマンドのヘルプを表示する")
     async def help_anchor(self, interaction: discord.Interaction):
@@ -107,9 +107,9 @@ class Anchor(commands.Cog):
             "* `/anchor start`：安価を開始する\n"
             "* `/anchor cancel`：安価をキャンセルする\n"
             "注意事項：```"
-            "安価コマンドに指定される書き込みは同チャンネルから選出されます。\n"
-            "安価スレと関係のない書き込みも安価のカウントに含まれます。\n"
-            "同時に複数の安価スレを作成することはできません。\n"
+            "* 安価コマンドに指定される書き込みは同チャンネルから選出されます。\n"
+            "* 安価スレと関係のない書き込みも安価のカウントに含まれます。\n"
+            "* 同時に複数の安価スレを作成することはできません。\n"
             "```",
             ephemeral=True
         )
