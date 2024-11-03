@@ -88,10 +88,19 @@ class Anchor(commands.Cog):
         if author in self.active_users:
             self.active_users.remove(author)
             anchor_prompt = self.user_prompts.pop(author, "")
-            await channel.send(
-                f"{author_name}さん、安価「{ replace_idol_emoji(anchor_prompt) }」の結果が出ましたよ！\n"
-                f"結果は「{ replace_idol_emoji(msg.content) }」です。"
-            )
+            
+            if "\n" in msg.content:
+                message = (
+                    f"{author_name}さん、安価「{ replace_idol_emoji(anchor_prompt) }」の結果は以下の通りです：\n"
+                    f"{ replace_idol_emoji(msg.content) }"
+                )
+            else:
+                message = (
+                    f"{author_name}さん、安価「{ replace_idol_emoji(anchor_prompt) }」の結果が出ましたよ！\n"
+                    f"結果は「{ replace_idol_emoji(msg.content) }」です。"
+                )
+
+            await channel.send(message)
     
     @group.command(name="cancel", description="自動安価をキャンセルする")
     async def cancel_anchor(self, interaction: discord.Interaction):
