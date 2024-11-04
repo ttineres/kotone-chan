@@ -1,13 +1,13 @@
 #
-# events/interact.py
+# event_interact.py
 #
 
 
 import discord
 from discord.ext import commands
 
-from utils.emoji import KOTONE_EMOJI
-from utils.voiceline import get_greeting_new_member
+from util_emoji import KOTONE_EMOJI
+from util_voiceline import get_greeting_new_member
 
 
 class Interact(commands.Cog):

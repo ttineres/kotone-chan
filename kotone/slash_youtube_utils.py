@@ -1,5 +1,5 @@
 #
-# slash/youtube_utils.py
+# slash_youtube_utils.py
 #
 # YouTube API reference: https://developers.google.com/youtube/v3/docs
 #
@@ -12,8 +12,8 @@ import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
 
-from utils.emoji import KOTONE_EMOJI, IDOL_EMOJI
-from utils.chara_name import KOTONE_NICKNAME_OF
+from util_emoji import KOTONE_EMOJI, IDOL_EMOJI
+from util_chara_name import KOTONE_NICKNAME_OF
 
 
 # Retrieve API key from environment variable

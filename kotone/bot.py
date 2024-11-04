@@ -38,25 +38,13 @@ async def on_ready():
     logging.info(f"[KOTONE] Logged in as {bot.user}")
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="世界一可愛い私"))
 
-    ignored_files = ["__init__.py"]
+    ignored_files = ["bot.py", "keep_alive.py", "__init__.py"]
     
-    # Add exclamation commands
-    for f in os.listdir("kotone/exclamation"):
-        if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/exclamation/{f}")
-            await bot.load_extension(f"exclamation.{f[:-3]}")
-
-    # Add slash commands
-    for f in os.listdir("kotone/slash"):
-        if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/slash/{f}")
-            await bot.load_extension(f"slash.{f[:-3]}")
-    
-    # Add events
-    for f in os.listdir("kotone/events"):
-        if f.endswith(".py") and f not in ignored_files:
-            logging.info(f"[KOTONE] Adding kotone/events/{f}")
-            await bot.load_extension(f"events.{f[:-3]}")
+    # Add commands
+    for f in os.listdir("kotone"):
+        if f not in ignored_files and f.endswith(".py") and not f.startswith("util_"):
+            logging.info(f"[KOTONE] Adding kotone/{f}")
+            await bot.load_extension(f"{f[:-3]}")
     
     if DEBUGGING == "TRUE":
         # immediately synchronize commands to a personal guild for debugging

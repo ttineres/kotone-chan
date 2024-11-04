@@ -1,14 +1,14 @@
 #
-# slash/non_gkmas.py
+# slash_non_gkmas.py
 #
 
 
 import discord
 from discord.ext import commands
 
-from utils.emoji import get_emoji, KOTONE_EMOJI
-from utils.voiceline import get_greeting
-from utils.binary_enum import Ephemeral
+from util_emoji import get_emoji, KOTONE_EMOJI
+from util_voiceline import get_greeting
+from util_binary_enum import Ephemeral
 
 
 class NonGKMas(commands.Cog):

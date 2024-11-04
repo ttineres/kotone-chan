@@ -1,5 +1,5 @@
 #
-# slash/gkmas.py
+# slash_gkmas.py
 #
 
 
@@ -9,8 +9,8 @@ import math
 import random
 import typing
 
-from utils.emoji import get_emoji, P_ITEM_EMOJI
-from utils.binary_enum import Ephemeral
+from util_emoji import get_emoji, P_ITEM_EMOJI
+from util_binary_enum import Ephemeral
 
 
 A_PLUS = 11500

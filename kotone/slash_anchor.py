@@ -1,12 +1,12 @@
 #
-# slash/anchor.py
+# slash_anchor.py
 #
 
 
 import discord
 from discord.ext import commands
 
-from utils.emoji import replace_idol_emoji
+from util_emoji import replace_idol_emoji
 
 
 class Anchor(commands.Cog):

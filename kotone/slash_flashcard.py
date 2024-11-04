@@ -1,5 +1,5 @@
 #
-# slash/flashcard.py
+# slash_flashcard.py
 #
 
 
@@ -8,7 +8,7 @@ import os
 import discord
 from discord.ext import commands
 
-from utils.binary_enum import Ephemeral
+from util_binary_enum import Ephemeral
 
 
 P_DRINK_FLASHCARD = {
