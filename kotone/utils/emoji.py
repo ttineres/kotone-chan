@@ -123,7 +123,7 @@ def replace_idol_emoji(message):
         as :emoji_name: with appropriate values in IDOL_EMOJI.
     """
     # Regular expression to match Discord emoji syntax
-    emoji_pattern = "<:(\w+):\d+>"
+    emoji_pattern = r"<:(\w+):\d+>"
 
     # Replace appropriate idol emojis
     new_message = re.sub(emoji_pattern, replace_match, message)
