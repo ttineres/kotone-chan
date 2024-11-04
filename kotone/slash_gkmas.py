@@ -9,8 +9,8 @@ import math
 import random
 import typing
 
-from util_emoji import get_emoji, P_ITEM_EMOJI
-from util_binary_enum import Ephemeral
+from .util_emoji import get_emoji, P_ITEM_EMOJI
+from .util_binary_enum import Ephemeral
 
 
 A_PLUS = 11500

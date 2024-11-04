@@ -7,8 +7,8 @@ import discord
 from discord.ext import commands
 import random
 
-from util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI
-from util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
+from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI
+from .util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
 
 
 class Miscellaneous(commands.Cog):

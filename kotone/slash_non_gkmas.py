@@ -6,9 +6,9 @@
 import discord
 from discord.ext import commands
 
-from util_emoji import get_emoji, KOTONE_EMOJI
-from util_voiceline import get_greeting
-from util_binary_enum import Ephemeral
+from .util_emoji import get_emoji, KOTONE_EMOJI
+from .util_voiceline import get_greeting
+from .util_binary_enum import Ephemeral
 
 
 class NonGKMas(commands.Cog):
