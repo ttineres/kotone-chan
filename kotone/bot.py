@@ -44,7 +44,7 @@ async def on_ready():
     for f in os.listdir("kotone"):
         if f not in ignored_files and f.endswith(".py") and not f.startswith("util_"):
             logging.info(f"[KOTONE] Adding kotone/{f}")
-            await bot.load_extension(f".{f[:-3]}")
+            await bot.load_extension(f"kotone.{f[:-3]}")
     
     if DEBUGGING == "TRUE":
         # immediately synchronize commands to a personal guild for debugging
