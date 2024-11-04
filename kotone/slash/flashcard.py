@@ -127,8 +127,7 @@ P_ITEM_FLASHCARD_FREQ = {
 }
 
 # All P-items
-P_ITEM_FLASHCARD = {
-    **P_ITEM_FLASHCARD_FREQ,
+P_ITEM_FLASHCARD = P_ITEM_FLASHCARD_FREQ | {
     "desc": "すべてのPアイテム",
 
     # R Sense
@@ -273,10 +272,8 @@ SKILLCARD_FLASHCARD_FREQ = {
     "desc": "よく使われるスキルカード",
 }
 
-SKILLCARD_FLASHCARD = {
-    **SKILLCARD_FLASHCARD_FREQ,
+SKILLCARD_FLASHCARD = SKILLCARD_FLASHCARD_FREQ | {
     "desc": "すべてのスキルカード",
-    
 }
 
 

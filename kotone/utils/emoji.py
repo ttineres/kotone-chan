@@ -123,7 +123,7 @@ def replace_idol_emoji(message):
         as :emoji_name: with appropriate values in IDOL_EMOJI.
     """
     # Regular expression to match Discord emoji syntax
-    emoji_pattern = r"<:(\w+):\d+>"
+    emoji_pattern = "<:(\w+):\d+>"
 
     # Replace appropriate idol emojis
     new_message = re.sub(emoji_pattern, replace_match, message)
@@ -146,4 +146,9 @@ if __name__ == "__main__":
     print(replace_idol_emoji(
         ":happy::lucky:<:wakarimasitaka:1247746311252480070> "
         "<:character_150KingBoo:1084132570020720701>"
+    ))
+    print(replace_idol_emoji(
+        "<:ume_hlw:1289166804236894281> "
+        "<:rinami_hlw:1289166794270965782> "
+        "<:matane:1222091514126143488>"
     ))
