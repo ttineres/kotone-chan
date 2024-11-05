@@ -8,10 +8,10 @@ from discord.ext import commands
 
 from .util_emoji import get_emoji, KOTONE_EMOJI
 from .util_voiceline import get_greeting
-from .util_binary_enum import Ephemeral
+from .util_binary_enum import EphemeralEnum
 
 
-class NonGKMas(commands.Cog):
+class NonGakumasCog(commands.Cog):
     """ A cog for commands unrelated to playing Gakumas. """
     def __init__(self, bot):
         self.bot = bot
@@ -39,7 +39,7 @@ class NonGKMas(commands.Cog):
         description="ことねちゃんに挨拶する"
     )
     @discord.app_commands.rename(ephemeral="表示設定")
-    async def kotone_hello(self, interaction: discord.Interaction, ephemeral: Ephemeral = Ephemeral.F):
+    async def kotone_hello(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.F):
         """ Greets the user. """
         await interaction.response.send_message(
             f"{ get_greeting(interaction.user.mention) }"
@@ -55,7 +55,7 @@ class NonGKMas(commands.Cog):
     async def goldrush(
         self,
         interaction: discord.Interaction,
-        ephemeral: Ephemeral = Ephemeral.T
+        ephemeral: EphemeralEnum = EphemeralEnum.T
     ):
         """ Provides useful links to Gold Rush"""
         await interaction.response.send_message(
@@ -69,4 +69,4 @@ class NonGKMas(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(NonGKMas(bot))
+    await bot.add_cog(NonGakumasCog(bot))

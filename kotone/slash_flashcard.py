@@ -8,7 +8,7 @@ import os
 import discord
 from discord.ext import commands
 
-from .util_binary_enum import Ephemeral
+from .util_binary_enum import EphemeralEnum
 
 
 P_DRINK_FLASHCARD = {
@@ -337,7 +337,7 @@ class QuesPreView(QuesPostView):
         await interaction.response.edit_message(content=self.full_text, view=QuesPostView(self.flashcard_dict, self.ques_using_key))
 
 
-class Flashcard(commands.Cog):
+class FlashcardCog(commands.Cog):
     """ A cog for flashcard activities. """
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -347,7 +347,7 @@ class Flashcard(commands.Cog):
 
     @group.command(name="drink", description="Pドリンク単語帳から出題")
     @discord.app_commands.rename(ephemeral="表示設定")
-    async def p_drink_flashcard(self, interaction: discord.Interaction, ephemeral: Ephemeral = Ephemeral.T):
+    async def p_drink_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
         """ Interactive quiz from P-drink flashcards. """
         new_ques_text, new_full_text = quiz_from(P_DRINK_FLASHCARD, True)
         await interaction.response.send_message(
@@ -359,7 +359,7 @@ class Flashcard(commands.Cog):
 
     @group.command(name="item", description="よく使われるPアイテム単語帳から出題")
     @discord.app_commands.rename(ephemeral="表示設定")
-    async def p_item_flashcard(self, interaction: discord.Interaction, ephemeral: Ephemeral = Ephemeral.T):
+    async def p_item_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
         """ Interactive quiz from P-item flashcards. """
         new_ques_text, new_full_text = quiz_from(P_ITEM_FLASHCARD_FREQ, True)
         await interaction.response.send_message(
@@ -371,7 +371,7 @@ class Flashcard(commands.Cog):
     
     @group.command(name="item-all", description="すべてのPアイテム単語帳から出題")
     @discord.app_commands.rename(ephemeral="表示設定")
-    async def p_item_all_flashcard(self, interaction: discord.Interaction, ephemeral: Ephemeral = Ephemeral.T):
+    async def p_item_all_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
         """ Interactive quiz from all P-item flashcards. """
         new_ques_text, new_full_text = quiz_from(P_ITEM_FLASHCARD, True)
         await interaction.response.send_message(
@@ -399,7 +399,7 @@ class Flashcard(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Flashcard(bot))
+    await bot.add_cog(FlashcardCog(bot))
 
 
 if __name__ == "__main__":

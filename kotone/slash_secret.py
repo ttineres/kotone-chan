@@ -9,7 +9,7 @@ from discord.ext import commands
 from .util_emoji import replace_idol_emoji
 
 
-class Secret(commands.Cog):
+class SecretCog(commands.Cog):
     """ A cog for storing secret texts to be revealed later. """
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -133,4 +133,4 @@ class Secret(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Secret(bot))
+    await bot.add_cog(SecretCog(bot))

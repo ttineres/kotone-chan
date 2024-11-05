@@ -28,7 +28,7 @@ HATSUBOSHI_PLAYLIST_ID = "PL8AmPgz38WkXIiEnqf-Q5XkWpQgm5UiuF"
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
 
-class YouTubeUtils(commands.Cog):
+class YouTubeUtilsCog(commands.Cog):
     """ A cog for YouTube-related commands. """
     def __init__(self, bot):
         self.bot = bot
@@ -184,7 +184,7 @@ class MediaTypeView(View):
     
 
 async def setup(bot: discord):
-    await bot.add_cog(YouTubeUtils(bot))
+    await bot.add_cog(YouTubeUtilsCog(bot))
 
 
 #

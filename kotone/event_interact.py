@@ -10,7 +10,7 @@ from .util_emoji import KOTONE_EMOJI
 from .util_voiceline import get_greeting_new_member
 
 
-class Interact(commands.Cog):
+class InteractCog(commands.Cog):
     """ A cog for user interactions. """
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -27,4 +27,4 @@ class Interact(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Interact(bot))
+    await bot.add_cog(InteractCog(bot))

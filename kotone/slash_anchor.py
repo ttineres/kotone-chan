@@ -9,7 +9,7 @@ from discord.ext import commands
 from .util_emoji import replace_idol_emoji
 
 
-class Anchor(commands.Cog):
+class AnchorCog(commands.Cog):
     """ A cog for anchor activities (安価スレ). """
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -128,4 +128,4 @@ class Anchor(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Anchor(bot))
+    await bot.add_cog(AnchorCog(bot))

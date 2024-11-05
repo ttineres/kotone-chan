@@ -10,7 +10,7 @@ import random
 import typing
 
 from .util_emoji import get_emoji, P_ITEM_EMOJI
-from .util_binary_enum import Ephemeral
+from .util_binary_enum import EphemeralEnum
 
 
 A_PLUS = 11500
@@ -35,7 +35,7 @@ def param_to_score(param, rank):
     return 40000 + math.ceil((diff-3650) / 0.01)
 
 
-class GKMas(commands.Cog):
+class GakumasCog(commands.Cog):
     """ A cog for commands related to playing Gakumas. """
     def __init__(self, bot):
         self.bot = bot
@@ -52,7 +52,7 @@ class GKMas(commands.Cog):
         da: int,
         vi: int,
         cap: typing.Literal[1500, 1800] = 1800,
-        ephemeral: Ephemeral = Ephemeral.T
+        ephemeral: EphemeralEnum = EphemeralEnum.T
     ):
         """ Calculates score required for ranks.
             Parameters are BEFORE exam.
@@ -89,7 +89,7 @@ class GKMas(commands.Cog):
         vo: int,
         da: int,
         vi: int,
-        ephemeral: Ephemeral = Ephemeral.T
+        ephemeral: EphemeralEnum = EphemeralEnum.T
     ):
         """ Calculates score required for ranks.
             Parameters are AFTER exam.
@@ -106,4 +106,4 @@ class GKMas(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(GKMas(bot))
+    await bot.add_cog(GakumasCog(bot))

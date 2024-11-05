@@ -11,7 +11,7 @@ from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI
 from .util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
 
 
-class Miscellaneous(commands.Cog):
+class ExclamationMiscCog(commands.Cog):
     """ A cog for miscellaneous commands. """
     def __init__(self, bot):
         self.bot = bot
@@ -51,4 +51,4 @@ class Miscellaneous(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(Miscellaneous(bot))
+    await bot.add_cog(ExclamationMiscCog(bot))

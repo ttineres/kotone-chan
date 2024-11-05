@@ -1,12 +1,12 @@
 #
 # util_binary_enum.py
 #
-# Simple enums for handling boolean-like choices
+# Simple enum for handling boolean-like choices
 #
 
 import enum
 
-class Ephemeral(enum.Enum):
+class EphemeralEnum(enum.Enum):
     全体表示 = 0
     自分だけに表示 = 1
     F = 0
