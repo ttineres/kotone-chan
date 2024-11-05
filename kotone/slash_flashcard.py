@@ -283,7 +283,7 @@ def quiz_from(flashcard_dict, ques_using_key):
         Otherwise, uses value as question and key as answer.
         Returns a pair (question_only_text, full_text).
     """
-    header_q_only = f"{flashcard_dict["desc"]}の単語帳から出題します！\n"
+    header_q_only = f"「{flashcard_dict["desc"]}」の単語帳から出題します！\n"
     header_full = "正解はこちら！\n"
 
     key = random.choice(list(flashcard_dict.keys()))
