@@ -113,6 +113,19 @@ def get_emoji(*emoji_dicts):
     random_key = random.choice([*emojis.keys()])
     return emojis[random_key]
 
+def emoji_to_name(emoji):
+    """ Attempts to return `alphanumeric_name` from emoji format
+        `<:alphanumeric_name:int_id>`
+        or returns empty string if no match is found.
+    """
+    emoji_pattern = r"^<:(\w+):\d+>$"
+    match = re.match(emoji_pattern, emoji)
+
+    if match:
+        return match.group(1)
+    else:
+        return None
+
 def replace_match(match):
     """ Helper function for replace_idol_emoji(). """
     emoji_name = match.group(1)

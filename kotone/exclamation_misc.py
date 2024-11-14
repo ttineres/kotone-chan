@@ -7,7 +7,7 @@ import discord
 from discord.ext import commands
 import random
 
-from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI
+from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI, emoji_to_name
 from .util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
 
 
@@ -34,15 +34,20 @@ class ExclamationMiscCog(commands.Cog):
             f"{ get_emoji(KOTONE_EMOJI) }"
         )
     
-    
     @commands.command(name="kotone")
     async def kotone(self, ctx, *, arg=None):
         """ Sends Kotone emoji.
             Optionally, sends the secified idol emoji.
         """
+        # Converts emoji arg to name
+        if arg:
+            arg = emoji_to_name(arg)
+
+        # Converts name to emoji
         emoji = IDOL_EMOJI.get(arg, get_emoji())
         await ctx.send(emoji)
-        # Try to delete input prompt
+
+        # Attempts to delete input prompt
         # Only works if given "Manage message" permission
         try:
             await ctx.message.delete()
