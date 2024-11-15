@@ -122,12 +122,20 @@ SPECIAL_KEYWORDS_GREETING = {
         "お、オハヨ～ございまぁす。",
         "……え……十王会長！？",
     ],
+    "ママうるさい": [
+        "う……ん……ん゛～～……くるしぃ……おもぉい。",
+        "おっ……おーまーえーらぁ～～～～～～～～～～！！",
+        "ここ、あたしの布団！　寝苦しいと思ったらさぁ～！",
+        "なんで領土侵犯してくんの！？　寝相悪すぎぃ！",
+        "ママじゃねーんだよぉ！",
+        "さっさと起きてどけぇ～！",
+    ]
 }
 
 
 def get_greeting_special(name: str, keyword: str) -> str:
     """ Greets user with respect to the invoked special `keyword`.
-    
+
         `keyword` should be a key in `SPECIAL_KEYWORDS_GREETING` dict.
     """
     if keyword in SPECIAL_KEYWORDS_GREETING.keys():
