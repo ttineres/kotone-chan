@@ -5,7 +5,6 @@
 
 import discord
 from discord.ext import commands
-import random
 
 from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI, emoji_to_name
 from .util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
@@ -22,8 +21,7 @@ class ExclamationMiscCog(commands.Cog):
             Certain keywords in arg trigger special interaction.
         """
         if arg:
-            keywords = SPECIAL_KEYWORDS_GREETING.copy()
-            random.shuffle(keywords)
+            keywords = SPECIAL_KEYWORDS_GREETING.keys()
             for keyword in keywords:
                 if keyword in arg:
                     await ctx.reply(get_greeting_special(ctx.author.mention, keyword))
