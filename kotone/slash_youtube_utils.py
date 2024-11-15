@@ -175,7 +175,7 @@ class MediaTypeView(View):
         )
     
     @discord.ui.button(label="十王星南", emoji=IDOL_EMOJI["sena1"], style=discord.ButtonStyle.grey, row=4)
-    async def rinami_button(self, interaction: discord.Interaction, button: Button):
+    async def sena_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Sena Juo"),
             ephemeral=True,
