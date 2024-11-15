@@ -84,7 +84,7 @@ def get_season_aisatu(name):
         return random.choice([
             "フルーツ狩りって、いくつ取れたらお得なんですかね……",
             "働きやすい気温になってきましたね！",
-            f"{name}さん！　お仕事の秋が来ましたよ！"
+            f"{name}さん！　お仕事の秋が来ましたよ！",
         ])
 
 def get_greeting_new_member(name):
@@ -103,48 +103,27 @@ def get_greeting_new_member(name):
     ])
 
 
-SPECIAL_KEYWORDS_GREETING = [
-    "奇遇ね",
-]
+SPECIAL_KEYWORDS_GREETING = {
+    "奇遇ね": [
+        "げっ！　どうしてこんなとこまでッ！？",
+        "うぇっ。な、なんすか？",
+        "げっ……しっつれいしまぁーす！",
+        "うぇっ！　勘弁してくださぁ～い！",
+        "げっ！　なんでいるんだよ！",
+        "うげっ！　……会長かと思いましたぁ。",
+        "じゅ、十王会長！？",
+        "会長！？　とっ……とりあえず――場所！　場所変えましょう！！",
+        "お、オハヨ～ございまぁす。",
+        "……え……十王会長！？",
+    ],
+}
 
 def get_greeting_special(name, keyword):
     """ Greets user if special keyword is used.
         Input keyword should be a member of SPECIAL_KEYWORDS_GREETING.
     """
-    match keyword:
-        case "奇遇ね":
-            return random.choice([
-                "げっ！　どうしてこんなとこまでッ！？",
-                "うぇっ。な、なんすか？",
-                "げっ……しっつれいしまぁーす！",
-                "うぇっ！　勘弁してくださぁ～い！",
-                "げっ！　なんでいるんだよ！",
-                "うげっ！　……会長かと思いましたぁ。",
-                "じゅ、十王会長！？",
-                "会長！？　とっ……とりあえず――場所！　場所変えましょう！！",
-                "お、オハヨ～ございまぁす。",
-                "……え……十王会長！？",
-            ])
-        case _:
-            logging.info(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}).")
-            return get_greeting(name)
-
-
-if __name__ == "__main__":
-    print("Examples of greeting:")
-    print(get_greeting("username"))
-    print(get_greeting("username"))
-    print(get_greeting("username"))
-    print(get_greeting("username"))
-    print(get_greeting("username"))
-    print(get_greeting("username"))
-    print("Examples of greeting new member:")
-    print(get_greeting_new_member("username"))
-    print(get_greeting_new_member("username"))
-    print(get_greeting_new_member("username"))
-    print(get_greeting_new_member("username"))
-    print(get_greeting_new_member("username"))
-    print(get_greeting_new_member("username"))
-    print("Examples of special greeting:")
-    print(get_greeting_special("username"))
-    print(get_greeting_special("username"))
+    if keyword in SPECIAL_KEYWORDS_GREETING.keys():
+        return random.choice(SPECIAL_KEYWORDS_GREETING[keyword])
+    else:
+        logging.info(f"[KOTONE] Could not properly call get_greeting_special({keyword}, {name}). This condition is caused by a bug in the kotone package.")
+        return get_greeting(name)

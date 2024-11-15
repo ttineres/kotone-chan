@@ -142,26 +142,3 @@ def replace_idol_emoji(message):
     new_message = re.sub(emoji_pattern, replace_match, message)
 
     return new_message
-
-
-if __name__ == "__main__":
-    print("Examples of emoji:")
-    print(get_emoji())
-    print(get_emoji(KOTONE_EMOJI))
-    print(get_emoji(P_ITEM_EMOJI))
-    print(get_emoji(KOTONE_EMOJI, P_ITEM_EMOJI))
-    print("Examples of messages with replaced idol emojis:")
-    print(replace_idol_emoji("手毬<:temari1:1240868706989641738>"))
-    print(replace_idol_emoji(
-        "俺<:TheTman:467927310184611841>:"
-        "今日は<:ques:1247745906816585729>なんだ"
-    ))
-    print(replace_idol_emoji(
-        ":happy::lucky:<:wakarimasitaka:1247746311252480070> "
-        "<:character_150KingBoo:1084132570020720701>"
-    ))
-    print(replace_idol_emoji(
-        "<:ume_hlw:1289166804236894281> "
-        "<:rinami_hlw:1289166794270965782> "
-        "<:matane:1222091514126143488>"
-    ))
