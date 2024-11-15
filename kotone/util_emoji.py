@@ -6,6 +6,8 @@
 import random
 from collections import ChainMap
 import re
+from typing import Optional
+
 
 KOTONE_EMOJI = {
     "kotone1"    : "<:kotone1:1285561438651285545>",
@@ -15,11 +17,13 @@ KOTONE_EMOJI = {
     "siturei"    : "<:siturei:1300725518307688458>",
 }
 
+
 P_ITEM_EMOJI = {
     "p_item_chokinbako": "<:p_item_chokinbako:1285442904101490770>",
     "p_item_minamoto"  : "<:p_item_minamoto:1285442926121586790>",
     "p_item_hanabi"    : "<:p_item_hanabi:1285442948133289984>",
 }
+
 
 IDOL_EMOJI = {
     "saki1"      : "<:saki1:1285561319361220711>",
@@ -101,7 +105,8 @@ IDOL_EMOJI = {
     "hajimemasune"  : "<:hajimemasune:1300725746729222206>",
 }
 
-def get_emoji(*emoji_dicts):
+
+def get_emoji(*emoji_dicts: dict[str, str]) -> str:
     """ Returns a random emoji chosen from all emoji dicts.
         Specify emoji_dicts to choose only from those dicts.
     """
@@ -113,7 +118,8 @@ def get_emoji(*emoji_dicts):
     random_key = random.choice([*emojis.keys()])
     return emojis[random_key]
 
-def emoji_to_name(emoji):
+
+def emoji_to_name(emoji: Optional[str]) -> Optional[str]:
     """ Attempts to return `alphanumeric_name` from emoji format
         `<:alphanumeric_name:int_id>`
         or returns empty string if no match is found.
@@ -129,12 +135,16 @@ def emoji_to_name(emoji):
     else:
         return
 
-def replace_match(match):
-    """ Helper function for replace_idol_emoji(). """
+
+def _replace_match(match: re.Match[str]) -> str:
+    """ Helper function for replace_idol_emoji().
+        Returns the corresponding emoji from name found in `match`.
+    """
     emoji_name = match.group(1)
     return IDOL_EMOJI.get(emoji_name, match.group(0))
 
-def replace_idol_emoji(message):
+
+def replace_idol_emoji(message: str) -> str:
     """ Replaces all instances of idol emojis formatted
         as :emoji_name: with appropriate values in IDOL_EMOJI.
     """
@@ -142,6 +152,6 @@ def replace_idol_emoji(message):
     emoji_pattern = r"<:(\w+):\d+>"
 
     # Replace appropriate idol emojis
-    new_message = re.sub(emoji_pattern, replace_match, message)
+    new_message = re.sub(emoji_pattern, _replace_match, message)
 
     return new_message

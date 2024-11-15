@@ -29,10 +29,12 @@ HOME_VOICE = {
     "HOME_18" : "ナ～あたしのこと好きすぎでしょ♡",
 }
 
-JAPAN_TIMEZONE = timezone(timedelta(hours=9))
 
-def get_greeting(name):
-    """ Randomly generates greeting. """
+_JAPAN_TIMEZONE = timezone(timedelta(hours=9))
+
+
+def get_greeting(name: str) -> str:
+    """ Randomly generates greeting for user with `name`. """
     rand = random.random()
     if rand < 0.1:
         return get_aisatu(name)
@@ -41,9 +43,11 @@ def get_greeting(name):
     random_key = random.choice([*HOME_VOICE.keys()])
     return HOME_VOICE[random_key]
 
-def get_aisatu(name):
+
+def get_aisatu(name: str) -> str:
     """ Returns greeting that changes based on the time of day. """
-    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(JAPAN_TIMEZONE)
+    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(_JAPAN_TIMEZONE)
+
     if 6 <= now.hour < 11:
         return random.choice([
             f"おっはようございまーす、{name}さん！",
@@ -65,9 +69,10 @@ def get_aisatu(name):
             "今日も後ちょっと、頑張りましょう！"
         ])
 
-def get_season_aisatu(name):
+
+def get_season_aisatu(name: str) -> str:
     """ Returns greeting that changes based on season. """
-    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(JAPAN_TIMEZONE)
+    now = datetime.now(timezone.utc).replace(tzinfo=timezone.utc).astimezone(_JAPAN_TIMEZONE)
     if 3 <= now.month < 6:
         return random.choice([
             "来ました……春限定メニューという名の、繁忙期がぁ～！",
@@ -87,8 +92,9 @@ def get_season_aisatu(name):
             f"{name}さん！　お仕事の秋が来ましたよ！",
         ])
 
-def get_greeting_new_member(name):
-    """ Generates greeting for new member. """
+
+def get_greeting_new_member(name: str) -> str:
+    """ Generates greeting for new member with `name`. """
     return random.choice([
         f"ようこそ、{name}さん！　ここで素敵な時間を過ごしましょう～～！",
         f"{name}さん、いらっしゃい～♪",
@@ -118,9 +124,11 @@ SPECIAL_KEYWORDS_GREETING = {
     ],
 }
 
-def get_greeting_special(name, keyword):
-    """ Greets user if special keyword is used.
-        Input keyword should be a member of SPECIAL_KEYWORDS_GREETING.
+
+def get_greeting_special(name: str, keyword: str) -> str:
+    """ Greets user with respect to the invoked special `keyword`.
+    
+        `keyword` should be a key in `SPECIAL_KEYWORDS_GREETING` dict.
     """
     if keyword in SPECIAL_KEYWORDS_GREETING.keys():
         return random.choice(SPECIAL_KEYWORDS_GREETING[keyword])
