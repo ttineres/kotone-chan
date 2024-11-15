@@ -22,6 +22,7 @@ class ExclamationMiscCog(commands.Cog):
         """
         if arg:
             keywords = SPECIAL_KEYWORDS_GREETING.keys()
+            # Note: the order of keywords is arbitrary
             for keyword in keywords:
                 if keyword in arg:
                     await ctx.reply(get_greeting_special(ctx.author.mention, keyword))
@@ -37,9 +38,8 @@ class ExclamationMiscCog(commands.Cog):
         """ Sends Kotone emoji.
             Optionally, sends the secified idol emoji.
         """
-        # Converts emoji arg to name
-        if arg:
-            arg = emoji_to_name(arg)
+        # Converts arg from emoji format to name
+        arg = emoji_to_name(arg) or arg
 
         # Converts name to emoji
         emoji = IDOL_EMOJI.get(arg, get_emoji())

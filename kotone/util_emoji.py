@@ -118,13 +118,16 @@ def emoji_to_name(emoji):
         `<:alphanumeric_name:int_id>`
         or returns empty string if no match is found.
     """
+    if not emoji:
+        return
+    
     emoji_pattern = r"^<:(\w+):\d+>$"
     match = re.match(emoji_pattern, emoji)
 
     if match:
         return match.group(1)
     else:
-        return None
+        return
 
 def replace_match(match):
     """ Helper function for replace_idol_emoji(). """
