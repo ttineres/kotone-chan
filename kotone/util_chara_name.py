@@ -13,6 +13,6 @@ KOTONE_NICKNAME_OF = {
     "Hiro Shinosawa"  : "篠澤さん",
     "Ume Hanami"      : "佑芽",
     "Misuzu Hataya"   : "秦谷美鈴",
-    "Sena Juou"       : "十王会長",
+    "Sena Juo"        : "十王会長",
     "Rinami Himesaki" : "莉波先輩",
 }

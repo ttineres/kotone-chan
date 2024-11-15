@@ -51,7 +51,7 @@ class YouTubeUtilsCog(commands.Cog):
         discord.app_commands.Choice(name="篠澤広", value="Hiro Shinosawa"),
         discord.app_commands.Choice(name="花海佑芽", value="Ume Hanami"),
         #discord.app_commands.Choice(name="秦谷美鈴", value="Misuzu Hataya"),
-        #discord.app_commands.Choice(name="十王星南", value="Sena Juou"),
+        discord.app_commands.Choice(name="十王星南", value="Sena Juo"),
         discord.app_commands.Choice(name="姫崎莉波", value="Rinami Himesaki"),
     ])
     async def hatsuboshi(
@@ -174,6 +174,14 @@ class MediaTypeView(View):
             suppress_embeds=True,
         )
     
+    @discord.ui.button(label="十王星南", emoji=IDOL_EMOJI["sena1"], style=discord.ButtonStyle.grey, row=4)
+    async def rinami_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Sena Juo"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+
     @discord.ui.button(label="姫崎莉波", emoji=IDOL_EMOJI["rinami1"], style=discord.ButtonStyle.grey, row=4)
     async def rinami_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -254,7 +262,7 @@ def get_music(chara_name):
     message = (
         "こちらが、"
         f"{ KOTONE_NICKNAME_OF[chara_name] }"
-        f"{ IDOL_EMOJI[ chara_name.split()[0].lower() + "_hlw" ] }"
+        f"{ IDOL_EMOJI[ chara_name.split()[0].lower() + "2" ] }"
         "の楽曲一覧でーす！\n"
     )
     for item in music_list:
