@@ -8,6 +8,7 @@ from freezegun import freeze_time
 from unittest.mock import patch
 from datetime import datetime
 from kotone.util_voiceline import *
+from kotone.util_voiceline import _JAPAN_TIMEZONE
 
 
 def test_get_greeting():
@@ -29,7 +30,7 @@ def test_get_greeting():
     ("TestName", 18, ["お疲れさまでーす！", "今日も後ちょっと、頑張りましょう！"]),
 ))
 def test_get_aisatu(name, hour, possible_results):
-    with freeze_time(datetime(2024, 5, 16, hour, tzinfo=JAPAN_TIMEZONE)):
+    with freeze_time(datetime(2024, 5, 16, hour, tzinfo=_JAPAN_TIMEZONE)):
         assert get_aisatu(name) in possible_results
 
 
@@ -40,14 +41,15 @@ def test_get_aisatu(name, hour, possible_results):
     ("TestName", 12, ["フルーツ狩りって、いくつ取れたらお得なんですかね……", "働きやすい気温になってきましたね！", "TestNameさん！　お仕事の秋が来ましたよ！"]),
 ))
 def test_get_season_aisatu(name, month, possible_results):
-    with freeze_time(datetime(2024, month, 1, tzinfo=JAPAN_TIMEZONE)):
+    with freeze_time(datetime(2024, month, 1, tzinfo=_JAPAN_TIMEZONE)):
         assert get_season_aisatu(name) in possible_results
 
 
 @pytest.mark.parametrize(("name", "keyword", "is_special"), (
     ("TestName", "奇遇ね", True),
+    ("TestName", "ママうるさい", True),
     ("TestName", None, False),
-    ("TestName", "ママうるさい", False),
+    ("TestName", "Not a keyword", False)
 ))
 def test_get_greeting_special(name, keyword, is_special):
     response = get_greeting_special(name, keyword)
