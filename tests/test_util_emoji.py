@@ -32,6 +32,7 @@ def test_get_emoji(emojis, possible_outcomes):
 
 
 @pytest.mark.parametrize(("emoji", "emoji_name"), (
+    (None, None),
     ("<:kotone2:1240868676278812742>", "kotone2"),
     ("<:temari_hlw:1289166801900666931>", "temari_hlw"),
     ("<:yatta:1233992971666329662>", "yatta"),
