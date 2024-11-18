@@ -1,6 +1,6 @@
 [project]
 name = "kotone"
-version = "1.0.4"
+version = "1.0.5"
 description = "A custom Discord app for Gakumas."
 readme = "README.md"
 requires-python = ">= 3.12"
@@ -17,6 +17,13 @@ Homepage = "https://github.com/ttineres/kotone-chan"
 
 [project.scripts]
 kotone-init = "kotone.bot:main"
+
+[tool.setuptools.package-data]
+"kotone" = [
+    "flashcard/flashcard_p_drinks.yaml",
+    "flashcard/flashcard_p_items.yaml",
+    "flashcard/flashcard_p_items_freq.yaml",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
