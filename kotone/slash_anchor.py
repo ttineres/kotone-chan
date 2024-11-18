@@ -6,7 +6,7 @@
 import discord
 from discord.ext import commands
 
-from .util_emoji import replace_idol_emoji
+from .util.emoji import replace_idol_emoji
 
 
 class AnchorCog(commands.Cog):

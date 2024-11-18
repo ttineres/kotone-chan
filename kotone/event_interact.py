@@ -6,8 +6,8 @@
 import discord
 from discord.ext import commands
 
-from .util_emoji import KOTONE_EMOJI
-from .util_voiceline import get_greeting_new_member
+from .util.emoji import KOTONE_EMOJI
+from .util.voiceline import get_greeting_new_member
 
 
 class InteractCog(commands.Cog):

@@ -4,7 +4,7 @@
 
 
 import pytest
-from kotone.util_emoji import *
+from kotone.util.emoji import *
 
 
 mock_kotone_emoji = {

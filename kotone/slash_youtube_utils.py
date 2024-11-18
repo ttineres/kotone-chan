@@ -12,8 +12,8 @@ import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
 
-from .util_emoji import KOTONE_EMOJI, IDOL_EMOJI
-from .util_chara_name import KOTONE_NICKNAME_OF
+from .util.emoji import KOTONE_EMOJI, IDOL_EMOJI
+from .util.chara_name import KOTONE_NICKNAME_OF
 
 
 # Retrieve API key from environment variable

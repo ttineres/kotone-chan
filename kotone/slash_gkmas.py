@@ -7,10 +7,10 @@ import discord
 from discord.ext import commands
 import math
 import random
-import typing
+from typing import Literal
 
-from .util_emoji import get_emoji, P_ITEM_EMOJI
-from .util_binary_enum import EphemeralEnum
+from .util.emoji import get_emoji, P_ITEM_EMOJI
+from .util.binary_enum import EphemeralEnum
 
 
 A_PLUS = 11500
@@ -18,7 +18,7 @@ S = 13000
 S_PLUS = 14500
 SS = 16000
 
-def param_to_score(param, rank):
+def param_to_score(param: int, rank: int) -> int:
     """ Returns the scores needed for the specified rank. """
     param_total = int(param * 2.3) + 1700
     diff = rank - param_total
@@ -37,8 +37,10 @@ def param_to_score(param, rank):
 
 class GakumasCog(commands.Cog):
     """ A cog for commands related to playing Gakumas. """
-    def __init__(self, bot):
+
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
+
 
     @discord.app_commands.command(
         name="calculate",
@@ -51,7 +53,7 @@ class GakumasCog(commands.Cog):
         vo: int,
         da: int,
         vi: int,
-        cap: typing.Literal[1500, 1800] = 1800,
+        cap: Literal[1500, 1800] = 1800,
         ephemeral: EphemeralEnum = EphemeralEnum.T
     ):
         """ Calculates score required for ranks.
@@ -77,7 +79,8 @@ class GakumasCog(commands.Cog):
             f"* A+: `{ param_to_score(new_sum, A_PLUS) }`\n",
             ephemeral=bool(ephemeral.value)
         )
-    
+
+
     @discord.app_commands.command(
         name="c",
         description="「試験後」のパラメータに応じて、A+やSランクに必要な試験スコアを算出する"

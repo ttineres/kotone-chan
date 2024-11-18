@@ -20,17 +20,20 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()],
 )
 
+
 # Retrieve token from environment variable
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 TEST_GUILD = os.getenv("TEST_GUILD")
 DEBUGGING = os.getenv("DEBUGGING")
 
+
 # Discord intents
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", help_command=None, intents=intents)
+
 
 # Load commands once bot is ready
 @bot.event
@@ -57,9 +60,11 @@ async def on_ready():
     
     logging.info("[KOTONE] Updated all commands successfully.")
 
+
 def main():
     keep_alive()
     bot.run(DISCORD_TOKEN)
+
 
 if __name__ == "__main__":
     main()

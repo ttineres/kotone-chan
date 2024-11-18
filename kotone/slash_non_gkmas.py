@@ -6,9 +6,9 @@
 import discord
 from discord.ext import commands
 
-from .util_emoji import get_emoji, KOTONE_EMOJI
-from .util_voiceline import get_greeting
-from .util_binary_enum import EphemeralEnum
+from .util.emoji import get_emoji, KOTONE_EMOJI
+from .util.voiceline import get_greeting
+from .util.binary_enum import EphemeralEnum
 
 
 class NonGakumasCog(commands.Cog):

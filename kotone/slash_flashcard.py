@@ -8,8 +8,12 @@ import os
 import discord
 from discord.ext import commands
 
-from .util_binary_enum import EphemeralEnum
-from .flashcard.init_flashcard import _FLASHCARD_P_DRINKS, _FLASHCARD_P_ITEMS_FREQ, _FLASHCARD_P_ITEMS
+from .util.binary_enum import EphemeralEnum
+from .flashcard.init_flashcard import (
+    _FLASHCARD_P_DRINKS,
+    _FLASHCARD_P_ITEMS_FREQ,
+    _FLASHCARD_P_ITEMS,
+)
 
 
 SKILLCARD_FLASHCARD_FREQ = {

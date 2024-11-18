@@ -3,8 +3,8 @@
 #
 
 
-import kotone.util_chara_name
+import kotone.util.chara_name
 
 
 def test_chara_name():
-    assert kotone.util_chara_name.KOTONE_NICKNAME_OF
+    assert kotone.util.chara_name.KOTONE_NICKNAME_OF

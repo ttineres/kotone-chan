@@ -7,8 +7,8 @@ import pytest
 from freezegun import freeze_time
 from unittest.mock import patch
 from datetime import datetime
-from kotone.util_voiceline import *
-from kotone.util_voiceline import _JAPAN_TIMEZONE
+from kotone.util.voiceline import *
+from kotone.util.voiceline import _JAPAN_TIMEZONE
 
 
 def test_get_greeting():

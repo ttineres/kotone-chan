@@ -23,6 +23,8 @@ kotone-init = "kotone.bot:main"
     "flashcard/flashcard_p_drinks.yaml",
     "flashcard/flashcard_p_items.yaml",
     "flashcard/flashcard_p_items_freq.yaml",
+    "flashcard/flashcard_skillcards.yaml",
+    "flashcard/flashcard_skillcards_freq.yaml",
 ]
 
 [tool.pytest.ini_options]

@@ -10,8 +10,8 @@ from unittest.mock import patch
 @pytest.mark.asyncio
 async def test_hello_command(bot, mock_reply, mock_ctx):
     with (
-        patch("kotone.util_voiceline.get_greeting") as mock_greeting,
-        patch("kotone.util_emoji.get_emoji") as mock_emoji
+        patch("kotone.util.voiceline.get_greeting") as mock_greeting,
+        patch("kotone.util.emoji.get_emoji") as mock_emoji
     ):
         mock_greeting.return_value = "あの……忙しそうですけど、ちゃんと休んでます？"
         mock_emoji.return_value = "<:kotone1:1285561438651285545>"

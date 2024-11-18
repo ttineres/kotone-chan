@@ -1,5 +1,5 @@
 #
-# util_chara_name.py
+# chara_name.py
 #
 
 KOTONE_NICKNAME_OF = {

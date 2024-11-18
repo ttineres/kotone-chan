@@ -1,5 +1,5 @@
 #
-# util_binary_enum.py
+# binary_enum.py
 #
 # Simple enum for handling boolean-like choices
 #

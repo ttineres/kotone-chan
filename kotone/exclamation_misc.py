@@ -6,15 +6,17 @@
 import discord
 from discord.ext import commands
 
-from .util_emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI, emoji_to_name
-from .util_voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
+from .util.emoji import get_emoji, KOTONE_EMOJI, IDOL_EMOJI, emoji_to_name
+from .util.voiceline import get_greeting, SPECIAL_KEYWORDS_GREETING, get_greeting_special
 
 
 class ExclamationMiscCog(commands.Cog):
     """ A cog for miscellaneous commands. """
+
     def __init__(self, bot):
         self.bot = bot
-    
+
+
     @commands.command(name="hello")
     async def hello(self, ctx, *, arg=None):
         """ Greets the user.
@@ -32,7 +34,8 @@ class ExclamationMiscCog(commands.Cog):
             f"{ get_greeting(ctx.author.mention) }"
             f"{ get_emoji(KOTONE_EMOJI) }"
         )
-    
+
+
     @commands.command(name="kotone")
     async def kotone(self, ctx, *, arg=None):
         """ Sends Kotone emoji.
