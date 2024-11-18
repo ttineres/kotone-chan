@@ -40,9 +40,9 @@ def _parse_title(
 
     if origin:
         if origin.get("idol"):
-            title += f"([{ origin["card_name"] }]{ origin["idol"] })"
+            title += f" ([{ origin["card_name"] }]{ origin["idol"] })"
         else:
-            title += f"({ origin["card_name"] })"
+            title += f" ({ origin["card_name"] })"
 
     return title
 
