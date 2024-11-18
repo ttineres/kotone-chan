@@ -1,0 +1,1497 @@
+#
+# flashcard_p_items.yaml
+#
+
+desc: すべてのPアイテム
+
+content:
+
+  # R Sense
+
+  - title: ばくおんライオン
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好調状態の場合、パラメータ+6
+    - （レッスン内1回）
+  
+  - title: ばくおんライオン
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好調状態の場合、パラメータ+11
+    - （レッスン内1回）
+
+  - title: 必携ステンレスボトル
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 月村手毬
+    effect:
+    - ターン開始時、集中が3以上の場合、集中+4
+    - （レッスン内1回）
+
+  - title: 必携ステンレスボトル
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 月村手毬
+    effect:
+    - ターン開始時、集中が3以上の場合、集中+6
+    - （レッスン内1回）
+
+  - title: 紳士風ハンカチーフ
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 有村麻央
+    effect:
+    - ターン開始時、好調状態の場合、集中+1
+    - （レッスン内2回）
+
+  - title: 紳士風ハンカチーフ
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 有村麻央
+    effect:
+    - ターン開始時、好調状態の場合、集中+2
+    - （レッスン内2回）
+
+  - title: いつものメイクポーチ
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 姫崎莉波
+    effect:
+    - アクティブスキルカード使用時、体力が50%以上の場合、集中+2
+    - （レッスン内1回）
+
+  - title: いつものメイクポーチ
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 姫崎莉波
+    effect:
+    - アクティブスキルカード使用時、体力が50%以上の場合、集中+3
+    - （レッスン内1回）
+
+  - title: ピンクのお揃いブレス
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 紫雲清夏
+    effect:
+    - ターン開始時、集中+1
+    - （レッスン内2回）
+
+  - title: ピンクのお揃いブレス
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 紫雲清夏
+    effect:
+    - ターン開始時、集中+1
+    - （レッスン内3回）
+
+  - title: 初声の証・ことね
+    is_enhanced: False
+    effect:
+    - 初めてのご褒美使用時、好調2ターン
+    - （レッスン内1回）
+
+  - title: 初声の証・ことね
+    is_enhanced: True
+    effect:
+    - 初めてのご褒美使用時、好調2ターン
+    - 固定元気+5
+    - （レッスン内1回）
+
+  - title: 初心の証・リーリヤ
+    is_enhanced: False
+    effect:
+    - ターン終了時、好調が6ターン以上の場合、好調2ターン
+    - 体力消費1
+    - （レッスン内2回）
+
+  - title: 初心の証・リーリヤ
+    is_enhanced: True
+    effect:
+    - ターン終了時、好調が6ターン以上の場合、好調2ターン
+    - （レッスン内2回）
+
+  - title: 初心の証・千奈
+    is_enhanced: False
+    effect:
+    - ターン開始時、最終ターンの場合、パラメータ+2（レッスン中に使用したスキルカード1枚ごとに、パラメータ上昇量+1）
+    - 体力消費1
+    - （レッスン内1回）
+
+  - title: 初心の証・千奈
+    is_enhanced: True
+    effect:
+    - ターン開始時、最終ターンの場合、パラメータ+6（レッスン中に使用したスキルカード1枚ごとに、パラメータ上昇量+1）
+    - 体力消費1
+    - （レッスン内1回）
+
+  - title: 初恋の証・広
+    is_enhanced: False
+    effect:
+    - ターン開始時、体力が50%以下の場合、集中+2
+    - 消費体力削減1
+    - ランダムな手札1枚をレッスン中強化
+    - （レッスン内1回）
+
+  - title: 初恋の証・広
+    is_enhanced: True
+    effect:
+    - ターン開始時、体力が50%以下の場合、集中+4
+    - 消費体力削減2
+    - ランダムな手札1枚をレッスン中強化
+    - （レッスン内1回）
+
+  # R Logic
+
+  - title: ちびども手作りメダル
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 藤田ことね
+    effect:
+    - ターン終了時、好印象が6以上の場合、好印象+2
+    - （レッスン内2回）
+
+  - title: ちびども手作りメダル
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 藤田ことね
+    effect:
+    - ターン終了時、好印象が6以上の場合、好印象+2
+    - （レッスン内3回）
+
+  - title: 超絶あんみんマスク
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 篠澤広
+    effect:
+    - ターン開始時、最終ターンの場合、元気の50%分パラメータ上昇
+    - 体力消費1
+
+  - title: 超絶あんみんマスク
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 篠澤広
+    effect:
+    - ターン開始時、最終ターンの場合、元気の70%分パラメータ上昇
+    - 体力消費1
+
+  - title: 緑のお揃いブレス
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 葛城リーリヤ
+    effect:
+    - 好印象が増加後、好印象+3
+    - （レッスン内1回）
+
+  - title: 緑のお揃いブレス
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 葛城リーリヤ
+    effect:
+    - 好印象が増加後、好印象+5
+    - （レッスン内1回）
+
+  - title: 願いを叶えるお守り
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 倉本千奈
+    effect:
+    - やる気が増加後、やる気+2
+    - （レッスン内1回）
+
+  - title: 願いを叶えるお守り
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 倉本千奈
+    effect:
+    - やる気が増加後、やる気+3
+    - （レッスン内1回）
+
+  - title: テクノドッグ
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 花海佑芽
+    effect:
+    - スキルカード使用後、やる気が3以上の場合、やる気+2
+    - （レッスン内1回）
+
+  - title: テクノドッグ
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 花海佑芽
+    effect:
+    - スキルカード使用後、やる気が3以上の場合、やる気+3
+    - （レッスン内1回）
+
+  - title: 初声の証・咲季
+    is_enhanced: False
+    effect:
+    - レッスン中に体力が減少した時、好印象+2
+    - （レッスン内2回）
+
+  - title: 初声の証・咲季
+    is_enhanced: True
+    effect:
+    - レッスン中に体力が減少した時、好印象+2
+    - （レッスン内3回）
+
+  - title: 初声の証・手毬
+    is_enhanced: False
+    effect:
+    - ターン終了時、好印象が6以上の場合、好印象の100%分パラメータ上昇
+    - （レッスン内2回）
+
+  - title: 初声の証・手毬
+    is_enhanced: True
+    effect:
+    - ターン終了時、好印象が6以上の場合、好印象の100%分パラメータ上昇
+    - （レッスン内3回）
+
+  - title: 初心の証・莉波
+    is_enhanced: False
+    effect:
+    - スキルカードを3回使用するごとに、やる気+2
+    - （レッスン内2回）
+
+  - title: 初心の証・莉波
+    is_enhanced: True
+    effect:
+    - スキルカードを3回使用するごとに、やる気+3
+    - （レッスン内2回）
+
+  - title: 初恋の証・麻央
+    is_enhanced: False
+    effect:
+    - ターン開始時、やる気が3以上の場合、好印象+3
+    - やる気減少1
+    - （レッスン内1回）
+
+  - title: 初恋の証・麻央
+    is_enhanced: True
+    effect:
+    - ターン開始時、やる気が3以上の場合、好印象+3
+    - やる気減少1
+    - （レッスン内2回）
+
+  - title: 初恋の証・清夏
+    is_enhanced: False
+    effect:
+    - スキルカード使用後、やる気が8以上の場合、やる気の150%分パラメータ上昇
+    - 体力消費1
+    - （レッスン内2回）
+
+  - title: 初恋の証・清夏
+    is_enhanced: True
+    effect:
+    - スキルカード使用後、やる気が8以上の場合、やる気の210%分パラメータ上昇
+    - 体力消費1
+    - （レッスン内2回）
+
+  # R Anomaly
+
+  - title: ティーキャディー
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 十王星南
+    effect:
+    - アクティブスキルカード使用後、強気の場合、パラメータ+5
+    - 体力回復1
+    - （レッスン内1回）
+
+  # SR Sense
+
+  - title: ティーキャディー
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 十王星南
+    effect:
+    - アクティブスキルカード使用後、強気の場合、パラメータ+7
+    - 体力回復3
+    - （レッスン内1回）
+
+  - title: 咲季の完全食レシピ
+    is_enhanced: False
+    origin:
+      card_name: わたしが一番！
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好調状態の場合、元気+9
+    - （レッスン内1回）
+
+  - title: 咲季の完全食レシピ
+    is_enhanced: True
+    origin:
+      card_name: わたしが一番！
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好調状態の場合、元気+12
+    - （レッスン内1回）
+
+  - title: 私の「初」の楽譜
+    is_enhanced: False
+    origin:
+      card_name: 一匹狼
+      idol: 月村手毬
+    effect:
+    - ターン開始時、元気が0の場合、体力減少1
+    - 集中+3
+    - （レッスン内2回）
+
+  - title: 私の「初」の楽譜
+    is_enhanced: True
+    origin:
+      card_name: 一匹狼
+      idol: 月村手毬
+    effect:
+    - ターン開始時、元気が0の場合、体力減少1
+    - 集中+4
+    - （レッスン内2回）
+
+  - title: Dearリトルプリンス
+    is_enhanced: False
+    origin:
+      card_name: はじまりはカッコよく
+      idol: 有村麻央
+    effect:
+    - 好調の効果ターンが増加後、好調3ターン
+    - （レッスン内1回）
+
+  - title: Dearリトルプリンス
+    is_enhanced: True
+    origin:
+      card_name: はじまりはカッコよく
+      idol: 有村麻央
+    effect:
+    - 好調の効果ターンが増加後、好調4ターン
+    - （レッスン内1回）
+
+  - title: きみへの差し入れ
+    is_enhanced: False
+    origin:
+      card_name: 『私らしさ』のはじまり
+      idol: 姫崎莉波
+    effect:
+      - ターン開始時、集中が5以上の場合、体力回復2
+      - （レッスン内3回）
+
+  - title: きみへの差し入れ
+    is_enhanced: True
+    origin:
+      card_name: 『私らしさ』のはじまり
+      idol: 姫崎莉波
+    effect:
+      - ターン開始時、集中が5以上の場合、体力回復2
+      - （レッスン内4回）
+
+  - title: 放課後のらくがき
+    is_enhanced: False
+    origin:
+      card_name: 夢へのりスタート
+      idol: 紫雲清夏
+    effect:
+    - 集中が増加後、体力が50%以上の場合、集中+2
+    - （ターン内2回）
+
+  - title: 放課後のらくがき
+    is_enhanced: True
+    origin:
+      card_name: 夢へのりスタート
+      idol: 紫雲清夏
+    effect:
+    - 集中が増加後、集中+2
+    - （ターン内2回）
+
+  # SR Logic
+
+  - title: お気にのスニーカー
+    is_enhanced: False
+    origin:
+      card_name: カワイイ♡はじめました
+      idol: 藤田ことね
+    effect:
+    - ターン終了時、元気が7以上の場合、好印象+4
+    - （レッスン内1回）
+
+  - title: お気にのスニーカー
+    is_enhanced: True
+    origin:
+      card_name: カワイイ♡はじめました
+      idol: 藤田ことね
+    effect:
+    - ターン終了時、元気が7以上の場合、好印象+5
+    - （レッスン内1回）
+
+  - title: だれでもわかる入門書
+    is_enhanced: False
+    origin:
+      card_name: 一番向いてないこと
+      idol: 篠澤広
+    effect:
+    - ターン開始時、元気が7以上の場合、やる気+5
+    - （レッスン内1回）
+
+  - title: だれでもわかる入門書
+    is_enhanced: True
+    origin:
+      card_name: 一番向いてないこと
+      idol: 篠澤広
+    effect:
+    - ターン開始時、元気が7以上の場合、やる気+6
+    - （レッスン内1回）
+
+  - title: 思い出ロボ
+    is_enhanced: False
+    origin:
+      card_name: 一つ踏み出した先に
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、体力が50%以上の場合、好印象+3
+    - （ターン内1回）
+
+  - title: 思い出ロボ
+    is_enhanced: True
+    origin:
+      card_name: 一つ踏み出した先に
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、体力が50%以上の場合、好印象+4
+    - （ターン内1回）
+
+  - title: しょげないハンカチ
+    is_enhanced: False
+    origin:
+      card_name: 胸を張って一歩ずつ
+      idol: 倉本千奈
+    effect:
+    - アクティブスキルカード使用後、元気の60%分パラメータ上昇
+    - 体力消費2
+    - （レッスン内2回）
+
+  - title: しょげないハンカチ
+    is_enhanced: True
+    origin:
+      card_name: 胸を張って一歩ずつ
+      idol: 倉本千奈
+    effect:
+    - アクティブスキルカード使用後、元気の70%分パラメータ上昇
+    - 体力消費2
+    - （レッスン内2回）
+
+  - title: 柴犬ポシェット
+    is_enhanced: False
+    origin:
+      card_name: アイドル、はじめっ！
+      idol: 花海佑芽
+    effect:
+    - 2ターンごとに、元気+5
+    - （レッスン内2回）
+
+  - title: 柴犬ポシェット
+    is_enhanced: True
+    origin:
+      card_name: アイドル、はじめっ！
+      idol: 花海佑芽
+    effect:
+    - 2ターンごとに、元気+5
+    - （レッスン内3回）
+
+  # SR Anamoly
+
+  - title: みんなの憧れ
+    is_enhanced: False
+    origin:
+      card_name: 一番星
+      idol: 十王星南
+    effect:
+    - スキルカード使用時、全力の場合、パラメータ+9
+    - 元気+9
+    - （レッスン内1回）
+
+  - title: みんなの憧れ
+    is_enhanced: True
+    origin:
+      card_name: 一番星
+      idol: 十王星南
+    effect:
+    - スキルカード使用時、全力の場合、パラメータ+18
+    - 元気+9
+    - （レッスン内1回）
+
+  # SR Support Free
+
+  - title: 美鈴からの贈り物
+    origin:
+      card_name: 今はあえて、背を向けて
+    effect:
+    - ボーカルSPレッスン終了時、ボーカルが400以上の場合、ランダムなスキルカードを強化
+
+  - title: 打倒！墾田永年私財法
+    origin:
+      card_name: 愛無き暗記は難しい
+    effect:
+    - 追い込みレッスン終了時、ボーカルが400以上の場合、ボーカル上昇+26
+
+  - title: 手作りのご褒美
+    origin:
+      card_name: ほっぺた、ぷに
+    effect:
+    - 追い込みレッスン終了時、ビジュアルが400以上の場合、ビジュアル上昇+26
+
+  - title: ふわふわでもこもこ
+    origin:
+      card_name: ふわふわでワクワク
+    effect:
+    - ダンスSPレッスン終了時、ランダムにPドリンクを2つ獲得
+
+  - title: お姉さま大百科
+    origin:
+      card_name: 嬉し恥ずかし夢心地
+    effect:
+    - 追い込みレッスン終了時、ダンスが400以上の場合、ビジュアル上昇+26
+
+  - title: 例のSSDの秘密
+    origin:
+      card_name: 実食！例のSSD
+    effect:
+    - ダンスレッスン終了時、体力が50%以上の場合、ダンス上昇+13
+
+  - title: 一緒にお昼寝ポプリ
+    origin:
+      card_name: マイペース、マイライフ
+    effect:
+    - ボーカルレッスン終了時、体力が50%以上の場合、ボーカル上昇+13
+
+  - title: 私が見つけた逸材メモ
+    origin:
+      card_name: 思惑とガクガク
+    effect:
+    - ビジュアルレッスン終了時、体力が50%以上の場合、ビジュアル上昇+13
+
+  - title: 朝一の助け舟
+    origin:
+      card_name: ほっとけないクラスメイト
+    effect:
+    - スキルカード強化時、ボーカルが400以上の場合、Pポイント+15
+
+  - title: 誓いの花びら
+    origin:
+      card_name: いつか、きっと花開く
+    effect:
+    - ビジュアルSPレッスン終了時、ビジュアルが400以上の場合、ランダムなスキルカードを強化
+
+  - title: ハンターの戦利品
+    origin:
+      card_name: ふわふわなお面
+    effect:
+    - ダンスSPレッスン終了時、ダンスが400以上の場合、Pポイント+60
+
+  # SR Support Sense
+
+  - title: ダブルボトル
+    origin:
+      card_name: どりゃぎゃ
+    effect:
+    - 好調効果のスキルカード獲得時、ダンス上昇+6
+
+  - title: ウチュウジンデアル
+    origin:
+      card_name: 第五種接近遭遇
+    effect:
+    - 集中効果のスキルカード獲得時、ボーカル上昇+6
+
+  - title: きっかけの帯
+    origin:
+      card_name: キュッと締めて
+    effect:
+    - 好調効果のスキルカード獲得時、ダンスが700以上の場合、スキルカードを選択して削除
+    - Pポイント+40
+    - （プロデュース中1回）
+
+  - title: 小さい秋見つけた
+    origin:
+      card_name: トンボをつかまえて
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、集中が5以上の場合、パラメータ+10
+    - （レッスン内2回）
+
+  # SR Support Logic
+
+  - title: 咲季オススメマット
+    origin:
+      card_name: かちこちストレッチ
+    effect:
+    - 好印象効果のスキルカード獲得時、ビジュアル上昇+6
+
+  - title: 可愛い隠しバスタオル
+    origin:
+      card_name: 海、楽しまなきゃ！
+    effect:
+    - やる気効果のスキルカード獲得時、ボーカル上昇+6
+
+  - title: 大きくてつやつや
+    origin:
+      card_name: りっぱなすすき！
+    effect:
+    - やる気効果のスキルカード獲得時、ビジュアルが400以上の場合、スキルカードを選択して強化
+    - 体力回復+2
+    - （プロデュース中1回）
+
+  - title: 優しさミルクシュガー
+    origin:
+      card_name: ブレイクタイムは珈琲で
+    effect:
+    - 好印象効果のスキルカード獲得時、ボーカルが700以上の場合、スキルカードを選択してコピー
+    - Pポイント+40
+    - （プロデュース中1回）
+
+  - title: お嬢様の恩返し
+    origin:
+      card_name: 千奈の恩返し
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、好印象が6以上の場合、好印象の80%分パラメータ上昇
+    - （レッスン内2回）
+
+  - title: ぜったいマル秘レシピ
+    origin:
+      card_name: SSDのひみつ
+    effect:
+    - 好印象効果のスキルカード獲得時、ビジュアルが700以上の場合、スキルカードを選択して削除
+    - Pポイント+40
+    - （プロデュース中1回）
+
+  # SR Support Anomaly
+
+  # SSR Misc
+
+  - title: はつぼしブローチ
+    effect:
+    - レッスン終了時、レッスン報酬のスキルカードの選択肢を追加
+
+  - title: はつぼしプレスレット
+    effect:
+    - SPレッスン終了時、体力減少3
+    - スキルカードを選択して強化
+
+  - title: はつぼし手帳
+    effect:
+    - ターン開始時、集中が5以上の場合、スキルカード使用数追加+1
+    - 集中+2
+    - （レッスン内1回）
+
+  - title: はつぼしTシャツ
+    effect:
+    - ターン開始時、好調状態の場合、スキルカード使用数追加+1
+    - 好調2ターン
+    - （レッスン内1回）
+
+  - title: はつぼしキーホルダー
+    effect:
+    - ターン開始時、好印象が3以上の場合、スキルカード使用数追加+1
+    - 好印象+3
+    - （レッスン内1回）
+
+  - title: マスコット（非公認）
+    effect:
+    - ターン開始時、やる気が5以上の場合、スキルカード使用数追加+1
+    - やる気+2
+    - （レッスン内1回）
+
+  - title: はつぼし時計
+    effect:
+    - ターン開始時、全力値が3以上の場合、スキルカード使用数追加+1
+    - 全力値+3
+    - （レッスン内1回）
+
+  - title: はつぼしフィギュア
+    effect:
+    - ターン開始時、強気の場合、温存2段階目に変更
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  # SSR Sense
+
+  - title: 共に戦うタオル
+    is_enhanced: False
+    origin:
+      card_name: Fighting My Way
+      idol: 花海咲季
+    effect:
+    - アクティブスキルカード使用後、好調1ターン
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 共に戦うタオル
+    is_enhanced: True
+    origin:
+      card_name: Fighting My Way
+      idol: 花海咲季
+    effect:
+    - アクティブスキルカード使用後、好調1ターン
+    - スキルカード使用数追加+1
+    - 元気+5
+    - （レッスン内1回）
+
+  - title: 自分を守るイヤホン
+    is_enhanced: False
+    origin:
+      card_name: Luna say maybe
+      idol: 月村手毬
+    effect:
+    - スキルカード使用時、集中が5以上の場合、スキルカード使用数追加+1
+    - 集中+1
+    - （レッスン内1回）
+
+  - title: 自分を守るイヤホン
+    is_enhanced: True
+    origin:
+      card_name: Luna say maybe
+      idol: 月村手毬
+    effect:
+    - スキルカード使用時、集中が5以上の場合、スキルカード使用数追加+1
+    - 集中+3
+    - （レッスン内1回）
+
+  - title: 内なる光の耳飾り
+    is_enhanced: False
+    origin:
+      card_name: Fluorite
+      idol: 有村麻央
+    effect:
+    - ターン開始時、好調状態の場合、集中+2
+    - 元気+1
+    - （レッスン内2回）
+
+  - title: 内なる光の耳飾り
+    is_enhanced: True
+    origin:
+      card_name: Fluorite
+      idol: 有村麻央
+    effect:
+    - ターン開始時、好調状態の場合、集中+3
+    - 元気+1
+    - （レッスン内2回）
+
+  - title: 等身大のレディリップ
+    is_enhanced: False
+    origin:
+      card_name: clumsy trick
+      idol: 姫崎莉波
+    effect:
+    - ターン開始時、残り2ターン以内の場合、パラメータ+5
+    - （レッスン内2回）
+
+  - title: 等身大のレディリップ
+    is_enhanced: True
+    origin:
+      card_name: clumsy trick
+      idol: 姫崎莉波
+    effect:
+    - ターン開始時、残り3ターン以内の場合、パラメータ+5
+    - （レッスン内3回）
+
+  - title: ゲーセンの戦利品
+    is_enhanced: False
+    origin:
+      card_name: Tame-Lie-One-Step
+      idol: 紫雲清夏
+    effect:
+    - レッスン開始時、集中+3
+    - （レッスン内1回）
+
+  - title: ゲーセンの戦利品
+    is_enhanced: True
+    origin:
+      card_name: Tame-Lie-One-Step
+      idol: 紫雲清夏
+    effect:
+    - レッスン開始時、集中+4
+    - （レッスン内1回）
+
+  - title: 最高にハッピーの源
+    is_enhanced: False
+    origin:
+      card_name: Yellow Big Bang！
+      idol: 藤田ことね
+    effect:
+    - アドレナリン全開使用時、好調3ターン
+    - 固定元気+5
+    - （レッスン内1回）
+
+  - title: 最高にハッピーの源
+    is_enhanced: True
+    origin:
+      card_name: Yellow Big Bang！
+      idol: 藤田ことね
+    effect:
+    - アドレナリン全開使用時、好調3ターン
+    - 固定元気+11
+    - （レッスン内1回）
+
+  - title: 最後の夏の思い出
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 有村麻央
+    effect:
+    - ターン開始時、集中が3以上の場合、元気+10
+    - （レッスン内1回）
+
+  - title: 最後の夏の思い出
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 有村麻央
+    effect:
+    - ターン開始時、集中が3以上の場合、元気+14
+    - （レッスン内1回）
+
+  - title: きみと分け合う夏
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 姫崎莉波
+    effect:
+    - ターン開始時、消費体力減少状態の場合、絶好調1ターン
+    - スキルカードを引く
+    - （レッスン内2回）
+
+  - title: きみと分け合う夏
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 姫崎莉波
+    effect:
+    - ターン開始時、消費体力減少状態の場合、絶好調1ターン
+    - スキルカードを引く
+    - （レッスン内3回）
+
+  - title: まだ見ぬ世界へ
+    is_enhanced: False
+    origin:
+      card_name: コントラスト
+      idol: 篠澤広
+    effect:
+    - ターン開始時、体力が50%以下の場合、集中+5
+    - 消費体力削減2
+    - 手札をすべてレッスン中強化
+    - （レッスン内1回）
+
+  - title: まだ見ぬ世界へ
+    is_enhanced: True
+    origin:
+      card_name: コントラスト
+      idol: 篠澤広
+    effect:
+    - ターン開始時、体力が50%以下の場合、集中+7
+    - 消費体力削減3
+    - 手札をすべてレッスン中強化
+    - （レッスン内1回）
+
+  - title: 瓶の中のきらめき
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、好調が6ターン以上の場合、好調2ターン
+    - （レッスン内3回）
+
+  - title: 瓶の中のきらめき
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、好調が3ターン以上の場合、好調2ターン
+    - （レッスン内4回）
+
+  - title: ときめきのいっぱい
+    is_enhanced: False
+    origin:
+      card_name: 日々、発見的ステップ！
+      idol: 倉本千奈
+    effect:
+    - ターン開始時、最終ターンの場合、パラメータ+3（レッスン中に使用したスキルカード1枚ごとに、パラメータ上昇量+3）
+    - 体力消費2
+    - （レッスン内1回）
+
+  - title: ときめきのいっぱい
+    is_enhanced: True
+    origin:
+      card_name: 日々、発見的ステップ！
+      idol: 倉本千奈
+    effect:
+    - ターン開始時、最終ターンの場合、パラメータ+3（レッスン中に使用したスキルカード1枚ごとに、パラメータ上昇量+5）
+    - （レッスン内1回）
+
+  - title: 温泉の後のお楽しみ
+    is_enhanced: False
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 倉本千奈
+    effect:
+    - スキルカードを4回使用するごとに、集中1.3倍
+    - 固定元気+2
+    - （レッスン内2回）
+
+  - title: 温泉の後のお楽しみ
+    is_enhanced: True
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 倉本千奈
+    effect:
+    - スキルカードを4回使用するごとに、集中1.3倍
+    - 固定元気+7
+    - （レッスン内2回）
+
+  - title: う～ら～め～し～や～
+    is_enhanced: False
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 倉本千奈
+    effect:
+    - アクティブスキルカード使用時、固定元気+5
+    - （レッスン内2回）
+
+  - title: う～ら～め～し～や～
+    is_enhanced: True
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 倉本千奈
+    effect:
+    - アクティブスキルカード使用時、固定元気+7
+    - （レッスン内2回）
+
+  - title: いたずらパペット
+    is_enhanced: False
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 篠澤広
+    effect:
+    - アクティブスキルカード使用時、体力が50%以下の場合、レッスン中に消費した体力の180%分パラメータ上昇
+    - 体力回復5
+    - 元気増加無効2ターン
+    - （レッスン内2回）
+
+  - title: いたずらパペット
+    is_enhanced: True
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 篠澤広
+    effect:
+    - アクティブスキルカード使用時、体力が50%以下の場合、レッスン中に消費した体力の220%分パラメータ上昇
+    - 体力回復6
+    - 元気増加無効2ターン
+    - （レッスン内2回）
+
+  - title: アニメイト装備
+    is_enhanced: False
+    origin:
+      card_name: 古今東西ちょちょいのちょい
+      idol: 花海咲季
+    effect:
+    - 2ターンごとに、好調状態の場合、好調の40%分集中増加
+    - 集中+1
+    - （レッスン内2回）
+
+  - title: アニメイト装備
+    is_enhanced: True
+    origin:
+      card_name: 古今東西ちょちょいのちょい
+      idol: 花海咲季
+    effect:
+    - 2ターンごとに、好調状態の場合、好調の50%分集中増加
+    - 集中+1
+    - 元気+3
+    - （レッスン内2回）
+
+  # SSR Logic
+
+  - title: ビッグドリーム貯金箱
+    is_enhanced: False
+    origin:
+      card_name: 世界一可愛い私
+      idol: 藤田ことね
+    effect:
+    - スキルカード使用後、好印象が6以上の場合、好印象+3
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: ビッグドリーム貯金箱
+    is_enhanced: True
+    origin:
+      card_name: 世界一可愛い私
+      idol: 藤田ことね
+    effect:
+    - スキルカード使用後、好印象が6以上の場合、好印象+5
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: みちくさ研究ノート
+    is_enhanced: False
+    origin:
+      card_name: 光景
+      idol: 篠澤広
+    effect:
+    - ターン開始時、残り2ターン以内の場合、元気の50%分パラメータ上昇
+    - 体力消費1
+
+  - title: みちくさ研究ノート
+    is_enhanced: True
+    origin:
+      card_name: 光景
+      idol: 篠澤広
+    effect:
+    - ターン開始時、残り2ターン以内の場合、元気の65%分パラメータ上昇
+    - 体力消費1
+
+  - title: 夢へのライフログ
+    is_enhanced: False
+    origin:
+      card_name: 白線
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、元気が7以上の場合、好印象1.5倍
+    - 好印象の30%分パラメータ上昇
+    - （レッスン内1回）
+
+  - title: 夢へのライフログ
+    is_enhanced: True
+    origin:
+      card_name: 白線
+      idol: 葛城リーリヤ
+    effect:
+    - ターン終了時、元気が7以上の場合、好印象1.5倍
+    - 好印象の100%分パラメータ上昇
+    - （レッスン内1回）
+
+  - title: ひみつ特訓カーデ
+    is_enhanced: False
+    origin:
+      card_name: Wonder Scale
+      idol: 倉本千奈
+    effect:
+    - やる気が増加後、やる気+3
+    - （レッスン内2回）
+
+  - title: ひみつ特訓カーデ
+    is_enhanced: True
+    origin:
+      card_name: Wonder Scale
+      idol: 倉本千奈
+    effect:
+    - やる気が増加後、やる気+3
+    - （レッスン内3回）
+
+  - title: これが、私
+    is_enhanced: False
+    origin:
+      card_name: アイヴイ
+      idol: 月村手毬
+    effect:
+    - ターン終了時、好印象が10以上の場合、好印象の100%分パラメータ上昇
+    - 元気+3
+    - （レッスン内2回）
+
+  - title: これが、私
+    is_enhanced: True
+    origin:
+      card_name: アイヴイ
+      idol: 月村手毬
+    effect:
+    - ターン終了時、好印象が10以上の場合、好印象の100%分パラメータ上昇
+    - 元気+3
+    - （レッスン内3回）
+
+  - title: 転がり続ける元気の源
+    is_enhanced: False
+    origin:
+      card_name: The Rolling Riceball
+      idol: 花海佑芽
+    effect:
+    - メンタルスキルカード使用後、やる気が5以上の場合、やる気+3
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 転がり続ける元気の源
+    is_enhanced: True
+    origin:
+      card_name: The Rolling Riceball
+      idol: 花海佑芽
+    effect:
+    - メンタルスキルカード使用後、やる気が5以上の場合、やる気+5
+    - スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 勝ちへのこだわり
+    is_enhanced: False
+    origin:
+      card_name: Boom Boom Pow
+      idol: 花海咲季
+    effect:
+    - レッスン中に体力が減少した時、好印象+2
+    - （レッスン内4回）
+
+  - title: 勝ちへのこだわり
+    is_enhanced: True
+    origin:
+      card_name: Boom Boom Pow
+      idol: 花海咲季
+    effect:
+    - レッスン中に体力が減少した時、好印象+2
+
+  - title: カエル印の扇風機
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 紫雲清夏
+    effect:
+    - アクティブスキルカード使用後、やる気が12以上の場合、やる気の270%分パラメータ上昇
+    - 体力消費2
+    - （レッスン内4回）
+
+  - title: カエル印の扇風機
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 紫雲清夏
+    effect:
+    - アクティブスキルカード使用後、やる気が12以上の場合、やる気の340%分パラメータ上昇
+    - 体力消費2
+    - （レッスン内4回）
+
+  - title: 敗れ知らずのポイ
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好印象が6以上の場合、体力回復4
+    - （レッスン内2回）
+
+  - title: 敗れ知らずのポイ
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 花海咲季
+    effect:
+    - ターン開始時、好印象が6以上の場合、体力回復5
+    - （レッスン内2回）
+
+  - title: ぱちぱち線香花火
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 藤田ことね
+    effect:
+    - 3ターンごとに、好印象が6以上の場合、好印象の100%分元気増加
+    - やる気+2
+    - 体力消費1
+    - （レッスン内4回）
+
+  - title: ぱちぱち線香花火
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 藤田ことね
+    effect:
+    - 3ターンごとに、好印象が6以上の場合、好印象の100%分元気増加
+    - やる気+3
+    - 体力消費1
+
+  - title: ぱたぱたうちわ
+    is_enhanced: False
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 姫崎莉波
+    effect:
+    - スキルカードを3回使用するごとに、元気+1
+    - やる気+3
+    - （レッスン内2回）
+
+  - title: ぱたぱたうちわ
+    is_enhanced: True
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 姫崎莉波
+    effect:
+    - スキルカードを3回使用するごとに、元気+2
+    - やる気+4
+    - （レッスン内2回）
+
+  - title: スタイリッシュモード
+    is_enhanced: False
+    origin:
+      card_name: Feel Jewel Dream
+      idol: 有村麻央
+    effect:
+    - ターン開始時、やる気が3以上の場合、好印象+3
+    - やる気減少1
+    - （レッスン内3回）
+
+  - title: スタイリッシュモード
+    is_enhanced: True
+    origin:
+      card_name: Feel Jewel Dream
+      idol: 有村麻央
+    effect:
+    - ターン開始時、やる気が3以上の場合、好印象+3
+    - やる気減少1
+    - （レッスン内4回）
+
+  - title: ぶきっちょコウモリ
+    is_enhanced: False
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 月村手毬
+    effect:
+    - 3ターンごとに、好印象が3以上の場合、元気の90%分パラメータ上昇
+    - やる気の160%分パラメータ上昇
+    - 好印象減少2
+    - （レッスン内3回）
+
+  - title: ぶきっちょコウモリ
+    is_enhanced: True
+    origin:
+      card_name: 仮装狂騒曲
+      idol: 月村手毬
+    effect:
+    - 3ターンごとに、好印象が3以上の場合、元気の100%分パラメータ上昇
+    - やる気の230%分パラメータ上昇
+    - 好印象減少2
+    - （レッスン内3回）
+
+  - title: これでばっちり
+    is_enhanced: False
+    origin:
+      card_name: L.U.V
+      idol: 姫崎莉波
+    effect:
+    - 体力回復効果のスキルカード使用後、元気を0にして、減少前の元気の50%分好印象増加
+    - 好印象の200%分パラメータ上昇
+    - 体力消費5
+    - （レッスン内1回）
+
+  - title: これでばっちり
+    is_enhanced: True
+    origin:
+      card_name: L.U.V
+      idol: 姫崎莉波
+    effect:
+    - 体力回復効果のスキルカード使用後、元気を0にして、減少前の元気の70%分好印象増加
+    - 好印象の200%分パラメータ上昇
+    - 体力消費5
+    - （レッスン内1回）
+
+  - title: 新しい、私
+    is_enhanced: False
+    origin:
+      card_name: 小さな野望
+      idol: 十王星南
+    effect:
+    - アクティブスキルカード使用後、強気の場合、パラメータ+8
+    - 体力回復4
+    - （レッスン内1回）
+
+  # SSR Anomaly
+
+  - title: 新しい、私
+    is_enhanced: True
+    origin:
+      card_name: 小さな野望
+      idol: 十王星南
+    effect:
+    - アクティブスキルカード使用後、強気の場合、パラメータ+12
+    - 体力回復6
+    - （レッスン内1回）
+
+  # SSR Support Free
+
+  - title: 得体のしれないモノ
+    origin:
+      card_name: あなたにも作ってあげる！
+    effect:
+    - 【ビジュアルレッスン・ビジュアルターンのみ】ターン開始時、パラメータ上昇量増加50%（1ターン）
+    - （レッスン内3回）
+
+  - title: 星のリトルプリンス
+    origin:
+      card_name: まるで王子様みたいな
+    effect:
+    - 【ビジュアルレッスン・ビジュアルターンのみ】ターン開始時、固定元気+2
+
+  - title: 悔しさの象徴
+    origin:
+      card_name: ぐぬぬぬぬ…………！
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、パラメータ上昇量増加50%（1ターン）
+    - （レッスン内3回）
+
+  - title: 曇りをぬぐったタオル
+    origin:
+      card_name: また、あんなに無理をして
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】アクティブスキルカード使用時、体力回復2
+    - （レッスン内3回）
+
+  - title: スカウト遮り帽
+    origin:
+      card_name: あら、奇遇ね
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】ターン開始時、スキルカードを引く
+    - 固定元気+2
+    - （レッスン内3回）
+
+  - title: 信頼の証
+    origin:
+      card_name: きみは、自慢の生徒です
+    effect:
+    - お出かけ終了時、体力回復9
+
+  - title: 満開ペアヘアピン
+    origin:
+      card_name: お姉ちゃんに任せなさい！
+    effect:
+    - 【ビジュアルレッスン・ビジュアルターンのみ】アクティブスキルカード使用時、体力回復2
+    - （レッスン内3回）
+
+  - title: 仲直りのきっかけ
+    origin:
+      card_name: 私の目に狂いはない
+    effect:
+    - 【ビジュアルレッスン・ビジュアルターンのみ】ターン開始時、スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 夢にあふれた大荷物
+    origin:
+      card_name: ほら、一緒に持と♪
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 天川ラーメン巡り
+    origin:
+      card_name: 何やってるんだろう、
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】ターン開始時、スキルカード使用数追加+1
+    - （レッスン内1回）
+
+  - title: 虹かけるクロス
+    origin:
+      card_name: 晴れたね
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】アクティブスキルカード使用時、体力回復2
+    - （レッスン内3回）
+
+  - title: みんなの教科書
+    origin:
+      card_name: 1人たりとも欠ける事なく
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】ターン開始時、体力が50%以下の場合、体力回復4
+    - （レッスン内1回）
+
+  - title: とうちょーのきろく
+    origin:
+      card_name: 新たな挑戦の成功ですわ！
+    effect:
+    - 授業終了時、ビジュアル上昇+15
+    - 体力回復2
+
+  - title: とろけた時間
+    origin:
+      card_name: 二人ならあっという間だね
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】ターン開始時、パラメータ上昇量増加50%（1ターン）
+    - （レッスン内3回）
+
+  - title: ごちそうさまでした
+    origin:
+      card_name: 食欲の秋なんです
+    effect:
+    - 相談選択時、相談の全項目を20%割引
+
+  # SSR Support Sense
+
+  - title: オーバーパワーボール
+    origin:
+      card_name: 夏を楽しみましょう！
+    effect:
+    - 【ボーカルレッスン・ボーカルターンのみ】ターン開始時、集中+4
+    - 体力消費2
+    - （レッスン内1回）
+
+  - title: ほっこりまんぷく
+    origin:
+      card_name: あっちも行きたいですわ！
+    effect:
+    - 好調効果のスキルカード獲得時、ダンスが200以上の場合、ランダムなPドリンク（SR以上）を獲得
+    - （プロデュース中4回）
+
+  - title: つやつやでふさふさ
+    origin:
+      card_name: すっかり秋色ですわね！
+    effect:
+    - 活動支給選択時、ボーカルが700以上の場合、スキルカードを2枚まで選択して強化
+    - （プロデュース中1回）
+
+  - title: 負けず嫌いの勲章
+    origin:
+      card_name: もうっ！　冷たいよ！
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、やる気の50%分パラメータ上昇
+
+  - title: 873シューター
+    origin:
+      card_name: 夏を満喫するわよ！
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、好印象+2
+    - 体力回復1
+    - （レッスン内2回）
+
+  - title: いじっぱりバルーン
+    origin:
+      card_name: 似合うんじゃない？
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、好印象が3以上の場合、やる気+3
+    - （レッスン内2回）
+
+  - title: 会長の完璧な計画
+    origin:
+      card_name: 会長、準備は万端です
+    effect:
+    - 元気効果のスキルカード獲得時、ビジュアルが200以上の場合、ランダムなPドリンク（SR以上）を獲得
+    - （プロデュース中4回）
+
+  # SSR Support Anomaly
+
+  - title: アイドルパワー測定機
+    origin:
+      card_name: プロデュースって大変ね
+    effect:
+    - 【ダンスレッスン・ダンスターンのみ】ターン開始時、温存の場合、体力回復5
+    - （レッスン内1回）
