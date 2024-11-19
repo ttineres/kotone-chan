@@ -9,6 +9,7 @@ import logging
 import os
 from dotenv import load_dotenv
 
+import kotone
 from .keep_alive import keep_alive
 
 
@@ -44,8 +45,9 @@ async def on_ready():
     ignored_files = ["bot.py", "keep_alive.py", "__init__.py"]
     
     # Add commands
-    for f in os.listdir("kotone"):
-        if f not in ignored_files and f.endswith(".py") and not f.startswith("util_"):
+    kotone_path = os.path.dirname(kotone.__file__)
+    for f in os.listdir(kotone_path):
+        if f not in ignored_files and f.endswith(".py"):
             logging.info(f"[KOTONE] Adding kotone/{f}")
             await bot.load_extension(f"kotone.{f[:-3]}")
     
