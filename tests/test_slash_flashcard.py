@@ -4,6 +4,7 @@
 
 
 import yaml
+import warnings
 
 from kotone.flashcard.init_flashcard import (
     _FLASHCARD_P_DRINKS,
@@ -119,3 +120,14 @@ def test_init_flashcard():
     ):
         assert "desc" in flashcard_dict.keys()
         assert all(isinstance(k, str) and isinstance(v, str) for k, v in flashcard_dict.items())
+
+    # Compare flashcard with the expected number of items currently in the game
+    exp_num_p_drinks = 26
+    exp_num_p_items = 174
+    exp_num_skillcards = 139 * 2 + 1    # 228 * 2 + 1
+    if len(_FLASHCARD_P_DRINKS.keys()) - 1 != exp_num_p_drinks:
+        warnings.warn(UserWarning(f"Expected { exp_num_p_drinks } p-drinks in flashcard, instead found { len(_FLASHCARD_P_DRINKS.keys())-1 }"))
+    if len(_FLASHCARD_P_ITEMS.keys()) - 1 != exp_num_p_items:
+        warnings.warn(UserWarning(f"Expected { exp_num_p_items } p-items in flashcard, instead found { len(_FLASHCARD_P_ITEMS.keys())-1 }"))
+    if len(_FLASHCARD_SKILLCARDS.keys()) - 1 != exp_num_skillcards:
+        warnings.warn(UserWarning(f"Expected { exp_num_skillcards } skillcards in flashcard, instead found { len(_FLASHCARD_SKILLCARDS.keys())-1 }"))
