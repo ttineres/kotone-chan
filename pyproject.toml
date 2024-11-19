@@ -10,6 +10,7 @@ dependencies = [
     "pyyaml",
     "flask",
     "google-api-python-client",
+    "audioop-lts",
 ]
 
 [project.urls]
