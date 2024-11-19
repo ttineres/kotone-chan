@@ -53,7 +53,7 @@ def _parse_title(
 
 def _parse_effect(effect_lst: list[str]) -> str:
     """ Helper function to parse an item's effect. """
-    return "\n ".join("* " + effect for effect in effect_lst)
+    return "\n".join("* " + effect for effect in effect_lst)
 
 
 def _parse_flashcard_freq(
@@ -69,7 +69,7 @@ def _parse_flashcard_freq(
     result = {"desc": raw_flashcard_freq["desc"]}
     title_list = raw_flashcard_freq["content"]
     for key in full_flashcard.keys() - {"desc"}:
-        if any(key.startswith(title) for title in title_list):
+        if any(title in key for title in title_list):
             result[key] = full_flashcard[key]
     return result
 
