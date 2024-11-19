@@ -9,6 +9,8 @@ from kotone.flashcard.init_flashcard import (
     _FLASHCARD_P_DRINKS,
     _FLASHCARD_P_ITEMS,
     _FLASHCARD_P_ITEMS_FREQ,
+    _FLASHCARD_SKILLCARDS,
+    _FLASHCARD_SKILLCARDS_FREQ,
 )
 
 
@@ -112,6 +114,8 @@ def test_init_flashcard():
         _FLASHCARD_P_DRINKS,
         _FLASHCARD_P_ITEMS,
         _FLASHCARD_P_ITEMS_FREQ,
+        _FLASHCARD_SKILLCARDS,
+        _FLASHCARD_SKILLCARDS_FREQ,
     ):
         assert "desc" in flashcard_dict.keys()
         assert all(isinstance(k, str) and isinstance(v, str) for k, v in flashcard_dict.items())
