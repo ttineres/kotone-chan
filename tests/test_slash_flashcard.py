@@ -121,6 +121,8 @@ def test_init_flashcard():
         assert "desc" in flashcard_dict.keys()
         assert all(isinstance(k, str) and isinstance(v, str) for k, v in flashcard_dict.items())
 
+
+def test_flashcard_length():
     # Compare flashcard with the expected number of items currently in the game
     exp_num_p_drinks = 26
     exp_num_p_items = 174
