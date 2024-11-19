@@ -1,0 +1,2906 @@
+#
+# flashcard_skillcards.yaml
+#
+
+desc: すべてのスキルカード
+
+content:
+
+  # N
+
+  - title: アピールの基本
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+
+  - title: アピールの基本
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - パラメータ+14
+
+  - title: ポーズの基本
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - パラメータ+2
+    - 元気+2
+
+  - title: ポーズの基本
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - パラメータ+6
+    - 元気+4
+
+  - title: 挑戦
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+25
+    - レッスン中1回
+
+  - title: 挑戦
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+37
+    - レッスン中1回
+
+  - title: 試行錯誤
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - パラメータ+8（2回）
+    - レッスン中1回
+
+  - title: 試行錯誤
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+10（2回）
+    - レッスン中1回
+
+  - title: 可愛い仕草
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 好印象+2
+    - 好印象の100%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 可愛い仕草
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 好印象+3
+    - 好印象の120%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 気分転換
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 元気の100%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 気分転換
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気の110%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 挨拶の基本
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 強気に変更
+
+  - title: 挨拶の基本
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 強気に変更
+    - 元気+4
+
+  - title: はげしく
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - 強気に変更
+    - パラメータ+15
+    - レッスン中1回
+
+  - title: はげしく
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 強気に変更
+    - パラメータ+25
+    - レッスン中1回
+
+  - title: スパート
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 全力値+1
+    - 温存の場合、自身を保留に移動
+    - 全力の場合、パラメータ+25
+
+  - title: スパート
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 全力値+1
+    - 温存の場合、自身を保留に移動
+    - 全力の場合、パラメータ+25
+
+  - title: 表現の基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+4
+    - レッスン中1回
+
+  - title: 表現の基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+7
+    - レッスン中1回
+
+  - title: 振る舞いの基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 元気+1
+    - 好調2ターン
+
+  - title: 振る舞いの基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -1
+    effect:
+    - 元気+1
+    - 好調3ターン
+
+  - title: 表情の基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 元気+1
+    - 集中+2
+
+  - title: 表情の基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -1
+    effect:
+    - 元気+1
+    - 集中+3
+
+  - title: 目線の基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - 好印象+2
+
+  - title: 目線の基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - 好印象+3
+
+  - title: 意識の基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - やる気+2
+
+  - title: 意識の基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - やる気+3
+
+  - title: メントレの基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+2
+    - 全力値+2
+
+  - title: メントレの基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+3
+    - 全力値+3
+
+  - title: イメージの基本
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+2
+
+  - title: イメージの基本
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+6
+
+  - title: 眠気
+    skillcard_type: T
+    cost:
+      val: 0
+    effect:
+    - レッスン中1回
+
+  # R Active
+
+  - title: 軽い足取り
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+6
+    - 好調2ターン
+
+  - title: 軽い足取り
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+    - 好調3ターン
+
+  - title: 愛嬌
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+13
+
+  - title: 愛嬌
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+21
+
+  - title: 準備運動
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+6
+    - 集中+2
+
+  - title: 準備運動
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+    - 集中+3
+
+  - title: ファンサ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - パラメータ+10
+
+  - title: ファンサ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - パラメータ+16
+
+  - title: 勢い任せ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+6
+    - 好調状態の場合、集中+3
+
+  - title: 勢い任せ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+    - 好調状態の場合、集中+4
+
+  - title: ハイタッチ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+17（集中効果を1.5倍適用）
+    - レッスン中1回
+
+  - title: ハイタッチ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+23（集中効果を2倍適用）
+    - レッスン中1回
+
+  - title: トークタイム
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+27
+    - レッスン中1回
+
+  - title: トークタイム
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+38
+    - レッスン中1回
+
+  - title: エキサイト
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: 4
+    effect:
+    - パラメータ+6
+    - 絶好調3ターン
+    - レッスン中1回
+
+  - title: エキサイト
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: 4
+    effect:
+    - パラメータ+10
+    - 絶好調4ターン
+    - レッスン中1回
+
+  - title: 今日もおはよう
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+7
+    - 好印象+3
+
+  - title: 今日もおはよう
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+    - 好印象+4
+
+  - title: ゆるふわおしゃべり
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - やる気+3
+    - 元気の60%分パラメータ上昇
+    - レッスン中1回
+
+  - title: ゆるふわおしゃべり
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - やる気+4
+    - 元気の80%分パラメータ上昇
+    - レッスン中1回
+
+  - title: もう少しだけ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+10
+    - やる気+3
+
+  - title: もう少しだけ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+15
+    - やる気+4
+
+  - title: 手拍子
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 好印象の150%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 手拍子
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 好印象の200%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 元気な挨拶
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気の110%分パラメータ上昇
+    - レッスン中1回
+
+  - title: 元気な挨拶
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気の120%分パラメータ上昇
+    - レッスン中1回
+
+  - title: ジャストアピール
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - パラメータ+15
+    - 全力値+2
+    - レッスン中1回
+
+  - title: ジャストアピール
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+15
+    - 全力値+3
+    - レッスン中1回
+
+  - title: スターライト
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 強気に変更
+    - パラメータ+9
+
+  - title: スターライト
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - 強気に変更
+    - パラメータ+18
+
+  - title: 一歩
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+15
+    - レッスン中1回
+
+  - title: 一歩
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+23
+    - レッスン中1回
+
+  - title: ラッキー♪
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - パラメータ+8
+    - 強気の場合、全力値+3
+    - レッスン中1回
+
+  - title: ラッキー♪
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - パラメータ+10
+    - 強気の場合、全力値+4
+    - レッスン中1回
+
+  - title: 積み重ね
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 全力値+2
+    - 温存の場合、自身を保留に移動
+    - 全力の場合、パラメータ+20
+
+  - title: 積み重ね
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 全力値+2
+    - 温存の場合、自身を保留に移動
+    - 全力の場合、パラメータ+35
+
+  - title: 精一杯
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 強気に変更
+    - パラメータ+6（2回）
+    - レッスン中1回
+
+  - title: 精一杯
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - 強気に変更
+    - パラメータ+7（2回）
+    - レッスン中1回
+
+  # R Mental
+
+  - title: 気合十分！
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+2
+    - 消費体力減少2ターン
+
+  - title: 気合十分！
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+2
+    - 消費体力減少3ターン
+
+  - title: ファーストステップ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+3
+    - 体力が50%以上の場合、消費体力削減1
+    - レッスン中1回 重複不可
+
+  - title: ファーストステップ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+6
+    - 体力が50%以上の場合、消費体力削減1
+    - レッスン中1回 重複不可
+
+  - title: バランス感覚
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 集中+3
+
+  - title: バランス感覚
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - 集中+4
+
+  - title: 楽観的
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 好調3ターン
+    - 好調状態の場合、集中+1
+
+  - title: 楽観的
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 好調4ターン
+    - 好調状態の場合、集中+1
+
+  - title: 深呼吸
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 集中+2
+    - 集中が3以上の場合、好調3ターン
+
+  - title: 深呼吸
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 集中+3
+    - 集中が3以上の場合、好調3ターン
+
+  - title: ひと呼吸
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - 好調3ターン
+    - 集中+4
+    - レッスン中1回 重複不可
+
+  - title: ひと呼吸
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 好調4ターン
+    - 集中+5
+    - レッスン中1回 重複不可
+
+  - title: リスタート
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 元気+2
+    - 好印象+3
+
+  - title: リスタート
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+2
+    - 好印象+4
+
+  - title: えいえいおー
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - やる気+3
+
+  - title: えいえいおー
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 元気+2
+    - やる気+4
+
+  - title: リズミカル
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+6
+    - レッスン中1回
+
+  - title: リズミカル
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+8
+    - レッスン中1回
+
+  - title: 思い出し笑い
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 好印象+3
+    - 好印象が3以上の場合、やる気+2
+
+  - title: 思い出し笑い
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 好印象+4
+    - 好印象が3以上の場合、やる気+3
+
+  - title: パステル気分
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+5
+    - やる気が3以上の場合、好印象+3
+
+  - title: パステル気分
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+7
+    - やる気が3以上の場合、好印象+4
+
+  - title: 励まし
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - やる気+3
+    - やる気が6以上の場合、好印象+4
+
+  - title: 励まし
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - やる気+4
+    - やる気が6以上の場合、好印象+5
+
+  - title: 幸せのおまじない
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -8
+    effect:
+    - 好印象+7
+    - レッスン中1回
+
+  - title: 幸せのおまじない
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -8
+    effect:
+    - 好印象+9
+    - レッスン中1回
+
+  - title: ハッピー♪
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 温存に変更
+    - 元気+7
+    - レッスン中1回
+
+  - title: ハッピー♪
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+10
+    - レッスン中1回
+
+  - title: 嬉しい誤算
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+5
+    - 全力値+2
+    - 全力値が1以上の場合、温存に変更
+    - レッスン中1回
+
+  - title: 嬉しい誤算
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+6
+    - 全力値+3
+    - 全力値が1以上の場合、温存に変更
+    - レッスン中1回
+
+  - title: 涙の思い出
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+2
+    - 強気の場合、全力値+3
+    - レッスン中1回
+
+  - title: 涙の思い出
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+4
+    - 強気の場合、全力値+4
+    - レッスン中1回
+
+  # SR Active
+
+  - title: 前途洋々
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+8 元気+7
+
+  - title: 前途洋々
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+12 元気+10
+
+  - title: 決めポーズ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - パラメータ+18
+    - レッスン中1回
+
+  - title: 決めポーズ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - パラメータ+27
+    - レッスン中1回
+
+  - title: アドリブ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - パラメータ+5
+    - 好調3ターン
+
+  - title: アドリブ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+9
+    - 好調4ターン
+
+  - title: 情熱ターン
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - パラメータ+11
+    - 集中+3
+
+  - title: 情熱ターン
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - パラメータ+18
+    - 集中+4
+
+  - title: 飛躍
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+13
+    - 集中が6以上の場合、パラメータ+15
+    - レッスン中1回
+
+  - title: 飛躍
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - パラメータ+13
+    - 集中が6以上の場合、パラメータ+15
+    - レッスン中1回
+
+  - title: 祝福
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - パラメータ+26
+    - 好調1ターン
+    - レッスン中1回
+
+  - title: 祝福
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - パラメータ+40
+    - 好調1ターン
+    - レッスン中1回
+
+  - title: スタートダッシュ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+30 元気+10
+    - 消費体力増加2ターン
+    - 重複不可
+
+  - title: スタートダッシュ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+40 元気+10
+    - 消費体力増加2ターン
+    - 重複不可
+
+  - title: スタンドプレー
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+12 元気+7
+    - 集中+5
+    - 消費体力増加2ターン
+    - 重複不可
+
+  - title: スタンドプレー
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+12 元気+7
+    - 集中+7
+    - 消費体力増加2ターン
+    - 重複不可
+
+  - title: シュプレヒコール
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - パラメータ+6
+    - 好調2ターン
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: シュプレヒコール
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 集中
+      val: -2
+    effect:
+    - 集中消費2
+    - パラメータ+6
+    - 好調3ターン
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 立ち位置チェック
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - パラメータ+25 元気+15
+    - 元気増加無効2ターン
+    - レッスン中1回
+
+  - title: 立ち位置チェック
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - パラメータ+40 元気+15
+    - 元気増加無効2ターン
+    - レッスン中1回
+
+  - title: ラブリーウインク
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 好印象+4
+    - 好印象の60%分パラメータ上昇
+
+  - title: ラブリーウインク
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 好印象+5
+    - 好印象の80%分パラメータ上昇
+
+  - title: ありがとうの言葉
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+9
+    - 元気の40%分パラメータ上昇
+    - レッスン中1回
+
+  - title: ありがとうの言葉
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+11
+    - 元気の70%分パラメータ上昇
+    - レッスン中1回
+
+  - title: ハートの合図
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気を半分にして、減少前の元気の130%分パラメータ上昇
+    - レッスン中1回
+
+  - title: ハートの合図
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気を半分にして、減少前の元気の180%分パラメータ上昇
+    - レッスン中1回
+
+  - title: キラメキ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+5
+    - 好印象の200%分パラメータ上昇
+    - 消費体力増加2ターン
+    - レッスン中1回 重複不可
+
+  - title: キラメキ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+5
+    - 好印象の250%分パラメータ上昇
+    - 消費体力増加2ターン
+    - レッスン中1回 重複不可
+
+  - title: みんな大好き
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 好印象の90%分パラメータ上昇
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: みんな大好き
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: やる気
+      val: -2
+    effect:
+    - やる気消費2
+    - 好印象の120%分パラメータ上昇
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: きらきら紙吹雪
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 元気の110%分パラメータ上昇
+    - 次のターン、スキルカードを引く
+    - 重複不可
+
+  - title: きらきら紙吹雪
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: やる気
+      val: -2
+    effect:
+    - やる気消費2
+    - 元気の110%分パラメータ上昇
+    - 次のターン、スキルカードを2枚引く
+    - 重複不可
+
+  - title: せーのっ！
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 強気に変更
+    - パラメータ+12
+
+  - title: せーのっ！
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 強気に変更
+    - パラメータ+22
+
+  - title: アッチェレランド
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+10
+    - 全力値+3
+
+  - title: アッチェレランド
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - パラメータ+12
+    - 全力値+4
+
+  - title: はじけるパッション
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - いずれかの指針の場合、使用可
+    - パラメータ+8（2回）
+    - レッスン中1回
+
+  - title: はじけるパッション
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -1
+    effect:
+    - いずれかの指針の場合、使用可
+    - パラメータ+10（2回）
+    - レッスン中1回
+
+  - title: 汗と成長
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 全力の場合、使用可
+    - パラメータ+37
+    - レッスン中1回
+
+  - title: 汗と成長
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 全力の場合、使用可
+    - パラメータ+47
+    - レッスン中1回
+
+  - title: オープニングアクト
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 強気に変更
+    - パラメータ+10
+    - 全力値+2
+    - レッスン中1回
+
+  - title: オープニングアクト
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - 強気に変更
+    - パラメータ+14
+    - 全力値+3
+    - レッスン中1回
+
+  - title: 始まりの笑顔
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 全力値
+      val: -2
+    effect:
+    - 全力値消費2
+    - 強気に変更
+    - パラメータ+6
+    - 消費体力減少2ターン
+    - 次のターン、スキルカードを引く
+    - 重複不可
+
+  - title: 始まりの笑顔
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 全力値
+      val: -1
+    effect:
+    - 全力値消費1
+    - 強気に変更
+    - パラメータ+8
+    - 消費体力減少2ターン
+    - 次のターン、スキルカードを引く
+    - 重複不可
+
+  - title: 理想のテンポ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - パラメータ+6（2回）
+    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+2
+    - レッスン中1回
+
+  - title: 理想のテンポ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - パラメータ+6（2回）
+    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+4
+    - レッスン中1回
+
+  - title: トレーニングの成果
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 全力値+3
+    - パラメータ+9
+    - 次のターン、温存に変更
+    - レッスン中1回
+
+  - title: トレーニングの成果
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 全力値+4
+    - パラメータ+10
+    - 次のターン、温存2段階目に変更
+    - レッスン中1回
+
+  # SR Mental
+
+  - title: アイドル宣言
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - スキルカード使用数追加+1
+    - スキルカードを2枚引く
+    - レッスン中1回 重複不可
+
+  - title: アイドル宣言
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - スキルカード使用数追加+1
+    - スキルカードを2枚引く
+    - 消費体力減少1ターン
+    - レッスン中1回 重複不可
+
+  - title: ハイテンション
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+11
+    - 元気増加無効2ターン
+    - 消費体力減少3ターン
+    - レッスン中1回
+
+  - title: ハイテンション
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+13
+    - 元気増加無効2ターン
+    - 消費体力減少4ターン
+    - レッスン中1回
+
+  - title: 眼力
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+6
+    - 集中+3
+    - レッスン中1回
+
+  - title: 眼力
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+8
+    - 集中+4
+    - レッスン中1回
+
+  - title: 大声援
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+6
+    - 好調3ターン
+    - レッスン中1回
+
+  - title: 大声援
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+8
+    - 好調4ターン
+    - レッスン中1回
+
+  - title: 演出計画
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 絶好調3ターン
+    - 以降、アクティブスキルカード使用時、固定元気+2
+    - レッスン中1回 重複不可
+
+  - title: 演出計画
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 絶好調4ターン
+    - 以降、アクティブスキルカード使用時、固定元気+2
+    - レッスン中1回 重複不可
+
+  - title: 願いの力
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 集中+2
+    - 以降、アクティブスキルカード使用時、集中+1
+    - レッスン中1回 重複不可
+
+  - title: 願いの力
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 集中+3
+    - 以降、アクティブスキルカード使用時、集中+1
+    - レッスン中1回 重複不可
+
+  - title: 静かな意志
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - レッスン開始時手札に入る
+    - 集中+3
+    - 好調2ターン
+    - レッスン中1回
+
+  - title: 静かな意志
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - レッスン開始時手札に入る
+    - 集中+4
+    - 好調3ターン
+    - レッスン中1回
+
+  - title: 始まりの合図
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 好調5ターン
+    - レッスン中1回
+
+  - title: 始まりの合図
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 好調7ターン
+    - レッスン中1回
+
+  - title: 意地
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 元気+3
+    - 集中+4
+    - レッスン中1回
+
+  - title: 意地
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 元気+5
+    - 集中+5
+    - レッスン中1回
+
+  - title: 存在感
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好調
+      val: -2
+    effect:
+    - 好調消費2ターン
+    - 集中+4
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 存在感
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好調
+      val: -1
+    effect:
+    - 好調消費1ターン
+    - 集中+5
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 成功への道筋
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好調
+      val: -2
+    effect:
+    - 好調消費2ターン
+    - 元気+2
+    - 集中+7
+    - レッスン中1回
+
+  - title: 成功への道筋
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好調
+      val: -2
+    effect:
+    - 好調消費2ターン
+    - 元気+4
+    - 集中+9
+    - レッスン中1回
+
+  - title: スポットライト
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+7
+    - 好調4ターン
+
+  - title: スポットライト
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+9
+    - 好調5ターン
+
+  - title: あふれる思い出
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - 元気+2
+    - やる気+4
+
+  - title: あふれる思い出
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 元気+4
+    - やる気+5
+
+  - title: ふれあい
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 元気+3
+    - 好印象+4
+
+  - title: ふれあい
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 元気+6
+    - 好印象+5
+
+  - title: 幸せな時間
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 好印象+6
+
+  - title: 幸せな時間
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 好印象+8
+
+  - title: ファンシーチャーム
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 好印象+3
+    - 以降、メンタルスキルカード使用時、好印象+1
+    - レッスン中1回 重複不可
+
+  - title: ファンシーチャーム
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - 好印象+5
+    - 以降、メンタルスキルカード使用時、好印象+1
+    - レッスン中1回 重複不可
+
+  - title: ワクワクが止まらない
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -3
+    effect:
+    - やる気+3
+    - 以降、メンタルスキルカード使用時、やる気+1
+    - レッスン中1回 重複不可
+
+  - title: ワクワクが止まらない
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - やる気+5
+    - 以降、メンタルスキルカード使用時、やる気+1
+    - レッスン中1回 重複不可
+
+  - title: 本番前夜
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - レッスン開始時手札に入る
+    - 好印象+4
+    - やる気+3
+    - レッスン中1回
+
+  - title: 本番前夜
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - レッスン開始時手札に入る
+    - 好印象+5
+    - やる気+4
+    - レッスン中1回
+
+  - title: ひなたぼっこ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: 0
+    effect:
+    - 元気+11
+    - やる気+5
+    - 消費体力増加2ターン
+    - レッスン中1回 重複不可
+
+  - title: ひなたぼっこ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 元気+11
+    - やる気+7
+    - 消費体力増加2ターン
+    - レッスン中1回 重複不可
+
+  - title: イメトレ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 元気+7
+    - やる気+4
+    - レッスン中1回
+
+  - title: イメトレ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - 元気+11
+    - やる気+5
+    - レッスン中1回
+
+  - title: やる気は満点
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 元気+1
+    - 好印象+4
+    - レッスン中1回
+
+  - title: やる気は満点
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -1
+    effect:
+    - 元気+2
+    - 好印象+5
+    - レッスン中1回
+
+  - title: ゆめみごこち
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好印象
+      val: -2
+    effect:
+    - 好印象消費2
+    - やる気+4
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: ゆめみごこち
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好印象
+      val: -1
+    effect:
+    - 好印象消費1
+    - やる気+5
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 止められない想い
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - やる気+3
+    - 好印象+3
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 止められない想い
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - やる気+4
+    - 好印象+5
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: オトメゴコロ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 好印象+4
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: オトメゴコロ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 好印象+5
+    - スキルカード使用数追加+1
+    - 好印象が10以上の場合、好印象+2
+    - 重複不可
+
+  - title: 潜在能力
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 元気+10
+    - 全力値+3
+    - 手札を選択し、保留に移動
+    - レッスン中1回
+
+  - title: 潜在能力
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - 元気+15
+    - 全力値+4
+    - 手札を選択し、保留に移動
+    - レッスン中1回
+
+  - title: カウントダウン
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+8
+    - レッスン中1回
+
+  - title: カウントダウン
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+13
+    - レッスン中1回
+
+  - title: プライド
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - レッスン開始時手札に入る
+    - 温存に変更
+    - 元気+5
+    - 全力値+2
+    - レッスン中1回
+
+  - title: プライド
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - レッスン開始時手札に入る
+    - 温存に変更
+    - 元気+8
+    - 全力値+3
+    - レッスン中1回
+
+  - title: 忍耐力
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - 温存に変更
+    - 元気+5
+    - 全力値+2
+    - レッスン中1回
+
+  - title: 忍耐力
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 温存2段階目に変更
+    - 元気+5
+    - 全力値+3
+    - レッスン中1回
+
+  - title: 切磋琢磨
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 全力値+2
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - スキルカード使用数追加+1
+    - 指針固定1ターン
+    - 重複不可
+
+  - title: 切磋琢磨
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: 0
+    effect:
+    - 全力値+3
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - スキルカード使用数追加+1
+    - 指針固定1ターン
+    - 重複不可
+
+  # SSR Active
+
+  - title: コール＆レスポンス
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - パラメータ+15
+    - 集中が3以上の場合、パラメータ+15
+    - レッスン中1回 重複不可
+
+  - title: コール＆レスポンス
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - パラメータ+15
+    - 集中が3以上の場合、パラメータ+34（集中効果を1.5倍適用）
+    - レッスン中1回 重複不可
+
+  - title: バズワード
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+38
+    - 重複不可
+
+  - title: バズワード
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+54
+    - 重複不可
+
+  - title: 成就
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -10
+    effect:
+    - 好調4ターン
+    - 次のターン、パラメータ+32
+    - レッスン中1回 重複不可
+
+  - title: 成就
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -10
+    effect:
+    - 好調7ターン
+    - 次のターン、パラメータ+40
+    - レッスン中1回 重複不可
+
+  - title: 魅惑のパフォーマンス
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -8
+    effect:
+    - 好調状態の場合、使用可
+    - 絶好調2ターン
+    - 次のターン、パラメータ+38
+    - レッスン中1回 重複不可
+
+  - title: 魅惑のパフォーマンス
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 好調状態の場合、使用可
+    - 絶好調3ターン
+    - 次のターン、パラメータ+47
+    - レッスン中1回 重複不可
+
+  - title: 至高のエンタメ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - 以降、アクティブスキルカード使用時、パラメータ+4
+    - レッスン中1回 重複不可
+
+  - title: 至高のエンタメ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 集中
+      val: -2
+    effect:
+    - 集中消費2
+    - 次のターン、スキルカードを引く
+    - 以降、アクティブスキルカード使用時、パラメータ+5
+    - レッスン中1回 重複不可
+
+  - title: 覚醒
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 好調
+      val: -1
+    effect:
+    - 好調消費1ターン
+    - パラメータ+3（2回）
+    - 集中+4
+    - 重複不可
+
+  - title: 覚醒
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 好調
+      val: -1
+    effect:
+    - 好調消費1ターン
+    - パラメータ+4（2回）
+    - 集中+6
+    - 重複不可
+
+  - title: 200%スマイル
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 好印象+5
+    - 好印象の100%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 200%スマイル
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -6
+    effect:
+    - 好印象+6
+    - 好印象の170%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 開花
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - やる気+6
+    - やる気の200%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 開花
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - やる気+8
+    - やる気の300%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 届いて！
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - 元気を0にして、減少前の元気の160%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 届いて！
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - 元気を0にして、減少前の元気の220%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 輝くキミへ
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: やる気
+      val: -4
+    effect:
+    - やる気消費4
+    - スキルカード使用数追加+1
+    - 以降、スキルカード使用時、好印象の30%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 輝くキミへ
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: やる気
+      val: -4
+    effect:
+    - やる気消費4
+    - スキルカード使用数追加+1
+    - 以降、スキルカード使用時、好印象の50%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: あのときの約束
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 好印象
+      val: -4
+    effect:
+    - 好印象消費4
+    - 元気+9
+    - 元気の100%分パラメータ上昇
+    - やる気の150%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: あのときの約束
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 好印象
+      val: -4
+    effect:
+    - 好印象消費4
+    - 元気+14
+    - 元気の130%分パラメータ上昇
+    - やる気の200%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: キセキの魔法
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 好印象の250%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: キセキの魔法
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 好印象の340%分パラメータ上昇
+    - レッスン中1回 重複不可
+
+  - title: 翔び立て！
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 全力値+3
+    - パラメータ+10（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
+    - \[成長\]全力になった時、このスキルカードのパラメータ値増加+20（レッスン中1回）
+    - レッスン中1回 重複不可
+
+  - title: 翔び立て！
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 全力値+4
+    - パラメータ+15（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
+    - \[成長\]全力になった時、このスキルカードのパラメータ値増加+30（レッスン中1回）
+    - レッスン中1回 重複不可
+
+  - title: 総合芸術
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - いずれかの指針の場合、使用可
+    - 強気に変更
+    - パラメータ+7
+    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+15（レッスン中4回）
+    - 重複不可
+
+  - title: 総合芸術
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - いずれかの指針の場合、使用可
+    - 強気に変更
+    - パラメータ+10
+    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+20（レッスン中4回）
+    - 重複不可
+
+  - title: 心・技・体
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -8
+    effect:
+    - 強気2段階目に変更
+    - パラメータ+7
+    - 全力値+3
+    - 消費体力減少2ターン
+    - レッスン中1回 重複不可
+
+  - title: 心・技・体
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -8
+    effect:
+    - 強気2段階目に変更
+    - パラメータ+16
+    - 全力値+4
+    - 消費体力減少4ターン
+    - レッスン中1回 重複不可
+
+  - title: 輝け！
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -7
+    effect:
+    - 全力値+3
+    - 次のターン、温存に変更
+    - 全力の場合、パラメータ+20（2回）
+    - レッスン中1回 重複不可
+
+  - title: 輝け！
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -7
+    effect:
+    - 全力値+4
+    - 次のターン、温存2段階目に変更
+    - 全力の場合、パラメータ+25（2回）
+    - レッスン中1回 重複不可
+
+  - title: クライマックス
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -10
+    effect:
+    - 強気に変更
+    - パラメータ+14（2回）
+    - 次のターン、温存に変更
+    - レッスン中1回 重複不可
+
+  - title: クライマックス
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -10
+    effect:
+    - 強気2段階目に変更
+    - パラメータ+19（2回）
+    - 次のターン、温存2段階目に変更
+    - レッスン中1回 重複不可
+
+  - title: 全身全霊
+    skillcard_type: A
+    is_enhanced: False
+    cost:
+      val: -8
+    effect:
+    - 強気に変更
+    - 次に使用したスキルカードの消費体力を0にする（2回）
+    - スキルカード使用数追加+1
+    - スキルカードを3枚引く
+    - レッスン中1回 重複不可
+
+  - title: 全身全霊
+    skillcard_type: A
+    is_enhanced: True
+    cost:
+      val: -8
+    effect:
+    - 強気に変更
+    - 次に使用したスキルカードの消費体力を0にする（2回）
+    - スキルカード使用数追加+2
+    - スキルカードを3枚引く
+    - レッスン中1回 重複不可
+
+  # SSR Mental
+
+  - title: テレビ出演
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -1
+    effect:
+    - 元気+3
+    - 消費体力減少4ターン
+    - レッスン中1回 重複不可
+
+  - title: テレビ出演
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -1
+    effect:
+    - 元気+5
+    - 消費体力減少5ターン
+    - レッスン中1回 重複不可
+
+  - title: 叶えたい夢
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 元気+8
+    - 消費体力削減1
+    - レッスン中1回 重複不可
+
+  - title: 叶えたい夢
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 元気+9
+    - 消費体力削減2
+    - レッスン中1回 重複不可
+
+  - title: アイドル魂
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -2
+    effect:
+    - レッスン開始時手札に入る
+    - 元気+6
+    - 低下状態無効1回
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: アイドル魂
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - レッスン開始時手札に入る
+    - 元気+6
+    - 低下状態無効1回
+    - 次のターン、手札をすべてレッスン中強化
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 仕切り直し
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 手札をすべて入れ替える
+    - 消費体力減少4ターン
+    - スキルカード使用数追加+1
+    - スキルカードを2枚引く
+    - レッスン中1回 重複不可
+
+  - title: 仕切り直し
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -2
+    effect:
+    - 手札をすべて入れ替える
+    - 消費体力減少4ターン
+    - スキルカード使用数追加+1
+    - スキルカードを2枚引く
+    - レッスン中1回 重複不可
+
+  - title: 国民的アイドル
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好調
+      val: -1
+    effect:
+    - 好調消費1ターン
+    - 次に使用するスキルカードの効果をもう1回発動（1回）
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 国民的アイドル
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好調
+      val: -1
+    effect:
+    - 好調消費1ターン
+    - 元気+8
+    - 次に使用するスキルカードの効果をもう1回発動（1回）
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 魅惑の視線
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - 絶好調4ターン
+    - 消費体力減少2ターン
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 魅惑の視線
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 集中
+      val: -3
+    effect:
+    - 集中消費3
+    - 絶好調5ターン
+    - 消費体力減少5ターン
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 鳴り止まない拍手
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -5
+    effect:
+    - 集中+4
+    - 好調2ターン
+    - 消費体力減少2ターン
+    - レッスン中1回 重複不可
+
+  - title: 鳴り止まない拍手
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -5
+    effect:
+    - 集中+5
+    - 好調3ターン
+    - 消費体力減少3ターン
+    - レッスン中1回 重複不可
+
+  - title: 天真爛漫
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -6
+    effect:
+    - 集中+1
+    - 以降、ターン終了時、集中が3以上の場合、集中+2
+    - レッスン中1回 重複不可
+
+  - title: 天真爛漫
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -3
+    effect:
+    - 集中+1
+    - 以降、ターン終了時、集中が3以上の場合、集中+2
+    - レッスン中1回 重複不可
+
+  - title: 私がスター
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好印象
+      val: -2
+    effect:
+    - 好印象消費2
+    - ターン追加+1
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 私がスター
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好印象
+      val: -1
+    effect:
+    - 好印象消費1
+    - ターン追加+1
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - レッスン中1回 重複不可
+
+  - title: 星屑センセーション
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 好印象+5
+    - スキルカード使用数追加+1
+    - レッスン中1回 重複不可
+
+  - title: 星屑センセーション
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: やる気
+      val: -3
+    effect:
+    - やる気消費3
+    - 好印象+7
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - レッスン中1回 重複不可
+
+  - title: ノートの端の決意
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -4
+    effect:
+    - 好印象+3
+    - やる気+3
+    - 消費体力減少3ターン
+    - レッスン中1回 重複不可
+
+  - title: ノートの端の決意
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -4
+    effect:
+    - 好印象+5
+    - やる気+3
+    - 消費体力減少3ターン
+    - レッスン中1回 重複不可
+
+  - title: 手書きのメッセージ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 好印象
+      val: -2
+    effect:
+    - 好印象消費2
+    - 元気+9
+    - 元気+9
+    - レッスン中1回 重複不可
+
+  - title: 手書きのメッセージ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 好印象
+      val: -1
+    effect:
+    - 好印象消費1
+    - 元気+10
+    - 元気+10
+    - レッスン中1回 重複不可
+
+  - title: トキメキ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -10
+    effect:
+    - 好印象+8
+    - やる気+5
+    - レッスン中1回 重複不可
+
+  - title: トキメキ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -9
+    effect:
+    - 好印象+10
+    - やる気+6
+    - レッスン中1回 重複不可
+
+  - title: 虹色ドリーマー
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -9
+    effect:
+    - 好印象+1
+    - 以降、ターン終了時、好印象が3以上の場合、好印象+3
+    - レッスン中1回 重複不可
+
+  - title: 虹色ドリーマー
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -9
+    effect:
+    - 好印象+4
+    - 以降、ターン終了時、好印象が3以上の場合、好印象+3
+    - レッスン中1回 重複不可
+
+  - title: アイドルになります
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 全力値
+      val: -3
+    effect:
+    - 全力値消費3
+    - スキルカード使用数追加+1
+    - 手札のパラメータ上昇回数増加+1
+    - レッスン中1回 重複不可
+
+  - title: アイドルになります
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 全力値
+      val: -3
+    effect:
+    - 全力値消費3
+    - 元気+4
+    - 温存に変更
+    - スキルカード使用数追加+1
+    - 手札のパラメータ上昇回数増加+1
+    - レッスン中1回 重複不可
+
+  - title: 頂点へ
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      val: -9
+    effect:
+    - 以降、ターン開始時、いずれかの指針の場合、すべてのスキルカードのパラメータ値増加+4
+    - レッスン中1回 重複不可
+
+  - title: 頂点へ
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      val: -9
+    effect:
+    - すべてのスキルカードのパラメータ値増加+6
+    - 以降、ターン開始時、いずれかの指針の場合、すべてのスキルカードのパラメータ値増加+4
+    - レッスン中1回 重複不可
+
+  - title: 覚悟
+    skillcard_type: M
+    is_enhanced: False
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+8
+    - 全力値+5
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - レッスン中1回 重複不可
+
+  - title: 覚悟
+    skillcard_type: M
+    is_enhanced: True
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+8
+    - 全力値+7
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - レッスン中1回 重複不可

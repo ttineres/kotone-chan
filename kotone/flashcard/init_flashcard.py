@@ -19,7 +19,7 @@ def _parse_flashcard(raw_flashcard: dict[str, Any]) -> dict[str, str]:
     """
     result = {"desc": raw_flashcard["desc"]}
     for item in raw_flashcard["content"]:
-        title = _parse_title(item["title"], item.get("is_enhanced"), item.get("cost"), item.get("origin"))
+        title = _parse_title(item["title"], item.get("skillcard_type"), item.get("is_enhanced"), item.get("cost"), item.get("origin"))
         effect = _parse_effect(item["effect"])
         result[title] = effect
     return result
@@ -27,11 +27,15 @@ def _parse_flashcard(raw_flashcard: dict[str, Any]) -> dict[str, str]:
 
 def _parse_title(
     title: str,
+    skillcard_type: Optional[str],
     is_enhanced: Optional[bool],
     cost: Optional[dict[str, str]],
     origin: Optional[dict[str, str]]
 ) -> str:
     """ Helper function to parse an item's title. """
+    if skillcard_type:
+        title = f"({ skillcard_type }) { title }"
+
     if is_enhanced:
         title += "+"
 
