@@ -136,8 +136,8 @@ class FlashcardCog(commands.Cog):
             "* `/flashcard drink`：「Pドリンク」の単語帳から出題\n"
             "* `/flashcard item`：「よく使われるPアイテム」の単語帳から出題\n"
             "* `/flashcard item-all`：「すべてのPアイテム」の単語帳から出題\n"
-            "* `/flashcard skill`：「よく使われるスキルカード」の単語帳から出題\n"
-            #"* `/flashcard skill-all`：「すべてのスキルカード」の単語帳から出題\n",
+            "* `/flashcard skill`：「よく使われるスキルカード」の単語帳から出題\n",
+            #"* `/flashcard skill-all`：「すべてのスキルカード」の単語帳から出題\n"
             ephemeral=True
         )
 
