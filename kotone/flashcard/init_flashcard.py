@@ -77,14 +77,27 @@ def _parse_flashcard_freq(
 # Load and parse flashcards from .yaml
 resource = importlib.resources.files(kotone.flashcard)
 
+
 with resource.joinpath("flashcard_p_drinks.yaml").open(encoding="utf-8") as f:
     _raw_p_drinks = yaml.safe_load(f)
 _FLASHCARD_P_DRINKS = _parse_flashcard(_raw_p_drinks)
+
 
 with resource.joinpath("flashcard_p_items.yaml").open(encoding="utf-8") as f:
     _raw_p_items = yaml.safe_load(f)
 _FLASHCARD_P_ITEMS = _parse_flashcard(_raw_p_items)
 
+
 with resource.joinpath("flashcard_p_items_freq.yaml").open(encoding="utf-8") as f:
     _raw_p_items_freq = yaml.safe_load(f)
 _FLASHCARD_P_ITEMS_FREQ = _parse_flashcard_freq(_raw_p_items_freq, _FLASHCARD_P_ITEMS)
+
+
+with resource.joinpath("flashcard_skillcards.yaml").open(encoding="utf-8") as f:
+    _raw_skillcards = yaml.safe_load(f)
+_FLASHCARD_SKILLCARDS = _parse_flashcard(_raw_skillcards)
+
+
+with resource.joinpath("flashcard_skillcards_freq.yaml").open(encoding="utf-8") as f:
+    _raw_skillcards_freq = yaml.safe_load(f)
+_FLASHCARD_SKILLCARDS_FREQ = _parse_flashcard_freq(_raw_skillcards_freq, _FLASHCARD_SKILLCARDS)
