@@ -5,6 +5,9 @@
 [学園アイドルマスター](https://gakuen.idolmaster-official.jp/)の二次創作です。
 
 > [!Note]
+> Looking for technical details? [Read me.](for_developers.md)
+
+> [!Note]
 > プライバシーポリシーは[こちら](privacy_policy.md)で確認できます。
 > 
 > You can find the privacy policy [here](privacy_policy.md).
