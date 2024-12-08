@@ -15,7 +15,7 @@ def test_get_greeting():
     with patch("random.random") as mock_random:
         mock_random.return_value = 0.05
         assert get_greeting("TestName")
-        
+
         mock_random.return_value = 0.15
         assert get_greeting("TestName")
 
@@ -31,18 +31,20 @@ def test_get_greeting():
 ))
 def test_get_aisatu(name, hour, possible_results):
     with freeze_time(datetime(2024, 5, 16, hour, tzinfo=_JAPAN_TIMEZONE)):
-        assert get_aisatu(name) in possible_results
+        for _ in range(100):
+            assert get_aisatu(name) in possible_results
 
 
 @pytest.mark.parametrize(("name", "month", "possible_results"), (
     ("TestName",  3, ["来ました……春限定メニューという名の、繁忙期がぁ～！", "TestNameさん、お花見いきましょうよ～", "もう外でレッスンしても、寒くなさそうですね！"]),
     ("TestName",  6, ["TestNameさん、もっと冷房強くなんないんですか～？", "真夏の着ぐるみバイト……さすがに……", "最近、チビ共が海行きたい～って、うるさいんですよ。"]),
     ("TestName",  9, ["フルーツ狩りって、いくつ取れたらお得なんですかね……", "働きやすい気温になってきましたね！", "TestNameさん！　お仕事の秋が来ましたよ！"]),
-    ("TestName", 12, ["フルーツ狩りって、いくつ取れたらお得なんですかね……", "働きやすい気温になってきましたね！", "TestNameさん！　お仕事の秋が来ましたよ！"]),
+    ("TestName", 12, ["寒いからって、外でのお仕事を減らしちゃだめですよ！", "TestNameさん、あったかい衣装くーださい♪", "風邪にお気をつけてくださいね？"]),
 ))
 def test_get_season_aisatu(name, month, possible_results):
     with freeze_time(datetime(2024, month, 1, tzinfo=_JAPAN_TIMEZONE)):
-        assert get_season_aisatu(name) in possible_results
+        for _ in range(100):
+            assert get_season_aisatu(name) in possible_results
 
 
 @pytest.mark.parametrize(("name", "keyword", "is_special"), (
