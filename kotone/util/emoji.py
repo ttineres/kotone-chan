@@ -103,6 +103,10 @@ IDOL_EMOJI = {
     "ganbattana"    : "<:ganbattana:1300725722129760266>",
     "sugoiwa"       : "<:sugoiwa:1300725731973926942>",
     "hajimemasune"  : "<:hajimemasune:1300725746729222206>",
+
+    "hatsumichan_1" : "<:hatsumichan_1:1319256044861390858>",
+    "hatsumichan_2" : "<:hatsumichan_2:1319256053220904990>",
+    "hatsumichan_3" : "<:hatsumichan_3:1319256061487742987>",
 }
 
 
@@ -126,7 +130,7 @@ def emoji_to_name(emoji: Optional[str]) -> Optional[str]:
     """
     if not emoji:
         return
-    
+
     emoji_pattern = r"^<:(\w+):\d+>$"
     match = re.match(emoji_pattern, emoji)
 
