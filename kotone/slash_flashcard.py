@@ -13,6 +13,7 @@ from .flashcard.init_flashcard import (
     _FLASHCARD_P_ITEMS_FREQ,
     _FLASHCARD_P_ITEMS,
     _FLASHCARD_SKILLCARDS_FREQ,
+    _FLASHCARD_SKILLCARDS,
 )
 
 
@@ -54,7 +55,7 @@ class QuesPostView(discord.ui.View):
     async def new_quiz_callback(self, interaction: discord.Interaction, button: discord.ui.Button):
         new_ques_text, new_full_text = quiz_from(self.flashcard_dict, self.ques_using_key)
         await interaction.response.edit_message(content=new_ques_text, view=QuesPreView(self.flashcard_dict, self.ques_using_key, new_full_text))
-    
+
     @discord.ui.button(label="出題モード変更", style=discord.ButtonStyle.grey, row=1)
     async def opposite_quiz_callback(self, interaction: discord.Interaction, button: discord.ui.Button):
         new_ques_text, new_full_text = quiz_from(self.flashcard_dict, not self.ques_using_key)
@@ -105,7 +106,7 @@ class FlashcardCog(commands.Cog):
             view=QuesPreView(_FLASHCARD_P_ITEMS_FREQ, True, new_full_text),
             ephemeral=bool(ephemeral.value)
         )
-    
+
     @group.command(name="item-all", description="すべてのPアイテムの単語帳から出題")
     @discord.app_commands.rename(ephemeral="表示設定")
     async def p_item_all_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
@@ -116,7 +117,7 @@ class FlashcardCog(commands.Cog):
             view=QuesPreView(_FLASHCARD_P_ITEMS, True, new_full_text),
             ephemeral=bool(ephemeral.value)
         )
-    
+
     @group.command(name="skill", description="よく使われるスキルカードの単語帳から出題")
     @discord.app_commands.rename(ephemeral="表示設定")
     async def skillcard_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
@@ -127,7 +128,18 @@ class FlashcardCog(commands.Cog):
             view=QuesPreView(_FLASHCARD_SKILLCARDS_FREQ, True, new_full_text),
             ephemeral=bool(ephemeral.value)
         )
-    
+
+    @group.command(name="skill-all", description="すべてのスキルカードの単語帳から出題")
+    @discord.app_commands.rename(ephemeral="表示設定")
+    async def skillcard_flashcard(self, interaction: discord.Interaction, ephemeral: EphemeralEnum = EphemeralEnum.T):
+        """ Interactive quiz from all skillcard flashcards. """
+        new_ques_text, new_full_text = quiz_from(_FLASHCARD_SKILLCARDS, True)
+        await interaction.response.send_message(
+            content=new_ques_text,
+            view=QuesPreView(_FLASHCARD_SKILLCARDS, True, new_full_text),
+            ephemeral=bool(ephemeral.value)
+        )
+
     @group.command(name="help", description="学マス単語帳のヘルプを表示")
     async def help_flashcard(self, interaction: discord.Interaction):
         """ Command for help with `/flashcard`. """
@@ -136,8 +148,8 @@ class FlashcardCog(commands.Cog):
             "* `/flashcard drink`：「Pドリンク」の単語帳から出題\n"
             "* `/flashcard item`：「よく使われるPアイテム」の単語帳から出題\n"
             "* `/flashcard item-all`：「すべてのPアイテム」の単語帳から出題\n"
-            "* `/flashcard skill`：「よく使われるスキルカード」の単語帳から出題\n",
-            #"* `/flashcard skill-all`：「すべてのスキルカード」の単語帳から出題\n"
+            "* `/flashcard skill`：「よく使われるスキルカード」の単語帳から出題\n"
+            "* `/flashcard skill-all`：「すべてのスキルカード」の単語帳から出題\n",
             ephemeral=True
         )
 

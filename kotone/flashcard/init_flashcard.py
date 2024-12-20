@@ -78,8 +78,9 @@ def _parse_flashcard_freq(
             # Exclude non-enhanced version of produce skillcards
             if (
                 exclude_origin_nonenhanced
+                and "[" in key
                 and "]" in key
-                and "+ ([" not in key
+                and "+" not in key
             ):
                 continue
 
