@@ -702,7 +702,7 @@ content:
     effect:
     - 元気+3
     - 体力が50%以上の場合、消費体力削減1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ファーストステップ
     skillcard_type: M
@@ -712,7 +712,7 @@ content:
     effect:
     - 元気+6
     - 体力が50%以上の場合、消費体力削減1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: バランス感覚
     skillcard_type: M
@@ -775,7 +775,7 @@ content:
     effect:
     - 好調3ターン
     - 集中+4
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ひと呼吸
     skillcard_type: M
@@ -785,7 +785,7 @@ content:
     effect:
     - 好調4ターン
     - 集中+5
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: リスタート
     skillcard_type: M
@@ -976,6 +976,545 @@ content:
     - 元気+4
     - 強気の場合、全力値+4
     - レッスン中1回
+
+  # R Produce Sense
+
+  - title: 新進気鋭
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 花海咲季
+    cost:
+      val: -5
+    effect:
+    - パラメータ+17
+    - 重複不可 レッスン中1回
+
+  - title: 新進気鋭
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 花海咲季
+    cost:
+      val: -5
+    effect:
+    - パラメータ+25
+    - 重複不可 レッスン中1回
+
+  - title: 意地っ張り
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 月村手毬
+    cost:
+      val: -6
+    effect:
+    - パラメータ+7
+    - 集中+3
+    - 重複不可 レッスン中1回
+
+  - title: 意地っ張り
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 月村手毬
+    cost:
+      val: -6
+    effect:
+    - パラメータ+7
+    - 集中+5
+    - 重複不可 レッスン中1回
+
+  - title: リトル・プリンス
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 有村麻央
+    cost:
+      val: -3
+    effect:
+    - パラメータ+8
+    - 好調状態の場合、パラメータ+3
+    - 重複不可 レッスン中1回
+
+  - title: リトル・プリンス
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 有村麻央
+    cost:
+      val: -3
+    effect:
+    - パラメータ+13
+    - 好調状態の場合、パラメータ+5
+    - 重複不可 レッスン中1回
+
+  - title: 包容力
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 姫崎莉波
+    cost:
+      val: 0
+    effect:
+    - パラメータ+2 元気+1
+    - 体力回復2
+    - 重複不可 レッスン中1回
+
+  - title: 包容力
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 姫崎莉波
+    cost:
+      val: 0
+    effect:
+    - パラメータ+3 元気+4
+    - 体力回復2
+    - 重複不可 レッスン中1回
+
+  - title: フレンドリー
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 紫雲清夏
+    cost:
+      val: -6
+    effect:
+    - パラメータ+10
+    - 集中が6以上の場合、パラメータ+10
+    - 重複不可 レッスン中1回
+
+  - title: フレンドリー
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 紫雲清夏
+    cost:
+      val: -6
+    effect:
+    - パラメータ+12（2回）
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのご褒美
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 初声
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好調3ターン
+    - 絶好調2ターン
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのご褒美
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 初声
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好調4ターン
+    - 絶好調3ターン
+    - 重複不可 レッスン中1回
+
+  - title: 初めての地平
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 初心
+      idol: 葛城リーリヤ
+    cost:
+      val: -2
+    effect:
+    - 好調の200%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 初めての地平
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 初心
+      idol: 葛城リーリヤ
+    cost:
+      val: -2
+    effect:
+    - 好調の250%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 初めての色
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 初心
+      idol: 倉本千奈
+    cost:
+      val: -2
+    effect:
+    - 元気+5
+    - 絶好調2ターン
+    - 重複不可 レッスン中1回
+
+  - title: 初めての色
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 初心
+      idol: 倉本千奈
+    cost:
+      val: -2
+    effect:
+    - 元気+5
+    - 絶好調3ターン
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのたのしみ
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 初恋
+      idol: 篠澤広
+    cost:
+      val: -3
+    effect:
+    - パラメータ+6（集中効果を1.5倍適用）
+    - 体力が50%以下の場合、元気+4
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのたのしみ
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 初恋
+      idol: 篠澤広
+    cost:
+      val: -3
+    effect:
+    - パラメータ+8（集中効果を2倍適用）
+    - 体力が50%以下の場合、元気+7
+    - 重複不可 レッスン中1回
+
+  # R Produce Logic
+
+  - title: アルバイター
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 藤田ことね
+    cost:
+      val: -6
+    effect:
+    - パラメータ+2
+    - 好印象+5
+    - 重複不可 レッスン中1回
+
+  - title: アルバイター
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 藤田ことね
+    cost:
+      val: -6
+    effect:
+    - パラメータ+6
+    - 好印象+6
+    - 重複不可 レッスン中1回
+
+  - title: 超高学歴アイドル
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 篠澤広
+    cost:
+      val: 0
+    effect:
+    - 元気+2
+    - やる気が6以上の場合、元気+3
+    - 重複不可 レッスン中1回
+
+  - title: 超高学歴アイドル
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 篠澤広
+    cost:
+      val: 0
+    effect:
+    - 元気+4
+    - やる気が6以上の場合、元気+5
+    - 重複不可 レッスン中1回
+
+  - title: 内気系少女
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 葛城リーリヤ
+    cost:
+      val: -3
+    effect:
+    - 好印象+1
+    - 以降、ターン終了時、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: 内気系少女
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 葛城リーリヤ
+    cost:
+      val: -2
+    effect:
+    - 好印象+2
+    - 以降、ターン終了時、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: 元気いっぱい
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+2
+    - 元気の50%分パラメータ上昇
+    - やる気+2
+    - 重複不可 レッスン中1回
+
+  - title: 元気いっぱい
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+2
+    - 元気の70%分パラメータ上昇
+    - やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 元気いっぱい
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+2（レッスン中に使用したスキルカード1枚ごとに、元気増加量+3）
+    - 重複不可 レッスン中1回
+
+  - title: 元気いっぱい
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+4（レッスン中に使用したスキルカード1枚ごとに、元気増加量+4）
+    - 重複不可 レッスン中1回
+
+  - title: 初めての未来
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 初声
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 好印象の190%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 初めての未来
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 初声
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 好印象の200%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 初めての場所
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 初声
+      idol: 月村手毬
+    cost:
+      val: -6
+    effect:
+    - 好印象+6
+    - 重複不可 レッスン中1回
+
+  - title: 初めての場所
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 初声
+      idol: 月村手毬
+    cost:
+      val: -6
+    effect:
+    - 好印象+8
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのお相手
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 初心
+      idol: 姫崎莉波
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+2（やる気効果を1.5倍適用）
+    - 元気の40%分パラメータ上昇
+    - 消費体力削減1
+    - 重複不可 レッスン中1回
+
+  - title: 初めてのお相手
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 初心
+      idol: 姫崎莉波
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+2（やる気効果を1.5倍適用）
+    - 元気の50%分パラメータ上昇
+    - 消費体力削減1
+    - 重複不可 レッスン中1回
+
+  - title: 初めての結晶
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 初心
+      idol: 有村麻央
+    cost:
+      val: -4
+    effect:
+    - 好印象の80%分パラメータ上昇
+    - やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 初めての結晶
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 初心
+      idol: 有村麻央
+    cost:
+      val: -4
+    effect:
+    - 好印象の120%分パラメータ上昇
+    - やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 初めての想い
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 初心
+      idol: 紫雲清夏
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - やる気+4
+    - やる気が6以上の場合、やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 初めての想い
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 初心
+      idol: 紫雲清夏
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - やる気+6
+    - やる気が6以上の場合、やる気+3
+    - 重複不可 レッスン中1回
+
+  # R Produce Anomaly
+
+  - title: 学園一のアイドル
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 学園生活
+      idol: 十王星南
+    cost:
+      val: -4
+    effect:
+    - 強気に変更
+    - パラメータ+2（2回）
+    - 重複不可 レッスン中1回
+
+  - title: 学園一のアイドル
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 学園生活
+      idol: 十王星南
+    cost:
+      val: -3
+    effect:
+    - 強気に変更
+    - パラメータ+4（2回）
+    - 重複不可 レッスン中1回
 
   # SR Active
 
@@ -1258,7 +1797,7 @@ content:
     - 元気+5
     - 好印象の200%分パラメータ上昇
     - 消費体力増加2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: キラメキ
     skillcard_type: A
@@ -1269,7 +1808,7 @@ content:
     - 元気+5
     - 好印象の250%分パラメータ上昇
     - 消費体力増加2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: みんな大好き
     skillcard_type: A
@@ -1499,7 +2038,7 @@ content:
     - 体力消費1
     - スキルカード使用数追加+1
     - スキルカードを2枚引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: アイドル宣言
     skillcard_type: M
@@ -1510,7 +2049,7 @@ content:
     - スキルカード使用数追加+1
     - スキルカードを2枚引く
     - 消費体力減少1ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ハイテンション
     skillcard_type: M
@@ -1582,7 +2121,7 @@ content:
     effect:
     - 絶好調3ターン
     - 以降、アクティブスキルカード使用時、固定元気+2
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 演出計画
     skillcard_type: M
@@ -1592,7 +2131,7 @@ content:
     effect:
     - 絶好調4ターン
     - 以降、アクティブスキルカード使用時、固定元気+2
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 願いの力
     skillcard_type: M
@@ -1602,7 +2141,7 @@ content:
     effect:
     - 集中+2
     - 以降、アクティブスキルカード使用時、集中+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 願いの力
     skillcard_type: M
@@ -1612,7 +2151,7 @@ content:
     effect:
     - 集中+3
     - 以降、アクティブスキルカード使用時、集中+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 静かな意志
     skillcard_type: M
@@ -1804,7 +2343,7 @@ content:
     effect:
     - 好印象+3
     - 以降、メンタルスキルカード使用時、好印象+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ファンシーチャーム
     skillcard_type: M
@@ -1814,7 +2353,7 @@ content:
     effect:
     - 好印象+5
     - 以降、メンタルスキルカード使用時、好印象+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ワクワクが止まらない
     skillcard_type: M
@@ -1824,7 +2363,7 @@ content:
     effect:
     - やる気+3
     - 以降、メンタルスキルカード使用時、やる気+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ワクワクが止まらない
     skillcard_type: M
@@ -1834,7 +2373,7 @@ content:
     effect:
     - やる気+5
     - 以降、メンタルスキルカード使用時、やる気+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 本番前夜
     skillcard_type: M
@@ -1867,7 +2406,7 @@ content:
     - 元気+11
     - やる気+5
     - 消費体力増加2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ひなたぼっこ
     skillcard_type: M
@@ -1878,7 +2417,7 @@ content:
     - 元気+11
     - やる気+7
     - 消費体力増加2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: イメトレ
     skillcard_type: M
@@ -1955,7 +2494,7 @@ content:
     - やる気+3
     - 好印象+3
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 止められない想い
     skillcard_type: M
@@ -1968,7 +2507,7 @@ content:
     - やる気+4
     - 好印象+5
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: オトメゴコロ
     skillcard_type: M
@@ -2107,6 +2646,584 @@ content:
     - 指針固定1ターン
     - 重複不可
 
+  # SR Produce Sense
+
+  - title: 一番は譲らない
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: わたしが一番！
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - パラメータ+18
+    - 好調3ターン
+    - 重複不可 レッスン中1回
+
+  - title: 一番は譲らない
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: わたしが一番！
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - パラメータ+26
+    - 好調4ターン
+    - 重複不可 レッスン中1回
+
+  - title: ローン・ウルフ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 一匹狼
+      idol: 月村手毬
+    cost:
+      val: -5
+    effect:
+    - パラメータ+12
+    - 集中が3以上の場合、パラメータ+12
+    - 重複不可 レッスン中1回
+
+  - title: ローン・ウルフ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 一匹狼
+      idol: 月村手毬
+    cost:
+      val: -2
+    effect:
+    - パラメータ+12
+    - 集中が3以上の場合、パラメータ+12
+    - 重複不可 レッスン中1回
+
+  - title: らしさ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: はじまりはカッコよく
+      idol: 有村麻央
+    cost:
+      val: 0
+    effect:
+    - パラメータ+4
+    - 好調状態の場合、集中+3
+    - 重複不可 レッスン中1回
+
+  - title: らしさ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: はじまりはカッコよく
+      idol: 有村麻央
+    cost:
+      val: 0
+    effect:
+    - パラメータ+6
+    - 好調状態の場合、集中+4
+    - 重複不可 レッスン中1回
+
+  - title: 寄り添う気持ち
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 『私らしさ』のはじまり
+      idol: 姫崎莉波
+    cost:
+      val: -6
+    effect:
+    - 元気+10
+    - 集中+4
+    - 重複不可 レッスン中1回
+
+  - title: 寄り添う気持ち
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 『私らしさ』のはじまり
+      idol: 姫崎莉波
+    cost:
+      val: -5
+    effect:
+    - 元気+12
+    - 集中+5
+    - 重複不可 レッスン中1回
+
+  - title: 勇気の一歩
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 夢へのリスタート
+      idol: 紫雲清夏
+    cost:
+      val: -3
+    effect:
+    - パラメータ+17（集中効果を2倍適用）
+    - 重複不可 レッスン中1回
+
+  - title: 勇気の一歩
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 夢へのリスタート
+      idol: 紫雲清夏
+    cost:
+      val: -3
+    effect:
+    - パラメータ+24（集中効果を2.5倍適用）
+    - 重複不可 レッスン中1回
+
+  # SR Produce Logic
+
+  - title: Colorful Cute!
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: カワイイ♡はじめました
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好印象+6
+    - 重複不可 レッスン中1回
+
+  - title: Colorful Cute!
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: カワイイ♡はじめました
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好印象+8
+    - 重複不可 レッスン中1回
+
+  - title: 苦しいのが好き
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 一番向いてないこと
+      idol: 篠澤広
+    cost:
+      val: -4
+    effect:
+    - 元気+6
+    - やる気の250%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 苦しいのが好き
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 一番向いてないこと
+      idol: 篠澤広
+    cost:
+      val: -4
+    effect:
+    - 元気+7
+    - やる気の350%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 純白の妖精
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 一つ踏み出した先に
+      idol: 葛城リーリヤ
+    cost:
+      val: -3
+    effect:
+    - 好印象+2
+    - 好印象の120%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 純白の妖精
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 一つ踏み出した先に
+      idol: 葛城リーリヤ
+    cost:
+      val: -3
+    effect:
+    - 好印象+2
+    - 好印象の160%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: いっしょけんめい
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 胸を張って一歩ずつ
+      idol: 倉本千奈
+    cost:
+      val: -2
+    effect:
+    - 元気+1
+    - やる気+5
+    - 重複不可 レッスン中1回
+
+  - title: いっしょけんめい
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 胸を張って一歩ずつ
+      idol: 倉本千奈
+    cost:
+      val: -2
+    effect:
+    - 元気+4
+    - やる気+6
+    - 重複不可 レッスン中1回
+
+  - title: 打倒お姉ちゃん
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: アイドル、はじめっ！
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+3
+    - 元気の100%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 打倒お姉ちゃん
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: アイドル、はじめっ！
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+3
+    - 元気の140%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  # SR Produce Anomaly
+
+  - title: 王者の御出まし
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 一番星
+      idol: 十王星南
+    cost:
+      val: -3
+    effect:
+    - 全力値+4
+    - 消費体力減少2ターン
+    - 重複不可 レッスン中1回
+
+  - title: 王者の御出まし
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 一番星
+      idol: 十王星南
+    cost:
+      val: -3
+    effect:
+    - 全力値+5
+    - 消費体力減少3ターン
+    - 重複不可 レッスン中1回
+
+  # SR Support Free
+
+  - title: お姉ちゃんだもの！
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 体当たりのラブコール
+    cost:
+      val: -3
+    effect:
+    - レッスンCLEARの100%以下の場合、使用可
+    - パラメータ+6 元気+6
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: お姉ちゃんだもの！
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 体当たりのラブコール
+    cost:
+      val: -3
+    effect:
+    - レッスンCLEARの100%以下の場合、使用可
+    - パラメータ+10 元気+9
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: おアツイ視線
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: のらりくらりしっかり
+    cost:
+      val: 0
+    effect:
+    - 元気が0の場合、使用可
+    - 元気+5
+    - 消費体力減少2ターン
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: おアツイ視線
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: のらりくらりしっかり
+    cost:
+      val: 0
+    effect:
+    - 元気が0の場合、使用可
+    - 元気+6
+    - 消費体力減少3ターン
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: ご指導ご鞭撻
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: てとりあしとり
+    cost:
+      val: -5
+    effect:
+    - 体力が50%以上の場合、使用可
+    - パラメータ+4 元気+5
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: ご指導ご鞭撻
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: てとりあしとり
+    cost:
+      val: -2
+    effect:
+    - 体力が50%以上の場合、使用可
+    - パラメータ+4 元気+5
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: ストレッチ談義
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 魅惑の大腿四頭筋
+    cost:
+      val: -3
+    effect:
+    - 3ターン目以降の場合、使用可
+    - パラメータ+3
+    - 消費体力減少2ターン
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: ストレッチ談義
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 魅惑の大腿四頭筋
+    cost:
+      val: 0
+    effect:
+    - 3ターン目以降の場合、使用可
+    - パラメータ+3
+    - 消費体力減少2ターン
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 全力サポート
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: はじめてのお友達
+    cost:
+      val: -2
+    effect:
+    - スキルカード使用数追加+1
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 全力サポート
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: はじめてのお友達
+    cost:
+      val: 0
+    effect:
+    - スキルカード使用数追加+1
+    - 次のターン、スキルカードを2枚引く
+    - 重複不可 レッスン中1回
+
+  - title: 旬の味わい
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: サンマ、パタパタ
+    cost:
+      val: -5
+    effect:
+    - パラメータ+4（2回）
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 旬の味わい
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: サンマ、パタパタ
+    cost:
+      val: -4
+    effect:
+    - パラメータ+6（2回）
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  # SR Support Sense
+
+  - title: キメ顔で自撮り
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: パシャっとキメポ
+    cost:
+      val: -4
+    effect:
+    - 好調3ターン
+    - 集中+2
+    - 体力が50%以上の場合、次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: キメ顔で自撮り
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: パシャっとキメポ
+    cost:
+      val: -4
+    effect:
+    - 好調4ターン
+    - 集中+3
+    - 体力が50%以上の場合、次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 切れた鼻緒が結んだ絆
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: やさしさ、あったかい
+    cost:
+      val: -3
+    effect:
+    - 好調4ターン
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 切れた鼻緒が結んだ絆
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: やさしさ、あったかい
+    cost:
+      val: -3
+    effect:
+    - 好調5ターン
+    - 次のターン、スキルカードを2枚引く
+    - 重複不可 レッスン中1回
+
+  - title: 気になる……
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 興味深い飲み物
+    cost:
+      val: -5
+    effect:
+    - 集中+4
+    - 集中が3以上の場合、次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 気になる……
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 興味深い飲み物
+    cost:
+      val: -4
+    effect:
+    - 集中+5
+    - 集中が3以上の場合、次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  # SR Support Logic
+
+  - title: なに聴いてるの？
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: イヤホンはんぶんこ
+    cost:
+      val: 0
+    effect:
+    - 元気+2
+    - 体力回復3
+    - 重複不可 レッスン中1回
+
+  - title: なに聴いてるの？
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: イヤホンはんぶんこ
+    cost:
+      val: 0
+    effect:
+    - 元気+2
+    - 体力回復5
+    - 重複不可 レッスン中1回
+
+  - title: こうかい……？
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: バズっちゃお！
+    cost:
+      val: -4
+    effect:
+    - 好印象+3
+    - 好印象の90%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: こうかい……？
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: バズっちゃお！
+    cost:
+      val: -4
+    effect:
+    - 好印象+4
+    - 好印象の100%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  # SR Support Anomaly
+
   # SSR Active
 
   - title: コール＆レスポンス
@@ -2117,7 +3234,7 @@ content:
     effect:
     - パラメータ+15
     - 集中が3以上の場合、パラメータ+15
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: コール＆レスポンス
     skillcard_type: A
@@ -2127,7 +3244,7 @@ content:
     effect:
     - パラメータ+15
     - 集中が3以上の場合、パラメータ+34（集中効果を1.5倍適用）
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: バズワード
     skillcard_type: A
@@ -2157,7 +3274,7 @@ content:
     effect:
     - 好調4ターン
     - 次のターン、パラメータ+32
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 成就
     skillcard_type: A
@@ -2167,7 +3284,7 @@ content:
     effect:
     - 好調7ターン
     - 次のターン、パラメータ+40
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 魅惑のパフォーマンス
     skillcard_type: A
@@ -2178,7 +3295,7 @@ content:
     - 好調状態の場合、使用可
     - 絶好調2ターン
     - 次のターン、パラメータ+38
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 魅惑のパフォーマンス
     skillcard_type: A
@@ -2189,7 +3306,7 @@ content:
     - 好調状態の場合、使用可
     - 絶好調3ターン
     - 次のターン、パラメータ+47
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 至高のエンタメ
     skillcard_type: A
@@ -2200,7 +3317,7 @@ content:
     effect:
     - 集中消費3
     - 以降、アクティブスキルカード使用時、パラメータ+4
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 至高のエンタメ
     skillcard_type: A
@@ -2212,7 +3329,7 @@ content:
     - 集中消費2
     - 次のターン、スキルカードを引く
     - 以降、アクティブスキルカード使用時、パラメータ+5
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 覚醒
     skillcard_type: A
@@ -2246,7 +3363,7 @@ content:
     effect:
     - 好印象+5
     - 好印象の100%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 200%スマイル
     skillcard_type: A
@@ -2256,7 +3373,7 @@ content:
     effect:
     - 好印象+6
     - 好印象の170%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 開花
     skillcard_type: A
@@ -2266,7 +3383,7 @@ content:
     effect:
     - やる気+6
     - やる気の200%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 開花
     skillcard_type: A
@@ -2276,7 +3393,7 @@ content:
     effect:
     - やる気+8
     - やる気の300%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 届いて！
     skillcard_type: A
@@ -2287,7 +3404,7 @@ content:
     effect:
     - 体力消費2
     - 元気を0にして、減少前の元気の160%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 届いて！
     skillcard_type: A
@@ -2298,7 +3415,7 @@ content:
     effect:
     - 体力消費2
     - 元気を0にして、減少前の元気の220%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 輝くキミへ
     skillcard_type: A
@@ -2310,7 +3427,7 @@ content:
     - やる気消費4
     - スキルカード使用数追加+1
     - 以降、スキルカード使用時、好印象の30%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 輝くキミへ
     skillcard_type: A
@@ -2322,7 +3439,7 @@ content:
     - やる気消費4
     - スキルカード使用数追加+1
     - 以降、スキルカード使用時、好印象の50%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: あのときの約束
     skillcard_type: A
@@ -2335,7 +3452,7 @@ content:
     - 元気+9
     - 元気の100%分パラメータ上昇
     - やる気の150%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: あのときの約束
     skillcard_type: A
@@ -2348,7 +3465,7 @@ content:
     - 元気+14
     - 元気の130%分パラメータ上昇
     - やる気の200%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: キセキの魔法
     skillcard_type: A
@@ -2359,7 +3476,7 @@ content:
     effect:
     - 体力消費5
     - 好印象の250%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: キセキの魔法
     skillcard_type: A
@@ -2370,7 +3487,7 @@ content:
     effect:
     - 体力消費5
     - 好印象の340%分パラメータ上昇
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 翔び立て！
     skillcard_type: A
@@ -2381,7 +3498,7 @@ content:
     - 全力値+3
     - パラメータ+10（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
     - \[成長\]全力になった時、このスキルカードのパラメータ値増加+20（レッスン中1回）
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 翔び立て！
     skillcard_type: A
@@ -2392,7 +3509,7 @@ content:
     - 全力値+4
     - パラメータ+15（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
     - \[成長\]全力になった時、このスキルカードのパラメータ値増加+30（レッスン中1回）
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 総合芸術
     skillcard_type: A
@@ -2428,7 +3545,7 @@ content:
     - パラメータ+7
     - 全力値+3
     - 消費体力減少2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 心・技・体
     skillcard_type: A
@@ -2440,7 +3557,7 @@ content:
     - パラメータ+16
     - 全力値+4
     - 消費体力減少4ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 輝け！
     skillcard_type: A
@@ -2451,7 +3568,7 @@ content:
     - 全力値+3
     - 次のターン、温存に変更
     - 全力の場合、パラメータ+20（2回）
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 輝け！
     skillcard_type: A
@@ -2462,7 +3579,7 @@ content:
     - 全力値+4
     - 次のターン、温存2段階目に変更
     - 全力の場合、パラメータ+25（2回）
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: クライマックス
     skillcard_type: A
@@ -2473,7 +3590,7 @@ content:
     - 強気に変更
     - パラメータ+14（2回）
     - 次のターン、温存に変更
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: クライマックス
     skillcard_type: A
@@ -2484,7 +3601,7 @@ content:
     - 強気2段階目に変更
     - パラメータ+19（2回）
     - 次のターン、温存2段階目に変更
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 全身全霊
     skillcard_type: A
@@ -2496,7 +3613,7 @@ content:
     - 次に使用したスキルカードの消費体力を0にする（2回）
     - スキルカード使用数追加+1
     - スキルカードを3枚引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 全身全霊
     skillcard_type: A
@@ -2508,7 +3625,7 @@ content:
     - 次に使用したスキルカードの消費体力を0にする（2回）
     - スキルカード使用数追加+2
     - スキルカードを3枚引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   # SSR Mental
 
@@ -2520,7 +3637,7 @@ content:
     effect:
     - 元気+3
     - 消費体力減少4ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: テレビ出演
     skillcard_type: M
@@ -2530,7 +3647,7 @@ content:
     effect:
     - 元気+5
     - 消費体力減少5ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 叶えたい夢
     skillcard_type: M
@@ -2542,7 +3659,7 @@ content:
     - 体力消費1
     - 元気+8
     - 消費体力削減1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 叶えたい夢
     skillcard_type: M
@@ -2554,7 +3671,7 @@ content:
     - 体力消費1
     - 元気+9
     - 消費体力削減2
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: アイドル魂
     skillcard_type: M
@@ -2566,7 +3683,7 @@ content:
     - 元気+6
     - 低下状態無効1回
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: アイドル魂
     skillcard_type: M
@@ -2579,7 +3696,7 @@ content:
     - 低下状態無効1回
     - 次のターン、手札をすべてレッスン中強化
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 仕切り直し
     skillcard_type: M
@@ -2591,7 +3708,7 @@ content:
     - 消費体力減少4ターン
     - スキルカード使用数追加+1
     - スキルカードを2枚引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 仕切り直し
     skillcard_type: M
@@ -2603,7 +3720,7 @@ content:
     - 消費体力減少4ターン
     - スキルカード使用数追加+1
     - スキルカードを2枚引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 国民的アイドル
     skillcard_type: M
@@ -2615,7 +3732,7 @@ content:
     - 好調消費1ターン
     - 次に使用するスキルカードの効果をもう1回発動（1回）
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 国民的アイドル
     skillcard_type: M
@@ -2628,7 +3745,7 @@ content:
     - 元気+8
     - 次に使用するスキルカードの効果をもう1回発動（1回）
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 魅惑の視線
     skillcard_type: M
@@ -2641,7 +3758,7 @@ content:
     - 絶好調4ターン
     - 消費体力減少2ターン
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 魅惑の視線
     skillcard_type: M
@@ -2654,7 +3771,7 @@ content:
     - 絶好調5ターン
     - 消費体力減少5ターン
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 鳴り止まない拍手
     skillcard_type: M
@@ -2665,7 +3782,7 @@ content:
     - 集中+4
     - 好調2ターン
     - 消費体力減少2ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 鳴り止まない拍手
     skillcard_type: M
@@ -2676,7 +3793,7 @@ content:
     - 集中+5
     - 好調3ターン
     - 消費体力減少3ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 天真爛漫
     skillcard_type: M
@@ -2686,7 +3803,7 @@ content:
     effect:
     - 集中+1
     - 以降、ターン終了時、集中が3以上の場合、集中+2
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 天真爛漫
     skillcard_type: M
@@ -2696,7 +3813,7 @@ content:
     effect:
     - 集中+1
     - 以降、ターン終了時、集中が3以上の場合、集中+2
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 私がスター
     skillcard_type: M
@@ -2708,7 +3825,7 @@ content:
     - 好印象消費2
     - ターン追加+1
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 私がスター
     skillcard_type: M
@@ -2721,7 +3838,7 @@ content:
     - ターン追加+1
     - スキルカード使用数追加+1
     - スキルカードを引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 星屑センセーション
     skillcard_type: M
@@ -2733,7 +3850,7 @@ content:
     - やる気消費3
     - 好印象+5
     - スキルカード使用数追加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 星屑センセーション
     skillcard_type: M
@@ -2746,7 +3863,7 @@ content:
     - 好印象+7
     - スキルカード使用数追加+1
     - スキルカードを引く
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ノートの端の決意
     skillcard_type: M
@@ -2757,7 +3874,7 @@ content:
     - 好印象+3
     - やる気+3
     - 消費体力減少3ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: ノートの端の決意
     skillcard_type: M
@@ -2768,7 +3885,7 @@ content:
     - 好印象+5
     - やる気+3
     - 消費体力減少3ターン
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 手書きのメッセージ
     skillcard_type: M
@@ -2780,7 +3897,7 @@ content:
     - 好印象消費2
     - 元気+9
     - 元気+9
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 手書きのメッセージ
     skillcard_type: M
@@ -2792,7 +3909,7 @@ content:
     - 好印象消費1
     - 元気+10
     - 元気+10
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: トキメキ
     skillcard_type: M
@@ -2802,7 +3919,7 @@ content:
     effect:
     - 好印象+8
     - やる気+5
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: トキメキ
     skillcard_type: M
@@ -2812,7 +3929,7 @@ content:
     effect:
     - 好印象+10
     - やる気+6
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 虹色ドリーマー
     skillcard_type: M
@@ -2822,7 +3939,7 @@ content:
     effect:
     - 好印象+1
     - 以降、ターン終了時、好印象が3以上の場合、好印象+3
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 虹色ドリーマー
     skillcard_type: M
@@ -2832,7 +3949,7 @@ content:
     effect:
     - 好印象+4
     - 以降、ターン終了時、好印象が3以上の場合、好印象+3
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: アイドルになります
     skillcard_type: M
@@ -2844,7 +3961,7 @@ content:
     - 全力値消費3
     - スキルカード使用数追加+1
     - 手札のパラメータ上昇回数増加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: アイドルになります
     skillcard_type: M
@@ -2858,7 +3975,7 @@ content:
     - 温存に変更
     - スキルカード使用数追加+1
     - 手札のパラメータ上昇回数増加+1
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 頂点へ
     skillcard_type: M
@@ -2867,7 +3984,7 @@ content:
       val: -9
     effect:
     - 以降、ターン開始時、いずれかの指針の場合、すべてのスキルカードのパラメータ値増加+4
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 頂点へ
     skillcard_type: M
@@ -2877,7 +3994,7 @@ content:
     effect:
     - すべてのスキルカードのパラメータ値増加+6
     - 以降、ターン開始時、いずれかの指針の場合、すべてのスキルカードのパラメータ値増加+4
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 覚悟
     skillcard_type: M
@@ -2890,7 +4007,7 @@ content:
     - 元気+8
     - 全力値+5
     - 山札か捨札にあるスキルカードを選択し、保留に移動
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
 
   - title: 覚悟
     skillcard_type: M
@@ -2903,4 +4020,1431 @@ content:
     - 元気+8
     - 全力値+7
     - 山札か捨札にあるスキルカードを選択し、保留に移動
-    - レッスン中1回 重複不可
+    - 重複不可 レッスン中1回
+
+  # SSR Produce Sense
+
+  - title: 絶対に負けない
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Fighting My Way
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - パラメータ+34
+    - 重複不可 レッスン中1回
+
+  - title: 絶対に負けない
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Fighting My Way
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - パラメータ+48
+    - 重複不可 レッスン中1回
+
+  - title: それぞれの道
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Luna say maybe
+      idol: 月村手毬
+    cost:
+      val: -7
+    effect:
+    - パラメータ+14
+    - 集中+5
+    - 重複不可 レッスン中1回
+
+  - title: それぞれの道
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Luna say maybe
+      idol: 月村手毬
+    cost:
+      val: -4
+    effect:
+    - パラメータ+15
+    - 集中+5
+    - 重複不可 レッスン中1回
+
+  - title: 盛装の華形
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Fluorite
+      idol: 有村麻央
+    cost:
+      val: -5
+    effect:
+    - パラメータ+12
+    - 好調状態の場合、パラメータ+14
+    - 重複不可 レッスン中1回
+
+  - title: 盛装の華形
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Fluorite
+      idol: 有村麻央
+    cost:
+      val: -5
+    effect:
+    - パラメータ+18
+    - 好調状態の場合、パラメータ+20
+    - 重複不可 レッスン中1回
+
+  - title: 距離感
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: clumsy trick
+      idol: 姫崎莉波
+    cost:
+      val: -4
+    effect:
+    - 集中+4
+    - 体力回復4
+    - 重複不可 レッスン中1回
+
+  - title: 距離感
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: clumsy trick
+      idol: 姫崎莉波
+    cost:
+      val: -3
+    effect:
+    - 集中+5
+    - 体力回復5
+    - 重複不可 レッスン中1回
+
+  - title: ワンモアステップ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Tame-Lie-One-Step
+      idol: 紫雲清夏
+    cost:
+      val: -4
+    effect:
+    - パラメータ+7（2回）
+    - 集中が6以上の場合、パラメータ+7
+    - 重複不可 レッスン中1回
+
+  - title: ワンモアステップ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Tame-Lie-One-Step
+      idol: 紫雲清夏
+    cost:
+      val: -3
+    effect:
+    - パラメータ+9（2回）
+    - 集中が6以上の場合、パラメータ+9
+    - 重複不可 レッスン中1回
+
+  - title: アドレナリン全開
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: Yellow Big Bang！
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好調3ターン
+    - 絶好調4ターン
+    - 重複不可 レッスン中1回
+
+  - title: アドレナリン全開
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: Yellow Big Bang！
+      idol: 藤田ことね
+    cost:
+      val: -4
+    effect:
+    - 好調4ターン
+    - 絶好調5ターン
+    - 重複不可 レッスン中1回
+
+  - title: ひんやり一休み
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 有村麻央
+    cost:
+      val: -8
+    effect:
+    - パラメータ+9（3回）
+    - 重複不可 レッスン中1回
+
+  - title: ひんやり一休み
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 有村麻央
+    cost:
+      val: -8
+    effect:
+    - パラメータ+14（3回）
+    - 重複不可 レッスン中1回
+
+  - title: 入道雲と、きみ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 姫崎莉波
+    cost:
+      val: -6
+    effect:
+    - 次に使用するアクティブスキルカードの効果をもう1回発動（1回・1ターン）
+    - 好調3ターン
+    - 消費体力減少2ターン
+    - 重複不可 レッスン中1回
+
+  - title: 入道雲と、きみ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 姫崎莉波
+    cost:
+      val: -5
+    effect:
+    - 次に使用するアクティブスキルカードの効果をもう1回発動（1回・1ターン）
+    - 好調5ターン
+    - 消費体力減少2ターン
+    - 重複不可 レッスン中1回
+
+  - title: バスに揺られて
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: コントラスト
+      idol: 篠澤広
+    cost:
+      val: -2
+    effect:
+    - パラメータ+5（集中効果を2.3倍適用）
+    - 体力が50%以下の場合、元気+6
+    - 重複不可 レッスン中1回
+
+  - title: バスに揺られて
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: コントラスト
+      idol: 篠澤広
+    cost:
+      val: -2
+    effect:
+    - パラメータ+8（集中効果を2.3倍適用）
+    - 体力が50%以下の場合、元気+12
+    - 重複不可 レッスン中1回
+
+  - title: はじめてのラムネ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 葛城リーリヤ
+    cost:
+      val: -4
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+9
+    - 好調の200%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: はじめてのラムネ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 葛城リーリヤ
+    cost:
+      val: -4
+    effect:
+    - 好調状態の場合、使用可
+    - パラメータ+12
+    - 好調の300%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: お茶会へようこそ♪
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 日々、発見的ステップ！
+      idol: 倉本千奈
+    cost:
+      val: -4
+    effect:
+    - 元気+3
+    - 絶好調2ターン
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: お茶会へようこそ♪
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 日々、発見的ステップ！
+      idol: 倉本千奈
+    cost:
+      val: -3
+    effect:
+    - 元気+5
+    - 絶好調3ターン
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: こくりとひとくち
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 倉本千奈
+    cost:
+      val: -5
+    effect:
+    - レッスン開始時手札に入る
+    - 集中+3
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: こくりとひとくち
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 倉本千奈
+    cost:
+      val: -5
+    effect:
+    - レッスン開始時手札に入る
+    - 集中+4
+    - 消費体力減少1ターン
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 悪戯しちゃいますわ！
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 倉本千奈
+    cost:
+      val: -5
+    effect:
+    - パラメータ+8（2回）
+    - 集中が3以上の場合、集中+2
+    - 重複不可 レッスン中1回
+
+  - title: 悪戯しちゃいますわ！
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 倉本千奈
+    cost:
+      val: -5
+    effect:
+    - パラメータ+10（2回）
+    - 集中が3以上の場合、集中+4
+    - 重複不可 レッスン中1回
+
+  - title: 正確無比な看板づくり
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 篠澤広
+    cost:
+      val: -6
+    effect:
+    - レッスン開始時手札に入る
+    - 好調3ターン
+    - 低下状態無効1回
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 正確無比な看板づくり
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 篠澤広
+    cost:
+      val: -6
+    effect:
+    - レッスン開始時手札に入る
+    - 好調5ターン
+    - 低下状態無効1回
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: ちょちょいのちょい
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 古今東西ちょちょいのちょい
+      idol: 花海咲季
+    cost:
+      val: -4
+    effect:
+    - 好調2ターン
+    - 以降の3ターンの間、ターン終了時、パラメータ+4
+    - 重複不可 レッスン中1回
+
+  - title: ちょちょいのちょい
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 古今東西ちょちょいのちょい
+      idol: 花海咲季
+    cost:
+      val: -4
+    effect:
+    - 好調2ターン
+    - 以降の5ターンの間、ターン終了時、パラメータ+4
+    - 重複不可 レッスン中1回
+
+  - title: おすそわけですっ！
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: White Night! White Wish!
+      idol: 花海佑芽
+    cost:
+      val: -7
+    effect:
+    - 集中+1
+    - 以降、ターン開始時、好調2ターン
+    - 重複不可 レッスン中1回
+
+  - title: おすそわけですっ！
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: White Night! White Wish!
+      idol: 花海佑芽
+    cost:
+      val: -6
+    effect:
+    - 集中+3
+    - 以降、ターン開始時、好調2ターン
+    - 重複不可 レッスン中1回
+
+  # SSR Produce Logic
+
+  - title: よそ見はダメ♪
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 世界一可愛い私
+      idol: 藤田ことね
+    cost:
+      val: -6
+    effect:
+    - 元気+2
+    - 好印象+7
+    - 重複不可 レッスン中1回
+
+  - title: よそ見はダメ♪
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 世界一可愛い私
+      idol: 藤田ことね
+    cost:
+      val: -6
+    effect:
+    - 元気+4
+    - 好印象+9
+    - 重複不可 レッスン中1回
+
+  - title: 本気の趣味
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 光景
+      idol: 篠澤広
+    cost:
+      val: 0
+    effect:
+    - 元気+5
+    - やる気が3以上の場合、元気+4
+    - 重複不可 レッスン中1回
+
+  - title: 本気の趣味
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 光景
+      idol: 篠澤広
+    cost:
+      val: 0
+    effect:
+    - 元気+7
+    - やる気が3以上の場合、元気+7
+    - 重複不可 レッスン中1回
+
+  - title: もう怖くないから
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 白線
+      idol: 葛城リーリヤ
+    cost:
+      val: -3
+    effect:
+    - 好印象+3
+    - 以降、ターン終了時、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: もう怖くないから
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 白線
+      idol: 葛城リーリヤ
+    cost:
+      val: -2
+    effect:
+    - 好印象+4
+    - 以降、ターン終了時、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: お嬢様の晴れ舞台
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Wonder Scale
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+2
+    - 元気の100%分パラメータ上昇
+    - やる気+2
+    - 重複不可 レッスン中1回
+
+  - title: お嬢様の晴れ舞台
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Wonder Scale
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+5
+    - 元気の120%分パラメータ上昇
+    - やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 絡まる想い
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: アイヴイ
+      idol: 月村手毬
+    cost:
+      val: -8
+    effect:
+    - レッスン開始時手札に入る
+    - 好印象+8
+    - 重複不可 レッスン中1回
+
+  - title: 絡まる想い
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: アイヴイ
+      idol: 月村手毬
+    cost:
+      val: -8
+    effect:
+    - レッスン開始時手札に入る
+    - 好印象+10
+    - 重複不可 レッスン中1回
+
+  - title: おっきなおにぎり
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: The Rolling Riceball
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+2（レッスン中に使用したスキルカード1枚ごとに、元気増加量+5）
+    - 重複不可 レッスン中1回
+
+  - title: おっきなおにぎり
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: The Rolling Riceball
+      idol: 花海佑芽
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 元気+2（レッスン中に使用したスキルカード1枚ごとに、元気増加量+8）
+    - 重複不可 レッスン中1回
+
+  - title: POW！
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Boom Boom Pow
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 好印象の250%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: POW！
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Boom Boom Pow
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - 好印象の260%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 昼下がりのそよ風
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: キミとセミブルー
+      idol: 紫雲清夏
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - やる気+7
+    - やる気が6以上の場合、やる気+3
+    - 重複不可 レッスン中1回
+
+  - title: 昼下がりのそよ風
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: キミとセミブルー
+      idol: 紫雲清夏
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - やる気+8
+    - やる気が3以上の場合、やる気+5
+    - 重複不可 レッスン中1回
+
+  - title: 金魚すくいで勝負
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - 好印象+3
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 金魚すくいで勝負
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 花海咲季
+    cost:
+      consumption_type: 体力
+      val: -2
+    effect:
+    - 体力消費2
+    - 好印象+5
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 夏の宵の線香花火
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 冠菊
+      idol: 藤田ことね
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - レッスン開始時手札に入る
+    - 好印象+3
+    - やる気+2
+    - 以降、元気効果のスキルカード使用後、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: 夏の宵の線香花火
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 冠菊
+      idol: 藤田ことね
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - レッスン開始時手札に入る
+    - 好印象+4
+    - やる気+3
+    - 以降、元気効果のスキルカード使用後、好印象+1
+    - 重複不可 レッスン中1回
+
+  - title: さっぱりひといき
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 姫崎莉波
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 元気+2（やる気効果を2.3倍適用）
+    - 元気の50%分パラメータ上昇
+    - 消費体力削減1
+    - 重複不可 レッスン中1回
+
+  - title: さっぱりひといき
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: ようこそ初星温泉
+      idol: 姫崎莉波
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 元気+2（やる気効果を2.3倍適用）
+    - 元気の90%分パラメータ上昇
+    - 消費体力削減1
+    - 重複不可 レッスン中1回
+
+  - title: 月夜のランウェイ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Feel Jewel Dream
+      idol: 有村麻央
+    cost:
+      val: -6
+    effect:
+    - やる気+3
+    - 以降、好印象効果のスキルカード使用後、好印象の30%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 月夜のランウェイ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Feel Jewel Dream
+      idol: 有村麻央
+    cost:
+      val: -6
+    effect:
+    - やる気+3
+    - 以降、好印象効果のスキルカード使用後、好印象の50%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 悪戦苦闘ハンドメイド
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 月村手毬
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 好印象+4
+    - やる気+4
+    - 好印象が3以上の場合、スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 悪戦苦闘ハンドメイド
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 仮想狂騒曲
+      idol: 月村手毬
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 好印象+6
+    - やる気+5
+    - 好印象が3以上の場合、スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: また、明日
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: L.U.V
+      idol: 姫崎莉波
+    cost:
+      val: -6
+    effect:
+    - 好印象が1以上の場合、使用可
+    - 最大体力の10%分体力回復
+    - 好印象+3
+    - 元気+5
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: また、明日
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: L.U.V
+      idol: 姫崎莉波
+    cost:
+      val: -6
+    effect:
+    - 好印象が1以上の場合、使用可
+    - 最大体力の10%分体力回復
+    - 好印象+5
+    - 元気+10
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: メリクリで～す♪
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: White Night! White Wish!
+      idol: 藤田ことね
+    cost:
+      val: -2
+    effect:
+    - 好印象+3
+    - 以降、メンタルスキルカード使用時、やる気+1
+    - 重複不可 レッスン中1回
+
+  - title: メリクリで～す♪
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: White Night! White Wish!
+      idol: 藤田ことね
+    cost:
+      val: -2
+    effect:
+    - 好印象+5
+    - 以降、メンタルスキルカード使用時、やる気+1
+    - 重複不可 レッスン中1回
+
+  - title: 愛を込めて
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: White Night! White Wish!
+      idol: 葛城リーリヤ
+    cost:
+      val: -6
+    effect:
+    - 元気+4（やる気効果を1.8倍適用）
+    - やる気の300%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 愛を込めて
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: White Night! White Wish!
+      idol: 葛城リーリヤ
+    cost:
+      val: -6
+    effect:
+    - 元気+6（やる気効果を2倍適用）
+    - やる気の400%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  # SSR Produce Anomaly
+
+  - title: 一番高い星
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 小さな野望
+      idol: 十王星南
+    cost:
+      val: -6
+    effect:
+    - 強気に変更
+    - パラメータ+3（2回）
+    - \[成長\]強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+10・コスト値増加+1（レッスン中2回）
+    - 重複不可 レッスン中1回
+
+  - title: 一番高い星
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 小さな野望
+      idol: 十王星南
+    cost:
+      val: -6
+    effect:
+    - 強気に変更
+    - パラメータ+6（2回）
+    - \[成長\]強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+15・コスト値増加+1（レッスン中2回）
+    - 重複不可 レッスン中1回
+
+  - title: 踏切の先に
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: カクシタワタシ
+      idol: 紫雲清夏
+    cost:
+      val: -3
+    effect:
+    - 全力の場合、使用可
+    - パラメータ+10（3回）
+    - 次のターン、温存2段階目に変更
+    - 重複不可 レッスン中1回
+
+  - title: 踏切の先に
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: カクシタワタシ
+      idol: 紫雲清夏
+    cost:
+      val: -3
+    effect:
+    - 全力の場合、使用可
+    - パラメータ+16（3回）
+    - 次のターン、温存2段階目に変更
+    - 重複不可 レッスン中1回
+
+  # SSR Support Free
+
+  - title: 花萌ゆ季節
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 次の桜の季節には。
+    cost:
+      val: -4
+    effect:
+    - ランダムな強化済みスキルカードを、手札に生成
+    - スキルカード使用数追加+1
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 花萌ゆ季節
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 次の桜の季節には。
+    cost:
+      val: -1
+    effect:
+    - ランダムな強化済みスキルカードを、手札に生成
+    - スキルカード使用数追加+1
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 陽だまりの生徒会室
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: お疲れ様、千奈ちゃん。
+    cost:
+      val: -3
+    effect:
+    - 体力回復3
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 陽だまりの生徒会室
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: お疲れ様、千奈ちゃん。
+    cost:
+      val: -2
+    effect:
+    - 体力回復5
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 心のアルバム
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: おいしい顔、いただき～！
+    cost:
+      val: 0
+    effect:
+    - パラメータ+3 元気+3
+    - 次のターン、スキルカードを引く
+    - 2ターン後、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: 心のアルバム
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: おいしい顔、いただき～！
+    cost:
+      val: 0
+    effect:
+    - パラメータ+6 元気+5
+    - 次のターン、スキルカードを引く
+    - 2ターン後、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: ティーパーティー
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 可愛いと可愛いで可愛い！
+    cost:
+      val: -3
+    effect:
+    - スキルカード使用数追加+1
+    - 手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: ティーパーティー
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 可愛いと可愛いで可愛い！
+    cost:
+      val: -1
+    effect:
+    - スキルカード使用数追加+1
+    - スキルカードを引く
+    - 手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 光のステージ
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: まじか。
+    cost:
+      val: -3
+    effect:
+    - 消費体力削減1
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 光のステージ
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: まじか。
+    cost:
+      val: 0
+    effect:
+    - 消費体力削減1
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 新生徒会爆誕！
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 仕事のつもりで臨みなさい
+    cost:
+      val: -5
+    effect:
+    - レッスン開始時手札に入る
+    - 消費体力減少2ターン
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 新生徒会爆誕！
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 仕事のつもりで臨みなさい
+    cost:
+      val: -4
+    effect:
+    - レッスン開始時手札に入る
+    - 消費体力減少4ターン
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 薄れゆく壁
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 第2回教室パーティー！
+    cost:
+      val: -5
+    effect:
+    - 元気+3
+    - 次のターン、手札をすべてレッスン中強化
+    - 2ターン後、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 薄れゆく壁
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 第2回教室パーティー！
+    cost:
+      val: -2
+    effect:
+    - 元気+3
+    - 次のターン、手札をすべてレッスン中強化
+    - 2ターン後、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: みずたまりスキップ
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: まだ上がりませんように！
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 元気+3
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: みずたまりスキップ
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: まだ上がりませんように！
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 元気+8
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 紅葉ランニング
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: ぜったい追いついてやる！
+    cost:
+      val: -1
+    effect:
+    - 低下状態無効1回
+    - スキルカードを引く
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 紅葉ランニング
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: ぜったい追いついてやる！
+    cost:
+      val: 0
+    effect:
+    - 低下状態無効1回
+    - スキルカードを2枚引く
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  # SSR Support Sense
+
+  - title: 喧嘩するほど仲がいい
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: こいつらめんどくさー
+    cost:
+      val: -6
+    effect:
+    - 集中+3
+    - 好調2ターン
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 喧嘩するほど仲がいい
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: こいつらめんどくさー
+    cost:
+      val: -6
+    effect:
+    - 集中+4
+    - 好調4ターン
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: はじける水しぶき
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 一時休戦です
+    cost:
+      consumption_type: 体力
+      val: -6
+    effect:
+    - 体力消費6
+    - パラメータ+33
+    - 好調が4ターン以上の場合、2ターン後、体力回復4
+    - 重複不可 レッスン中1回
+
+  - title: はじける水しぶき
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 一時休戦です
+    cost:
+      consumption_type: 体力
+      val: -6
+    effect:
+    - 体力消費6
+    - パラメータ+45
+    - 好調が4ターン以上の場合、2ターン後、体力回復6
+    - 重複不可 レッスン中1回
+
+  - title: 交わる感情
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: 花火、やりませんか……？
+    cost:
+      val: -5
+    effect:
+    - パラメータ+7（集中効果を1.5倍適用）
+    - 集中+4
+    - 重複不可 レッスン中1回
+
+  - title: 交わる感情
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: 花火、やりませんか……？
+    cost:
+      val: -5
+    effect:
+    - パラメータ+13（集中効果を1.5倍適用）
+    - 集中+5
+    - 重複不可 レッスン中1回
+
+  - title: 光の夜
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: キラキラして綺麗～っ！
+    cost:
+      val: 0
+    effect:
+    - 絶好調2ターン
+    - 体力回復2
+    - 重複不可 レッスン中1回
+
+  - title: 光の夜
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: キラキラして綺麗～っ！
+    cost:
+      val: 0
+    effect:
+    - 絶好調3ターン
+    - 体力回復4
+    - 重複不可 レッスン中1回
+
+  # SSR Support Logic
+
+  - title: ダメダメクッキング
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: わたしたち、やればできる
+    cost:
+      val: -7
+    effect:
+    - 好印象+4
+    - やる気+3
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: ダメダメクッキング
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: わたしたち、やればできる
+    cost:
+      val: -6
+    effect:
+    - 好印象+5
+    - やる気+4
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: お泊り猛勉強
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: 「ア」じゃなくて「エ」！
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 好印象+5
+    - 重複不可 レッスン中1回
+
+  - title: お泊り猛勉強
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: 「ア」じゃなくて「エ」！
+    cost:
+      consumption_type: 体力
+      val: -1
+    effect:
+    - 体力消費1
+    - 好印象+6
+    - 次のターン、スキルカードを引く
+    - 重複不可 レッスン中1回
+
+  - title: その本、おもしろい？
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: ゆっくりと過ごしましょう
+    cost:
+      consumption_type: 体力
+      val: -5
+    effect:
+    - 体力消費5
+    - 好印象が3以上の場合、好印象の120%分パラメータ上昇
+    - やる気が3以上の場合、元気の50%分パラメータ上昇
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: その本、おもしろい？
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: ゆっくりと過ごしましょう
+    cost:
+      consumption_type: 体力
+      val: -4
+    effect:
+    - 体力消費4
+    - 好印象が3以上の場合、好印象の150%分パラメータ上昇
+    - やる気が3以上の場合、元気の70%分パラメータ上昇
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: ほかほか焼き芋
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: そろそろ焼けたかな？
+    cost:
+      val: -4
+    effect:
+    - 元気+4
+    - やる気+4
+    - 元気が30以上の場合、好印象+3
+    - 重複不可 レッスン中1回
+
+  - title: ほかほか焼き芋
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: そろそろ焼けたかな？
+    cost:
+      val: -4
+    effect:
+    - 元気+7
+    - やる気+5
+    - 元気が30以上の場合、好印象+4
+    - 重複不可 レッスン中1回
+
+  # SSR Support Anomaly
+
+  - title: 雨宿りのバス停
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: さみだれ
+    cost:
+      val: -5
+    effect:
+    - 温存に変更
+    - 全力値+3
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回
+
+  - title: 雨宿りのバス停
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: さみだれ
+    cost:
+      val: -5
+    effect:
+    - 温存2段階目に変更
+    - 全力値+4
+    - 次のターン、手札をすべてレッスン中強化
+    - 重複不可 レッスン中1回

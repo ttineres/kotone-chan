@@ -126,7 +126,7 @@ def test_flashcard_length():
     # Compare flashcard with the expected number of items currently in the game
     exp_num_p_drinks = 26
     exp_num_p_items = 187
-    exp_num_skillcards = 139 * 2 + 1    # 228 * 2 + 1
+    exp_num_skillcards = 233 * 2 + 1
     if len(_FLASHCARD_P_DRINKS.keys()) - 1 != exp_num_p_drinks:
         warnings.warn(UserWarning(f"Expected { exp_num_p_drinks } p-drinks in flashcard, instead found { len(_FLASHCARD_P_DRINKS.keys())-1 }"))
     if len(_FLASHCARD_P_ITEMS.keys()) - 1 != exp_num_p_items:
