@@ -79,7 +79,6 @@ def _parse_flashcard_freq(
             if (
                 exclude_origin_nonenhanced
                 and "]" in key
-                and ")" in key
                 and "+ ([" not in key
             ):
                 continue
