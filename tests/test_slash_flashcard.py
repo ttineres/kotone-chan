@@ -41,10 +41,10 @@ def test_flashcard_p_items_yaml():
         item = lst[i]
         assert isinstance(item, dict)
         assert isinstance(item.get("title"), str)
-        
+
         if item.get("is_enhanced") is False:
             assert item.get("title") == lst[i+1].get("title") and lst[i+1].get("is_enhanced")
-        
+
         assert isinstance(item.get("effect"), list)
 
 
@@ -58,7 +58,7 @@ def test_flashcard_p_items_freq_yaml():
     assert isinstance(freq_flashcard, dict)
     assert isinstance(freq_flashcard.get("desc"), str)
     assert isinstance(freq_flashcard.get("content"), list)
-    
+
     for title in freq_flashcard["content"]:
         assert isinstance(title, str)
         assert any(item["title"].startswith(title) for item in full_flashcard["content"])
@@ -84,11 +84,11 @@ def test_flashcard_skillcards_yaml():
                 item.get("title") == lst[i+1].get("title") and lst[i+1].get("is_enhanced")
                 or item["skillcard_type"] == "T"
             )
-        
+
         assert isinstance(item.get("cost"), dict)
         assert isinstance(item["cost"].get("val"), int)
         assert isinstance(item.get("effect"), list)
-        
+
         if item["cost"].get("consumption_type"):
             assert isinstance(item["cost"]["consumption_type"], str)
             assert item["effect"][0].startswith( f"{ item["cost"]["consumption_type"] }消費{ abs(item["cost"]["val"]) }" )
@@ -104,7 +104,7 @@ def test_flashcard_skillcards_freq_yaml():
     assert isinstance(freq_flashcard, dict)
     assert isinstance(freq_flashcard.get("desc"), str)
     assert isinstance(freq_flashcard.get("content"), list)
-    
+
     for title in freq_flashcard["content"]:
         assert isinstance(title, str)
         assert any(title in item["title"] for item in full_flashcard["content"])
@@ -125,7 +125,7 @@ def test_init_flashcard():
 def test_flashcard_length():
     # Compare flashcard with the expected number of items currently in the game
     exp_num_p_drinks = 26
-    exp_num_p_items = 174
+    exp_num_p_items = 187
     exp_num_skillcards = 139 * 2 + 1    # 228 * 2 + 1
     if len(_FLASHCARD_P_DRINKS.keys()) - 1 != exp_num_p_drinks:
         warnings.warn(UserWarning(f"Expected { exp_num_p_drinks } p-drinks in flashcard, instead found { len(_FLASHCARD_P_DRINKS.keys())-1 }"))
