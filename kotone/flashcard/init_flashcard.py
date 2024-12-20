@@ -30,7 +30,7 @@ def _parse_title(
     skillcard_type: Optional[str],
     is_enhanced: Optional[bool],
     cost: Optional[dict[str, str]],
-    origin: Optional[dict[str, str]]
+    origin: Optional[dict[str, str]],
 ) -> str:
     """ Helper function to parse an item's title. """
     if skillcard_type:
@@ -58,19 +58,34 @@ def _parse_effect(effect_lst: list[str]) -> str:
 
 def _parse_flashcard_freq(
     raw_flashcard_freq: dict[str, Any],
-    full_flashcard: dict[str, str]
+    full_flashcard: dict[str, str],
+    exclude_origin_nonenhanced: bool,
 ) -> dict[str, str]:
     """ Returns a partial flashcard dict from `full_flashcard`
         containing only items specified by `raw_flashcard_freq`.
 
         Intended for cutting down the size of flashcards
         so they only contain frequently-used items.
+
+        If `exclude_origin_nonenhanced`, this excludes
+        non-enhanced versions of produce skillcards.
     """
     result = {"desc": raw_flashcard_freq["desc"]}
     title_list = raw_flashcard_freq["content"]
+
     for key in full_flashcard.keys() - {"desc"}:
         if any(title in key for title in title_list):
+            # Exclude non-enhanced version of produce skillcards
+            if (
+                exclude_origin_nonenhanced
+                and "]" in key
+                and ")" in key
+                and "+ ([" not in key
+            ):
+                continue
+
             result[key] = full_flashcard[key]
+
     return result
 
 
@@ -90,7 +105,7 @@ _FLASHCARD_P_ITEMS = _parse_flashcard(_raw_p_items)
 
 with resource.joinpath("flashcard_p_items_freq.yaml").open(encoding="utf-8") as f:
     _raw_p_items_freq = yaml.safe_load(f)
-_FLASHCARD_P_ITEMS_FREQ = _parse_flashcard_freq(_raw_p_items_freq, _FLASHCARD_P_ITEMS)
+_FLASHCARD_P_ITEMS_FREQ = _parse_flashcard_freq(_raw_p_items_freq, _FLASHCARD_P_ITEMS, False)
 
 
 with resource.joinpath("flashcard_skillcards.yaml").open(encoding="utf-8") as f:
@@ -100,4 +115,4 @@ _FLASHCARD_SKILLCARDS = _parse_flashcard(_raw_skillcards)
 
 with resource.joinpath("flashcard_skillcards_freq.yaml").open(encoding="utf-8") as f:
     _raw_skillcards_freq = yaml.safe_load(f)
-_FLASHCARD_SKILLCARDS_FREQ = _parse_flashcard_freq(_raw_skillcards_freq, _FLASHCARD_SKILLCARDS)
+_FLASHCARD_SKILLCARDS_FREQ = _parse_flashcard_freq(_raw_skillcards_freq, _FLASHCARD_SKILLCARDS, True)
