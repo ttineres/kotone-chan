@@ -4451,6 +4451,60 @@ content:
     - 以降、ターン開始時、好調2ターン
     - 重複不可 レッスン中1回
 
+  - title: これまでもこれからも
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - 好調が4ターン以上の場合、使用可
+    - パラメータ+40（好調効果を2.5倍適用）
+    - 重複不可 レッスン中1回
+
+  - title: これまでもこれからも
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 花海咲季
+    cost:
+      val: -6
+    effect:
+    - 好調が4ターン以上の場合、使用可
+    - パラメータ+55（好調効果を3倍適用）
+    - 重複不可 レッスン中1回
+
+  - title: 嫌いな自分にバイバイ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 月村手毬
+    cost:
+      val: -4
+    effect:
+    - 集中+5
+    - 最終ターンのターン終了時、パラメータ+15（集中効果を2.5倍適用）
+    - 重複不可 レッスン中1回
+
+  - title: 嫌いな自分にバイバイ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 月村手毬
+    cost:
+      val: -4
+    effect:
+    - 集中+7
+    - 最終ターンのターン終了時、パラメータ+15（集中効果を2.5倍適用）
+    - 重複不可 レッスン中1回
+
+  # End of SSR Produce Sense
+
   # SSR Produce Logic
 
   - title: よそ見はダメ♪
@@ -4915,6 +4969,32 @@ content:
     - やる気の400%分パラメータ上昇
     - 重複不可 レッスン中1回
 
+  - title: 自慢のお姉ちゃんだぞ
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 藤田ことね
+    cost:
+      val: -7
+    effect:
+    - 以降、残り3ターン以内のターン終了時、好印象の140%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 自慢のお姉ちゃんだぞ
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 藤田ことね
+    cost:
+      val: -7
+    effect:
+    - 以降、残り3ターン以内のターン終了時、好印象の180%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  # End of SSR Produce Logic
+
   # SSR Produce Anomaly
 
   - title: 一番高い星
@@ -4972,6 +5052,8 @@ content:
     - パラメータ+16（3回）
     - 次のターン、温存2段階目に変更
     - 重複不可 レッスン中1回
+
+  # End of SSR Produce Anomaly
 
   # SSR Support Free
 
@@ -5206,6 +5288,8 @@ content:
     - スキルカード使用数追加+1
     - 重複不可 レッスン中1回
 
+  # End of SSR Support Free
+
   # SSR Support Sense
 
   - title: 喧嘩するほど仲がいい
@@ -5309,6 +5393,34 @@ content:
     - 絶好調3ターン
     - 体力回復4
     - 重複不可 レッスン中1回
+
+  - title: 練習再開！
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: もう一度、最初から！
+    cost:
+      val: -3
+    effect:
+    - 好調1ターン
+    - 手札をすべて入れ替える
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 練習再開！
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: もう一度、最初から！
+    cost:
+      val: -3
+    effect:
+    - 好調3ターン
+    - 手札をすべて入れ替える
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  # End of SSR Support Sense
 
   # SSR Support Logic
 
@@ -5421,6 +5533,8 @@ content:
     - 元気が30以上の場合、好印象+4
     - 重複不可 レッスン中1回
 
+  # End of SSR Support Logic
+
   # SSR Support Anomaly
 
   - title: 雨宿りのバス停
@@ -5448,3 +5562,5 @@ content:
     - 全力値+4
     - 次のターン、手札をすべてレッスン中強化
     - 重複不可 レッスン中1回
+
+  # End of SSR Support Anomaly

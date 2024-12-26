@@ -1,6 +1,6 @@
 [project]
 name = "kotone"
-version = "1.0.8"
+version = "1.0.9"
 description = "A custom Discord app for Gakumas."
 readme = "README.md"
 requires-python = ">= 3.12"
