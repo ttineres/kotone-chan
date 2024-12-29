@@ -16,7 +16,6 @@ class ExclamationMiscCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command(name="hello")
     async def hello(self, ctx, *, arg=None):
         """ Greets the user.
@@ -34,7 +33,6 @@ class ExclamationMiscCog(commands.Cog):
             f"{ get_greeting(ctx.author.mention) }"
             f"{ get_emoji(KOTONE_EMOJI) }"
         )
-
 
     @commands.command(name="kotone")
     async def kotone(self, ctx, *, arg=None):

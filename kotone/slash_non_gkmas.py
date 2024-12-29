@@ -33,7 +33,7 @@ class NonGakumasCog(commands.Cog):
             "* `!kotone`：とっておきのことねちゃんスタンプを見せちゃいます♪",
             ephemeral=True
         )
-    
+
     @discord.app_commands.command(
         name="kotone-hello",
         description="ことねちゃんに挨拶する"
@@ -46,7 +46,7 @@ class NonGakumasCog(commands.Cog):
             f"{ get_emoji(KOTONE_EMOJI) }",
             ephemeral=bool(ephemeral.value)
         )
-    
+
     @discord.app_commands.command(
         name="goldrush",
         description="学園アイドルマスター GOLD RUSH の情報はこちら！"

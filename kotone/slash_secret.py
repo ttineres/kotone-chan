@@ -34,7 +34,7 @@ class SecretCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         # Check bot is added to guild
         if interaction.guild not in self.bot.guilds:
             await interaction.response.send_message(
@@ -42,7 +42,7 @@ class SecretCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         # Check bot permission to send message in channel
         bot_member = interaction.guild.get_member(self.bot.user.id)
         if not interaction.channel.permissions_for(bot_member).send_messages:
@@ -60,7 +60,7 @@ class SecretCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         await interaction.response.send_message(
             "秘密テキストを預かりました。\n"
             f"内容は「{ replace_idol_emoji(content) }」です。\n"
@@ -77,14 +77,14 @@ class SecretCog(commands.Cog):
         await interaction.channel.send(
             f"{author_name}さんが秘密テキストを設定しました。"
         )
-    
+
     @group.command(name="reveal", description="秘密テキストを公開")
     async def reveal_secret(self, interaction: discord.Interaction):
         author = interaction.user.name
         if author not in self.active_users:
             await interaction.response.send_message("保管中の秘密テキストがありません。", ephemeral=True)
             return
-        
+
         if interaction.channel_id != self.user_channels[author]:
             await interaction.response.send_message(
                 "秘密テキストは別のチャンネルで保管されているため、公開できません。\n"
@@ -92,7 +92,7 @@ class SecretCog(commands.Cog):
                 ephemeral=True
                 )
             return
-        
+
         self.active_users.remove(author)
         self.user_channels.pop(author, "")
         author_name = interaction.user.mention
@@ -115,7 +115,7 @@ class SecretCog(commands.Cog):
                 )
         else:
             await interaction.response.send_message("保管中の秘密テキストがありません。", ephemeral=True)
-    
+
     @group.command(name="help", description="秘密テキストのヘルプを表示")
     async def help_secret(self, interaction: discord.Interaction):
         await interaction.response.send_message(

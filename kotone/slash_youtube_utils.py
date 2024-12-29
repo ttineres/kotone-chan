@@ -32,7 +32,7 @@ class YouTubeUtilsCog(commands.Cog):
     """ A cog for YouTube-related commands. """
     def __init__(self, bot):
         self.bot = bot
-    
+
     @discord.app_commands.command(
         name="hatsuboshi",
         description="初星学園公式YouTubeの楽曲や動画を表示する"
@@ -93,7 +93,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="最新動画", style=discord.ButtonStyle.blurple, row=0)
     async def latest_videos_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -101,7 +101,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="花海咲季", emoji=IDOL_EMOJI["saki1"], style=discord.ButtonStyle.grey, row=1)
     async def saki_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -109,7 +109,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="月村手毬", emoji=IDOL_EMOJI["temari1"], style=discord.ButtonStyle.grey, row=1)
     async def temari_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -117,7 +117,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="藤田ことね", emoji=IDOL_EMOJI["kotone1"], style=discord.ButtonStyle.grey, row=1)
     async def kotone_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -125,7 +125,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="有村麻央", emoji=IDOL_EMOJI["mao1"], style=discord.ButtonStyle.grey, row=2)
     async def mao_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -133,7 +133,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="葛城リーリヤ", emoji=IDOL_EMOJI["lilja1"], style=discord.ButtonStyle.grey, row=2)
     async def lilja_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -141,7 +141,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="倉本千奈", emoji=IDOL_EMOJI["china1"], style=discord.ButtonStyle.grey, row=2)
     async def china_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -149,7 +149,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="紫雲清夏", emoji=IDOL_EMOJI["sumika1"], style=discord.ButtonStyle.grey, row=3)
     async def sumika_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -157,7 +157,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="篠澤広", emoji=IDOL_EMOJI["hiro1"], style=discord.ButtonStyle.grey, row=3)
     async def hiro_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -165,7 +165,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="花海佑芽", emoji=IDOL_EMOJI["ume1"], style=discord.ButtonStyle.grey, row=3)
     async def ume_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -173,7 +173,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
     @discord.ui.button(label="十王星南", emoji=IDOL_EMOJI["sena1"], style=discord.ButtonStyle.grey, row=4)
     async def sena_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
@@ -189,7 +189,7 @@ class MediaTypeView(View):
             ephemeral=True,
             suppress_embeds=True,
         )
-    
+
 
 async def setup(bot: discord):
     await bot.add_cog(YouTubeUtilsCog(bot))

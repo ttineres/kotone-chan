@@ -43,14 +43,14 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="White Night! White Wish!"))
 
     ignored_files = ["bot.py", "keep_alive.py", "__init__.py"]
-    
+
     # Add commands
     kotone_path = os.path.dirname(kotone.__file__)
     for f in os.listdir(kotone_path):
         if f not in ignored_files and f.endswith(".py"):
             logging.info(f"[KOTONE] Adding kotone/{f}")
             await bot.load_extension(f"kotone.{f[:-3]}")
-    
+
     if DEBUGGING == "TRUE":
         # immediately synchronize commands to a personal guild for debugging
         guild = discord.Object(id=TEST_GUILD)
@@ -59,7 +59,7 @@ async def on_ready():
         logging.info(f"[KOTONE] DEBUGGING: Updated commands to personal guild successfully.")
     else:
         await bot.tree.sync()
-    
+
     logging.info("[KOTONE] Updated all commands successfully.")
 
 

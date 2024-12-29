@@ -32,7 +32,7 @@ class AnchorCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         # Check bot is added to guild
         if interaction.guild not in self.bot.guilds:
             await interaction.response.send_message(
@@ -40,7 +40,7 @@ class AnchorCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         # Check bot permission to send message in channel
         bot_member = interaction.guild.get_member(self.bot.user.id)
         if not interaction.channel.permissions_for(bot_member).send_messages:
@@ -58,12 +58,12 @@ class AnchorCog(commands.Cog):
                 ephemeral=True
             )
             return
-        
+
         # Check correct argument passed
         if num_msg <= 0:
             await interaction.response.send_message("リプ数を1以上に設定してください！", ephemeral=True)
             return
-        
+
         await interaction.response.send_message(
             "安価スレを開始しました！\n"
             f"内容は「{ replace_idol_emoji(content) }」\n"
@@ -84,11 +84,11 @@ class AnchorCog(commands.Cog):
             msg = await self.bot.wait_for("message", check=check)
             if author not in self.active_users:
                 return
-        
+
         if author in self.active_users:
             self.active_users.remove(author)
             anchor_prompt = self.user_prompts.pop(author, "")
-            
+
             if "\n" in msg.content:
                 message = (
                     f"{author_name}さん、安価「{ replace_idol_emoji(anchor_prompt) }」の結果は以下の通りです：\n"
@@ -101,7 +101,7 @@ class AnchorCog(commands.Cog):
                 )
 
             await channel.send(message)
-    
+
     @group.command(name="cancel", description="自動安価をキャンセルする")
     async def cancel_anchor(self, interaction: discord.Interaction):
         author = interaction.user.name
@@ -111,7 +111,7 @@ class AnchorCog(commands.Cog):
             await interaction.response.send_message(f"安価「{ replace_idol_emoji(anchor_prompt) }」がキャンセルされました。")
         else:
             await interaction.response.send_message("進行中の安価がありません。", ephemeral=True)
-    
+
     @group.command(name="help", description="安価コマンドのヘルプを表示する")
     async def help_anchor(self, interaction: discord.Interaction):
         await interaction.response.send_message(
