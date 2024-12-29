@@ -19,9 +19,11 @@ KOTONE_EMOJI = {
 
 
 P_ITEM_EMOJI = {
-    "p_item_chokinbako": "<:p_item_chokinbako:1285442904101490770>",
-    "p_item_minamoto"  : "<:p_item_minamoto:1285442926121586790>",
-    "p_item_hanabi"    : "<:p_item_hanabi:1285442948133289984>",
+    "p_item_chokinbako"  : "<:p_item_chokinbako:1285442904101490770>",
+    "p_item_minamoto"    : "<:p_item_minamoto:1285442926121586790>",
+    "p_item_hanabi"      : "<:p_item_hanabi:1285442948133289984>",
+    "p_item_aijo"        : "<:p_item_aijo:1322914494003019817>",
+    "p_item_ichibanboshi": "<:p_item_ichibanboshi:1322914507714199562>",
 }
 
 
