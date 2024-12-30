@@ -49,6 +49,13 @@ def param_to_score(param: int, rank: int) -> int:
         return 30000 + math.ceil((diff-3450) / 0.02)
     return 40000 + math.ceil((diff-3650) / 0.01)
 
+def nia_estimate_eval(param: int, votes: int, score: int) -> int:
+    """ Returns the estimated evaluation given pre-audition
+        `param` and `votes`, and the `score` of the final audition.
+    """
+    score = max(score, 200000)
+    return nia_param_to_eval(param + score * 0.003, votes + score / 6)
+
 def nia_param_to_eval(param: int | float, votes: int | float) -> int:
     """ Returns the evaluation score in 'NIA' game mode.
 
@@ -210,7 +217,7 @@ class GakumasCog(commands.Cog):
         # 20 candidate scores 10000, 20000, ..., 200000
         candidates = range(10000, 200001, 10000)
         candidate_evals = [
-            nia_param_to_eval(base_param + score * 0.003, votes + score / 6)
+            nia_estimate_eval(base_param, votes, score)
             for score
             in candidates
         ]
@@ -226,14 +233,14 @@ class GakumasCog(commands.Cog):
         final_score_ss = -1
         if rough_score_ss != -1:
             for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_param_to_eval(base_param + score * 0.003, votes + score / 6) >= SS:
+                if nia_estimate_eval(base_param, votes, score) >= SS:
                     final_score_ss = score
                     break
 
         final_score_ss_plus = -1
         if rough_score_ss_plus != -1:
             for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_param_to_eval(base_param + score * 0.003, votes + score / 6) >= SS_PLUS:
+                if nia_estimate_eval(base_param, votes, score) >= SS_PLUS:
                     rough_score_ss_plus = score
                     break
 
