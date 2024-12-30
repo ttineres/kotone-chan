@@ -53,7 +53,7 @@ def nia_estimate_eval(param: int, votes: int, score: int) -> int:
     """ Returns the estimated evaluation given pre-audition
         `param` and `votes`, and the `score` of the final audition.
     """
-    score = max(score, 200000)
+    score = min(score, 200000)
     return nia_param_to_eval(param + score * 0.003, votes + score / 6)
 
 def nia_param_to_eval(param: int | float, votes: int | float) -> int:
@@ -219,7 +219,7 @@ class GakumasCog(commands.Cog):
             f"オーディション前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
             f"オーディション前投票数合計：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
-            f"* **推定**評価値：`{ estimate_eval }` （{ eval_to_rank(estimate_eval) }）"
+            f"* **推定**評価値：`{ estimate_eval }` （{ eval_to_rank(estimate_eval) }）\n"
             "```"
             "評価値は推定値です。実際の数値と大きく乖離する場合があります。\n"
             "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
