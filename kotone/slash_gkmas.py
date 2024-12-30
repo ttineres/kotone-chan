@@ -188,7 +188,7 @@ class GakumasCog(commands.Cog):
 
     @discord.app_commands.command(
         name="nia-estimate",
-        description="『NIA』において、最終オーディション前パラメータ、投票数とスコアに応じて推定評価値を算出する"
+        description="『NIA』において、「FINALE前」パラメータ、投票数とスコアに応じて推定評価値を算出する"
     )
     @discord.app_commands.rename(votes="投票数", score="スコア", ephemeral="表示設定")
     async def estimate_nia_with_score(
@@ -216,8 +216,8 @@ class GakumasCog(commands.Cog):
 
         await interaction.response.send_message(
             f"『N.I.A』**推定**評価値はこちら！\n"
-            f"オーディション前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
-            f"オーディション前投票数合計：`{ votes }`\t{ emoji_2 }\n"
+            f"「FINALE」前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
+            f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
             f"* **推定**評価値：`{ estimate_eval }` （{ eval_to_rank(estimate_eval) }）\n"
             "```"
@@ -230,7 +230,7 @@ class GakumasCog(commands.Cog):
 
     @discord.app_commands.command(
         name="nia",
-        description="『NIA』において、S+やSSランクに必要なスコアを「最終オーディション前」の状況に応じて推定評価値を算出する"
+        description="『NIA』において、S+やSSランクに必要なスコアを「FINALE前」の状況に応じて推定評価値を算出する"
     )
     @discord.app_commands.rename(votes="投票数", ephemeral="表示設定")
     async def estimate_nia(
@@ -287,9 +287,9 @@ class GakumasCog(commands.Cog):
                     break
 
         message = (
-            f"『N.I.A』最終オーディションの**推定**必須スコアはこちら！\n"
-            f"オーディション前パラメータ合計：`{ base_param }`\t{ emoji_1 }\n"
-            f"オーディション前投票数合計：`{ votes }`\t{ emoji_2 }\n"
+            f"『N.I.A』オーディション「FINALE」の**推定**必須スコアはこちら！\n"
+            f"「FINALE」前パラメータ合計：`{ base_param }`\t{ emoji_1 }\n"
+            f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
         )
 
         if final_score_ss == -1:
