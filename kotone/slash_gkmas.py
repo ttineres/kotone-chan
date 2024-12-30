@@ -208,7 +208,8 @@ class GakumasCog(commands.Cog):
         p_item_emoji = P_ITEM_EMOJI.copy()
         emoji_1_key = random.choice([*p_item_emoji.keys()])
         emoji_1 = p_item_emoji.pop(emoji_1_key)
-        emoji_2 = p_item_emoji.pop(emoji_1_key)
+        emoji_2_key = random.choice([*p_item_emoji.keys()])
+        emoji_2 = p_item_emoji.pop(emoji_2_key)
         emoji_3 = get_emoji(p_item_emoji)
 
         estimate_eval = nia_estimate_eval(vo + da + vi, votes, score)
