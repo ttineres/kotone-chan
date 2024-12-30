@@ -187,6 +187,47 @@ class GakumasCog(commands.Cog):
 
 
     @discord.app_commands.command(
+        name="nia-estimate",
+        description="『NIA』において、最終パラメータ及び投票数に応じて最終ランクを算出する"
+    )
+    @discord.app_commands.rename(votes="投票数", score="スコア", ephemeral="表示設定")
+    async def estimate_nia_with_score(
+        self,
+        interaction: discord.Interaction,
+        vo: int,
+        da: int,
+        vi: int,
+        votes: int,
+        score: int,
+        ephemeral: EphemeralEnum = EphemeralEnum.T
+    ):
+        """ Calculates final rank based on
+            final parameter sum and votes.
+        """
+        # Retrieve unique emojis
+        p_item_emoji = P_ITEM_EMOJI.copy()
+        emoji_1_key = random.choice([*p_item_emoji.keys()])
+        emoji_1 = p_item_emoji.pop(emoji_1_key)
+        emoji_2 = p_item_emoji.pop(emoji_1_key)
+        emoji_3 = get_emoji(p_item_emoji)
+
+        estimate_eval = nia_estimate_eval(vo + da + vi, votes, score)
+
+        await interaction.response.send_message(
+            f"『N.I.A』**推定**評価値はこちら！\n"
+            f"オーディション前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
+            f"オーディション前投票数合計：`{ votes }`\t{ emoji_2 }\n"
+            f"最終スコア：`{ score }`\t{ emoji_3 }\n"
+            f"* **推定**評価値：`{ estimate_eval }` （{ eval_to_rank(estimate_eval) }）"
+            "```"
+            "評価値は推定値です。実際の数値と大きく乖離する場合があります。\n"
+            "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
+            "```",
+            ephemeral=bool(ephemeral.value)
+        )
+
+
+    @discord.app_commands.command(
         name="nia",
         description="『NIA』において、S+やSSランクに必要なスコアを「最終オーディション前」の状況に応じて推定する"
     )
@@ -263,7 +304,7 @@ class GakumasCog(commands.Cog):
         message += (
             "```"
             "スコアはすべて推定値です。実際の数値と大きく乖離する場合があります。\n"
-            "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮していません。"
+            "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
             "```"
         )
 
