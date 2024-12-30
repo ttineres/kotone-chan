@@ -188,7 +188,7 @@ class GakumasCog(commands.Cog):
 
     @discord.app_commands.command(
         name="nia-estimate",
-        description="『NIA』において、最終パラメータ及び投票数に応じて最終ランクを算出する"
+        description="『NIA』において、最終オーディション前パラメータ、投票数とスコアに応じて推定評価値を算出する"
     )
     @discord.app_commands.rename(votes="投票数", score="スコア", ephemeral="表示設定")
     async def estimate_nia_with_score(
@@ -229,7 +229,7 @@ class GakumasCog(commands.Cog):
 
     @discord.app_commands.command(
         name="nia",
-        description="『NIA』において、S+やSSランクに必要なスコアを「最終オーディション前」の状況に応じて推定する"
+        description="『NIA』において、S+やSSランクに必要なスコアを「最終オーディション前」の状況に応じて推定評価値を算出する"
     )
     @discord.app_commands.rename(votes="投票数", ephemeral="表示設定")
     async def estimate_nia(
