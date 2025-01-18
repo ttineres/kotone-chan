@@ -349,14 +349,18 @@ class GakumasCog(commands.Cog):
             message += f"* SS：`{ final_score_ss_optimistic }`～"
             if final_score_ss_pessimistic != -1:
                 message += f"`{ final_score_ss_pessimistic }`"
+            else:
+                message += "？"
             message += "\n"
 
         if final_score_ss_plus_optimistic == -1:
             message += "* SS+：無理かも……（`200000`以上？）\n"
         else:
-            message += f"* SS+：`{ final_score_ss_plus_optimistic }`"
+            message += f"* SS+：`{ final_score_ss_plus_optimistic }`～"
             if final_score_ss_plus_pessimistic != -1:
                 message += f"`{ final_score_ss_plus_pessimistic }`"
+            else:
+                message += "？"
             message += "\n"
 
         message += (
