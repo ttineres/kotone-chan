@@ -235,7 +235,7 @@ class GakumasCog(commands.Cog):
             f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
             f"* **推定**評価値：`{ estimate_eval_pessimistic }` ({ eval_to_rank(estimate_eval_pessimistic) })"
-            f"～`{ estimate_eval_optimistic }` ({ eval_to_rank(estimate_eval_optimistic) })\n"
+            f" ～`{ estimate_eval_optimistic }` ({ eval_to_rank(estimate_eval_optimistic) })\n"
             "```"
             "評価値は推定値です。実際の数値と大きく乖離する場合があります。\n"
             "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
