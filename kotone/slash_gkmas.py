@@ -350,7 +350,7 @@ class GakumasCog(commands.Cog):
             if final_score_ss_pessimistic != -1:
                 message += f"`{ final_score_ss_pessimistic }`"
             else:
-                message += "？"
+                message += "`200000+`？"
             message += "\n"
 
         if final_score_ss_plus_optimistic == -1:
@@ -360,7 +360,7 @@ class GakumasCog(commands.Cog):
             if final_score_ss_plus_pessimistic != -1:
                 message += f"`{ final_score_ss_plus_pessimistic }`"
             else:
-                message += "？"
+                message += "`200000+`？"
             message += "\n"
 
         message += (
