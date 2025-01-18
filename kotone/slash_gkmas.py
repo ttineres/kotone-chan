@@ -49,16 +49,26 @@ def param_to_score(param: int, rank: int) -> int:
         return 30000 + math.ceil((diff-3450) / 0.02)
     return 40000 + math.ceil((diff-3650) / 0.01)
 
-def nia_estimate_eval(param: int, votes: int, score: int, ratio_score_to_votes: int | float = 6) -> int:
+def nia_estimate_eval(
+        param: int,
+        votes: int,
+        score: int,
+        ratio_score_to_param: int | float = 320,
+        ratio_score_to_votes: int | float = 6,
+    ) -> int:
     """ Returns the estimated evaluation given pre-audition
         `param` and `votes`, and the `score` of the final audition.
+
+        `ratio_score_to_param` is a heuristic value for estimating
+        the post-audition increment of parameter; commonly observed
+        values range between `180` and `320`.
 
         `ratio_score_to_votes` is a heuristic value for estimating
         the post-audition increment of votes; commonly observed values
         range between `4.9` and `6.1`.
     """
     score = min(score, 200000)
-    return nia_param_to_eval(param + score * 0.003, votes + score / ratio_score_to_votes)
+    return nia_param_to_eval(param + score / ratio_score_to_param, votes + score / ratio_score_to_votes)
 
 def nia_param_to_eval(param: int | float, votes: int | float) -> int:
     """ Returns the evaluation score in 'NIA' game mode.
@@ -216,16 +226,16 @@ class GakumasCog(commands.Cog):
         emoji_2 = p_item_emoji.pop(emoji_2_key)
         emoji_3 = get_emoji(p_item_emoji)
 
-        estimate_eval_pessimistic = nia_estimate_eval(vo + da + vi, votes, score, 6)
-        estimate_eval_optimistic = nia_estimate_eval(vo + da + vi, votes, score, 5)
+        estimate_eval_pessimistic = nia_estimate_eval(vo + da + vi, votes, score, 320, 6)
+        estimate_eval_optimistic = nia_estimate_eval(vo + da + vi, votes, score, 180, 5)
 
         await interaction.response.send_message(
             f"『N.I.A』**推定**評価値はこちら！\n"
             f"「FINALE」前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
             f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
-            f"* **推定**評価値：`{ estimate_eval_pessimistic }` （{ eval_to_rank(estimate_eval_pessimistic) }）"
-            f"～`{ estimate_eval_optimistic }` （{ eval_to_rank(estimate_eval_optimistic) }）\n"
+            f"* **推定**評価値：`{ estimate_eval_pessimistic }` ({ eval_to_rank(estimate_eval_pessimistic) })"
+            f"～`{ estimate_eval_optimistic }` ({ eval_to_rank(estimate_eval_optimistic) })\n"
             "```"
             "評価値は推定値です。実際の数値と大きく乖離する場合があります。\n"
             "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
@@ -267,7 +277,7 @@ class GakumasCog(commands.Cog):
 
         # Pessimistic estimation with heuristic ratio_to_votes=6
         candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, 6)
+            nia_estimate_eval(base_param, votes, score, 320, 6)
             for score
             in candidates
         ]
@@ -283,14 +293,14 @@ class GakumasCog(commands.Cog):
         final_score_ss_pessimistic = -1
         if rough_score_ss != -1:
             for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 6) >= SS:
+                if nia_estimate_eval(base_param, votes, score, 320, 6) >= SS:
                     final_score_ss_pessimistic = score
                     break
 
         final_score_ss_plus_pessimistic = -1
         if rough_score_ss_plus != -1:
             for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 6) >= SS_PLUS:
+                if nia_estimate_eval(base_param, votes, score, 320, 6) >= SS_PLUS:
                     final_score_ss_plus_pessimistic = score
                     break
 
@@ -298,7 +308,7 @@ class GakumasCog(commands.Cog):
 
         # Optimistic estimation with heuristic ratio_to_votes=5
         candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, 5)
+            nia_estimate_eval(base_param, votes, score, 180, 5)
             for score
             in candidates
         ]
@@ -314,14 +324,14 @@ class GakumasCog(commands.Cog):
         final_score_ss_optimistic = -1
         if rough_score_ss != -1:
             for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 5) >= SS:
+                if nia_estimate_eval(base_param, votes, score, 180, 5) >= SS:
                     final_score_ss_optimistic = score
                     break
 
         final_score_ss_plus_optimistic = -1
         if rough_score_ss_plus != -1:
             for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 5) >= SS_PLUS:
+                if nia_estimate_eval(base_param, votes, score, 180, 5) >= SS_PLUS:
                     final_score_ss_plus_optimistic = score
                     break
 
