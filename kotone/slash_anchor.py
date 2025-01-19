@@ -66,7 +66,7 @@ class AnchorCog(commands.Cog):
 
         await interaction.response.send_message(
             "安価スレを開始しました！\n"
-            f"内容は「{ replace_idol_emoji(content) }」\n"
+            f"お題は「{ replace_idol_emoji(content) }」\n"
             f"↓ {num_msg}\n"
             "`一定の期間内に書き込みがない場合、安価スレが失効になる可能性があります。`"
         )
