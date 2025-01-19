@@ -1151,6 +1151,50 @@ content:
     - 体力消費1
     - （レッスン内3回）
 
+  - title: いつかの小さな星
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 十王星南
+    effect:
+    - ファンサ使用後、ターン追加+1
+    - 絶好調2ターン
+    - 体力消費3
+    - （レッスン内2回）
+
+  - title: いつかの小さな星
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 十王星南
+    effect:
+    - ファンサ使用後、ターン追加+1
+    - 絶好調3ターン
+    - 体力消費2
+    - （レッスン内2回）
+
+  - title: いつか見た夢
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 葛城リーリヤ
+    effect:
+    - 準備運動使用後、集中+1
+    - 体力消費3
+    - 以降の3ターンの間、ターン開始時、集中+3
+    - （レッスン内2回）
+
+  - title: いつか見た夢
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 葛城リーリヤ
+    effect:
+    - 準備運動使用後、集中+1
+    - 体力消費1
+    - 以降の3ターンの間、ターン開始時、集中+3
+    - （レッスン内2回）
+
   # End of SSR Sense
 
   # SSR Logic
@@ -1491,6 +1535,70 @@ content:
     - 体力消費1
     - （レッスン内3回）
 
+  - title: 描いた夢へのあゆみ
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 倉本千奈
+    effect:
+    - ゆるふわおしゃべり使用時、ターン追加+1
+    - 元気1.5倍
+    - 体力消費2
+    - （レッスン内1回）
+
+  - title: 描いた夢へのあゆみ
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 倉本千奈
+    effect:
+    - ゆるふわおしゃべり使用時、ターン追加+1
+    - 元気1.6倍
+    - （レッスン内1回）
+
+  - title: 選びとった熱
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 篠澤広
+    effect:
+    - えいえいおー使用時、体力が50%以上の場合、やる気+2
+    - スキルカード使用数追加+1
+    - 最大体力の15%分体力消費
+    - （レッスン内5回）
+
+  - title: 選びとった熱
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 篠澤広
+    effect:
+    - えいえいおー使用時、体力が50%以上の場合、やる気+3
+    - スキルカード使用数追加+1
+    - 最大体力の15%分体力消費
+    - （レッスン内5回）
+
+  - title: 翼
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 紫雲清夏
+    effect:
+    - リスタート使用後、元気が7以上の場合、好印象1.5倍
+    - 次のターン、除外にあるまた、飛べるを手札に移動
+    - 体力消費2
+    - （レッスン内2回）
+
+  - title: 翼
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 紫雲清夏
+    effect:
+    - リスタート使用後、元気が7以上の場合、好印象1.5倍
+    - 次のターン、除外にあるまた、飛べるを手札に移動
+    - （レッスン内2回）
+
   # End of SSR Logic
 
   # SSR Anomaly
@@ -1533,6 +1641,74 @@ content:
     effect:
     - ターン開始時、このレッスン中の累計全力値が5以上の場合、全力値+8
     - 踏切の先にを保留に移動
+    - （レッスン内1回）
+
+  - title: ボクの一部
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 有村麻央
+    effect:
+    - スターライト使用時、温存の場合、スキルカードを引く
+    - 消費体力減少1ターン
+    - スターライトのパラメータ値増加+10
+    - 体力消費1
+    - （レッスン内3回）
+
+  - title: ボクの一部
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 有村麻央
+    effect:
+    - スターライト使用時、温存の場合、スキルカードを2枚引く
+    - 消費体力減少1ターン
+    - スターライトのパラメータ値増加+10
+    - 体力消費1
+    - （レッスン内3回）
+
+  - title: きみが見つけた私
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 姫崎莉波
+    effect:
+    - 嬉しい誤算使用後、パラメータ上昇量増加60%（2ターン）
+    - 全力値+10
+    - 体力消費1
+    - （レッスン内1回）
+
+  - title: きみが見つけた私
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 姫崎莉波
+    effect:
+    - 嬉しい誤算使用後、パラメータ上昇量増加60%（2ターン）
+    - 全力値+15
+    - 体力消費1
+    - （レッスン内1回）
+
+  - title: 叶える覚悟
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 花海佑芽
+    effect:
+    - ジャストアピール使用後、保留にあるスキルカードが1枚以上の場合、温存に変更
+    - 全力値+2
+    - 保留にあるスキルカードのパラメータ上昇回数増加+1・コスト値増加+2
+    - （レッスン内1回）
+
+  - title: 叶える覚悟
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 花海佑芽
+    effect:
+    - ジャストアピール使用後、保留にあるスキルカードが1枚以上の場合、温存2段階目に変更
+    - 全力値+4
+    - 保留にあるスキルカードのパラメータ上昇回数増加+1・コスト値増加+1
     - （レッスン内1回）
 
   # End of SSR Anomaly
@@ -1642,6 +1818,13 @@ content:
     effect:
     - 相談選択時、相談の全項目を20%割引
 
+  - title: すごすぎるバトン
+    origin:
+      card_name: これが私達の、3年間
+    effect:
+    - 授業・営業終了時、Pポイント+20
+    - 体力回復2
+
   # SSR Support Sense
 
   - title: オーバーパワーボール
@@ -1716,3 +1899,10 @@ content:
     effect:
     - 【ダンスレッスン・ダンスターンのみ】ターン開始時、全力の場合、パラメータ+13
     - （レッスン内2回）
+
+  - title: ぜったいいっぱい！
+    origin:
+      card_name: はいっ、みんなも一緒に♪
+    effect:
+    - 温存効果のスキルカード獲得時、ボーカルが400以上の場合、スキルカードを選択して強化
+    - （プロデュース中2回）

@@ -1991,7 +1991,7 @@ content:
       val: -5
     effect:
     - パラメータ+6（2回）
-    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+2
+    - 成長：指針を変更するたび、このスキルカードのパラメータ値増加+2
     - レッスン中1回
 
   - title: 理想のテンポ
@@ -2001,7 +2001,7 @@ content:
       val: -5
     effect:
     - パラメータ+6（2回）
-    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+4
+    - 成長：指針を変更するたび、このスキルカードのパラメータ値増加+4
     - レッスン中1回
 
   - title: トレーニングの成果
@@ -3497,7 +3497,7 @@ content:
     effect:
     - 全力値+3
     - パラメータ+10（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
-    - \[成長\]全力になった時、このスキルカードのパラメータ値増加+20（レッスン中1回）
+    - 成長：全力になった時、このスキルカードのパラメータ値増加+20（レッスン中1回）
     - 重複不可 レッスン中1回
 
   - title: 翔び立て！
@@ -3508,7 +3508,7 @@ content:
     effect:
     - 全力値+4
     - パラメータ+15（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加）
-    - \[成長\]全力になった時、このスキルカードのパラメータ値増加+30（レッスン中1回）
+    - 成長：全力になった時、このスキルカードのパラメータ値増加+30（レッスン中1回）
     - 重複不可 レッスン中1回
 
   - title: 総合芸術
@@ -3520,7 +3520,7 @@ content:
     - いずれかの指針の場合、使用可
     - 強気に変更
     - パラメータ+7
-    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+15（レッスン中4回）
+    - 成長：指針を変更するたび、このスキルカードのパラメータ値増加+15（レッスン中4回）
     - 重複不可
 
   - title: 総合芸術
@@ -3532,7 +3532,7 @@ content:
     - いずれかの指針の場合、使用可
     - 強気に変更
     - パラメータ+10
-    - \[成長\]指針を変更するたび、このスキルカードのパラメータ値増加+20（レッスン中4回）
+    - 成長：指針を変更するたび、このスキルカードのパラメータ値増加+20（レッスン中4回）
     - 重複不可
 
   - title: 心・技・体
@@ -4503,6 +4503,64 @@ content:
     - 最終ターンのターン終了時、パラメータ+15（集中効果を2.5倍適用）
     - 重複不可 レッスン中1回
 
+  - title: 夢はまだ続く
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 十王星南
+    cost:
+      val: -4
+    effect:
+    - 好調状態の場合、使用可
+    - 好調の100%分パラメータ上昇
+    - 好調1ターン
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 夢はまだ続く
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 十王星南
+    cost:
+      val: -4
+    effect:
+    - 好調状態の場合、使用可
+    - 好調の150%分パラメータ上昇
+    - 好調3ターン
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: いつか見た景色
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 葛城リーリヤ
+    cost:
+      val: -6
+    effect:
+    - 集中が6以上の場合、使用可
+    - 集中1.3倍
+    - 次のターン、パラメータ+9（3回・集中効果を1.5倍適用）
+    - 重複不可 レッスン中1回
+
+  - title: いつか見た景色
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 葛城リーリヤ
+    cost:
+      val: -5
+    effect:
+    - 集中が6以上の場合、使用可
+    - 集中1.5倍
+    - 次のターン、パラメータ+9（3回・集中効果を1.5倍適用）
+    - 重複不可 レッスン中1回
+
   # End of SSR Produce Sense
 
   # SSR Produce Logic
@@ -4993,6 +5051,92 @@ content:
     - 以降、残り3ターン以内のターン終了時、好印象の180%分パラメータ上昇
     - 重複不可 レッスン中1回
 
+  - title: 広がり続ける世界
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - やる気+4
+    - 次のターン、元気+5
+    - 最終ターンのターン終了時、元気の130%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: 広がり続ける世界
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 倉本千奈
+    cost:
+      consumption_type: 体力
+      val: -3
+    effect:
+    - 体力消費3
+    - やる気+6
+    - 次のターン、元気+8
+    - 最終ターンのターン終了時、元気の130%分パラメータ上昇
+    - 重複不可 レッスン中1回
+
+  - title: エウレカ！
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 篠澤広
+    cost:
+      val: -12
+    effect:
+    - スキルカード使用数追加+1
+    - 以降、ターン開始時、体力が50%以下の場合、元気の30%分パラメータ上昇・最大体力の5%分体力回復
+    - 重複不可 レッスン中1回
+
+  - title: エウレカ！
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 篠澤広
+    cost:
+      val: -12
+    effect:
+    - スキルカード使用数追加+1
+    - 以降、ターン開始時、体力が50%以下の場合、元気の40%分パラメータ上昇・最大体力の10%分体力回復
+    - 重複不可 レッスン中1回
+
+  - title: また、飛べる
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 紫雲清夏
+    cost:
+      val: -4
+    effect:
+    - 元気+1
+    - 好印象+3
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: また、飛べる
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 紫雲清夏
+    cost:
+      val: -4
+    effect:
+    - 元気+2
+    - 好印象+5
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
   # End of SSR Produce Logic
 
   # SSR Produce Anomaly
@@ -5008,7 +5152,7 @@ content:
     effect:
     - 強気に変更
     - パラメータ+3（2回）
-    - \[成長\]強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+10・コスト値増加+1（レッスン中2回）
+    - 成長：強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+10・コスト値増加+1（レッスン中2回）
     - 重複不可 レッスン中1回
 
   - title: 一番高い星
@@ -5022,7 +5166,7 @@ content:
     effect:
     - 強気に変更
     - パラメータ+6（2回）
-    - \[成長\]強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+15・コスト値増加+1（レッスン中2回）
+    - 成長：強気効果のスキルカード使用後、このスキルカードのパラメータ値増加+15・コスト値増加+1（レッスン中2回）
     - 重複不可 レッスン中1回
 
   - title: 踏切の先に
@@ -5052,6 +5196,92 @@ content:
     - パラメータ+16（3回）
     - 次のターン、温存2段階目に変更
     - 重複不可 レッスン中1回
+
+  - title: 手にした答え
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 有村麻央
+    cost:
+      val: -7
+    effect:
+    - スターライトのパラメータ上昇回数増加+1
+    - 山札か捨札にあるスターライト+1枚を手札に移動
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: 手にした答え
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 有村麻央
+    cost:
+      val: -7
+    effect:
+    - 温存2段階目に変更
+    - スターライトのパラメータ上昇回数増加+1
+    - 山札か捨札にあるスターライト+1枚を手札に移動
+    - スキルカード使用数追加+1
+    - 重複不可 レッスン中1回
+
+  - title: アイドルにしてくれた
+    skillcard_type: A
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 姫崎莉波
+    cost:
+      val: -3
+    effect:
+    - 全力になった回数が1回以上の場合、使用可
+    - パラメータ+20
+    - 成長：全力になった時、このスキルカードのパラメータ上昇回数増加+1（レッスン中4回）
+    - 重複不可 レッスン中1回
+
+  - title: アイドルにしてくれた
+    skillcard_type: A
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 姫崎莉波
+    cost:
+      val: -2
+    effect:
+    - 全力になった回数が1回以上の場合、使用可
+    - パラメータ+25
+    - 成長：全力になった時、このスキルカードのパラメータ上昇回数増加+1（レッスン中4回）
+    - 重複不可 レッスン中1回
+
+  - title: 新たなステージ
+    skillcard_type: M
+    is_enhanced: False
+    origin:
+      card_name: Campus mode!!
+      idol: 花海佑芽
+    cost:
+      val: -3
+    effect:
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - 全力値+1
+    - スキルカード使用数追加+1
+    - 重複不可
+
+  - title: 新たなステージ
+    skillcard_type: M
+    is_enhanced: True
+    origin:
+      card_name: Campus mode!!
+      idol: 花海佑芽
+    cost:
+      val: -3
+    effect:
+    - 山札か捨札にあるスキルカードを選択し、保留に移動
+    - 全力値+2
+    - スキルカード使用数追加+1
+    - 保留にあるスキルカードのパラメータ値増加+5
+    - 重複不可
 
   # End of SSR Produce Anomaly
 
