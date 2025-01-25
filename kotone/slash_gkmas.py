@@ -53,22 +53,38 @@ def nia_estimate_eval(
         param: int,
         votes: int,
         score: int,
-        ratio_score_to_param: int | float = 320,
-        ratio_score_to_votes: int | float = 6,
+        is_pessimistic: bool = True
     ) -> int:
     """ Returns the estimated evaluation given pre-audition
         `param` and `votes`, and the `score` of the final audition.
 
-        `ratio_score_to_param` is a heuristic value for estimating
-        the post-audition increment of parameter; commonly observed
-        values range between `180` and `320`.
+        `is_pessimistic` determines the heuristic values used in
+        the estimation.
 
-        `ratio_score_to_votes` is a heuristic value for estimating
-        the post-audition increment of votes; commonly observed values
-        range between `4.9` and `6.1`.
+        Heuristics are partially based on observations by `@_genki_P`.
     """
-    score = min(score, 200000)
-    return nia_param_to_eval(param + score / ratio_score_to_param, votes + score / ratio_score_to_votes)
+    # `ratio_score_to_param` is a heuristic value for
+    # estimating the post-audition increment of parameter.
+    # Commonly observed values range between `180` and `320`.
+    ratio_score_to_param = 320 if is_pessimistic else 180
+
+    # `votes_bottleneck` is a heuristic value for
+    # estimating the post-audition increment of votes.
+    # # If the final score is lower than this value,
+    # the votes gained is kept at 16,000.
+    votes_bottleneck = 80000 if is_pessimistic else 0
+
+    if score <= 199203:
+        new_param = param + score / ratio_score_to_param
+        new_votes = votes + (35133 - 16000) * (score - votes_bottleneck) / (199203 - votes_bottleneck) + 16000
+        new_votes = min(new_votes, 16000)
+        return nia_param_to_eval(new_param, new_votes)
+
+    score = min(score, 796481)
+    param_increase = 157 + 130 + 106 if is_pessimistic else 172 + 142 + 116
+    new_param = param + param_increase
+    new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
+    return nia_param_to_eval(new_param, new_votes)
 
 def nia_param_to_eval(param: int | float, votes: int | float) -> int:
     """ Returns the evaluation score in 'NIA' game mode.
@@ -226,19 +242,18 @@ class GakumasCog(commands.Cog):
         emoji_2 = p_item_emoji.pop(emoji_2_key)
         emoji_3 = get_emoji(p_item_emoji)
 
-        estimate_eval_pessimistic = nia_estimate_eval(vo + da + vi, votes, score, 320, 6)
-        estimate_eval_optimistic = nia_estimate_eval(vo + da + vi, votes, score, 180, 5)
+        estimate_eval_pessimistic = nia_estimate_eval(vo + da + vi, votes, score, True)
+        estimate_eval_optimistic = nia_estimate_eval(vo + da + vi, votes, score, False)
 
         await interaction.response.send_message(
             f"『N.I.A』**推定**評価値はこちら！\n"
-            f"「FINALE」前パラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
-            f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
+            f"「FINALE」前のパラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
+            f"「FINALE」前の投票数：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
             f"* **推定**評価値：`{ estimate_eval_pessimistic }` ({ eval_to_rank(estimate_eval_pessimistic) })"
             f" ～`{ estimate_eval_optimistic }` ({ eval_to_rank(estimate_eval_optimistic) })\n"
             "```"
-            "評価値は推定値です。実際の数値と大きく乖離する場合があります。\n"
-            "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
+            "推測値と実際の評価値が大きく乖離することがあります。"
             "```",
             ephemeral=bool(ephemeral.value)
         )
@@ -270,14 +285,18 @@ class GakumasCog(commands.Cog):
         emoji_1 = p_item_emoji.pop(emoji_1_key)
         emoji_2 = get_emoji(p_item_emoji)
 
-        base_param = vo + da + vi
+        base_param = (
+            min(vo, 1900)
+            + min(da, 1900)
+            + min(vi, 1900)
+        )
 
         # 20 candidate scores 10000, 20000, ..., 200000
         candidates = range(10000, 200001, 10000)
 
-        # Pessimistic estimation with heuristic ratio_to_votes=6
+        # Pessimistic estimation
         candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, 320, 6)
+            nia_estimate_eval(base_param, votes, score, True)
             for score
             in candidates
         ]
@@ -293,22 +312,22 @@ class GakumasCog(commands.Cog):
         final_score_ss_pessimistic = -1
         if rough_score_ss != -1:
             for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 320, 6) >= SS:
+                if nia_estimate_eval(base_param, votes, score, True) >= SS:
                     final_score_ss_pessimistic = score
                     break
 
         final_score_ss_plus_pessimistic = -1
         if rough_score_ss_plus != -1:
             for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 320, 6) >= SS_PLUS:
+                if nia_estimate_eval(base_param, votes, score, True) >= SS_PLUS:
                     final_score_ss_plus_pessimistic = score
                     break
 
         # End of pessimistic estimation
 
-        # Optimistic estimation with heuristic ratio_to_votes=5
+        # Optimistic estimation
         candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, 180, 5)
+            nia_estimate_eval(base_param, votes, score, False)
             for score
             in candidates
         ]
@@ -324,14 +343,14 @@ class GakumasCog(commands.Cog):
         final_score_ss_optimistic = -1
         if rough_score_ss != -1:
             for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 180, 5) >= SS:
+                if nia_estimate_eval(base_param, votes, score, False) >= SS:
                     final_score_ss_optimistic = score
                     break
 
         final_score_ss_plus_optimistic = -1
         if rough_score_ss_plus != -1:
             for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, 180, 5) >= SS_PLUS:
+                if nia_estimate_eval(base_param, votes, score, False) >= SS_PLUS:
                     final_score_ss_plus_optimistic = score
                     break
 
@@ -339,8 +358,8 @@ class GakumasCog(commands.Cog):
 
         message = (
             f"『N.I.A』オーディション「FINALE」の**推定**必須スコアはこちら！\n"
-            f"「FINALE」前パラメータ合計：`{ base_param }`\t{ emoji_1 }\n"
-            f"「FINALE」前投票数合計：`{ votes }`\t{ emoji_2 }\n"
+            f"「FINALE」前のパラメータ合計：`{ base_param }`\t{ emoji_1 }\n"
+            f"「FINALE」前の投票数：`{ votes }`\t{ emoji_2 }\n"
         )
 
         if final_score_ss_optimistic == -1:
@@ -365,8 +384,7 @@ class GakumasCog(commands.Cog):
 
         message += (
             "```"
-            "スコアはすべて推定値です。実際の数値と大きく乖離する場合があります。\n"
-            "審査基準1位から3位、それぞれのターンに獲得したスコアの割合は考慮されていません。"
+            "推測値と実際の数値が大きく乖離することがあります。"
             "```"
         )
 
