@@ -251,12 +251,17 @@ class GakumasCog(commands.Cog):
         emoji_2 = p_item_emoji.pop(emoji_2_key)
         emoji_3 = get_emoji(p_item_emoji)
 
-        estimate_eval_pessimistic = nia_estimate_eval(vo + da + vi, votes, score, True)
-        estimate_eval_optimistic = nia_estimate_eval(vo + da + vi, votes, score, False)
+        base_param = (
+            min(vo, 1900)
+            + min(da, 1900)
+            + min(vi, 1900)
+        )
+        estimate_eval_pessimistic = nia_estimate_eval(base_param, votes, score, True)
+        estimate_eval_optimistic = nia_estimate_eval(base_param, votes, score, False)
 
         await interaction.response.send_message(
             f"『N.I.A』**推定**評価値はこちら！\n"
-            f"「FINALE」前のパラメータ合計：`{ vo + da + vi }`\t{ emoji_1 }\n"
+            f"「FINALE」前のパラメータ合計：`{ base_param }`\t{ emoji_1 }\n"
             f"「FINALE」前の投票数：`{ votes }`\t{ emoji_2 }\n"
             f"最終スコア：`{ score }`\t{ emoji_3 }\n"
             f"* **推定**評価値：`{ estimate_eval_pessimistic }` ({ eval_to_rank(estimate_eval_pessimistic) })"
