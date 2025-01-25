@@ -83,14 +83,14 @@ def nia_estimate_eval(
         else:
             # Compare optimistic estimation with another realistic value
             naive_estimation = nia_param_to_eval(new_param, new_votes)
-            param_increase = (157 + 130 + 106) * 1.3
+            param_increase = (157 + 130 + 106) * 1.2
             new_param = param + param_increase
             new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
             bottleneck_estimation = nia_param_to_eval(new_param, new_votes)
             return min(naive_estimation, bottleneck_estimation)
 
     score = min(score, 796481)
-    param_increase = (157 + 130 + 106) * 1.3 if is_pessimistic else (172 + 142 + 116) * 1.4
+    param_increase = (157 + 130 + 106) * 1.2 if is_pessimistic else (172 + 142 + 116) * 1.4
     new_param = param + param_increase
     new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
     return nia_param_to_eval(new_param, new_votes)
