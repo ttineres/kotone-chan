@@ -70,7 +70,7 @@ def nia_estimate_eval(
 
     # `votes_bottleneck` is a heuristic value for
     # estimating the post-audition increment of votes.
-    # # If the final score is lower than this value,
+    # If the final score is lower than this value,
     # the votes gained is kept at 16,000.
     votes_bottleneck = 80000 if is_pessimistic else 0
 
@@ -78,10 +78,19 @@ def nia_estimate_eval(
         new_param = param + score / ratio_score_to_param
         new_votes = votes + (35133 - 16000) * (score - votes_bottleneck) / (199203 - votes_bottleneck) + 16000
         new_votes = max(new_votes, 16000)
-        return nia_param_to_eval(new_param, new_votes)
+        if is_pessimistic:
+            return nia_param_to_eval(new_param, new_votes)
+        else:
+            # Compare optimistic estimation with another realistic value
+            naive_estimation = nia_param_to_eval(new_param, new_votes)
+            param_increase = (157 + 130 + 106) * 1.3
+            new_param = param + param_increase
+            new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
+            bottleneck_estimation = nia_param_to_eval(new_param, new_votes)
+            return min(naive_estimation, bottleneck_estimation)
 
     score = min(score, 796481)
-    param_increase = 157 + 130 + 106 if is_pessimistic else 172 + 142 + 116
+    param_increase = (157 + 130 + 106) * 1.3 if is_pessimistic else (172 + 142 + 116) * 1.4
     new_param = param + param_increase
     new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
     return nia_param_to_eval(new_param, new_votes)
@@ -291,70 +300,30 @@ class GakumasCog(commands.Cog):
             + min(vi, 1900)
         )
 
-        # 20 candidate scores 10000, 20000, ..., 200000
-        candidates = range(10000, 200001, 10000)
+        # Candidate scores 10000, 20000, ..., 200000, 300000, ..., 700000
+        candidates = list(range(10000, 200000, 10000)) + list(range(200000, 700001, 100000))
 
         # Pessimistic estimation
-        candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, True)
-            for score
-            in candidates
-        ]
-
-        rough_score_ss = -1
-        rough_score_ss_plus = -1
-        for i in range(20):
-            if candidate_evals[i] >= SS and rough_score_ss == -1:
-                rough_score_ss = (i + 1) * 10000
-            if candidate_evals[i] >= SS_PLUS and rough_score_ss_plus == -1:
-                rough_score_ss_plus = (i + 1) * 10000
-
-        final_score_ss_pessimistic = -1
-        if rough_score_ss != -1:
-            for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, True) >= SS:
-                    final_score_ss_pessimistic = score
-                    break
-
-        final_score_ss_plus_pessimistic = -1
-        if rough_score_ss_plus != -1:
-            for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, True) >= SS_PLUS:
-                    final_score_ss_plus_pessimistic = score
-                    break
-
-        # End of pessimistic estimation
+        score_ss_pessimistic = -1
+        score_ss_plus_pessimistic = -1
+        for candidate_score in candidates:
+            candidate_eval = nia_estimate_eval(base_param, votes, candidate_score, True)
+            if score_ss_pessimistic == -1 and candidate_eval >= SS:
+                score_ss_pessimistic = candidate_score
+            if score_ss_plus_pessimistic == -1 and candidate_eval >= SS_PLUS:
+                score_ss_plus_pessimistic = candidate_score
+                break
 
         # Optimistic estimation
-        candidate_evals = [
-            nia_estimate_eval(base_param, votes, score, False)
-            for score
-            in candidates
-        ]
-
-        rough_score_ss = -1
-        rough_score_ss_plus = -1
-        for i in range(20):
-            if candidate_evals[i] >= SS and rough_score_ss == -1:
-                rough_score_ss = (i + 1) * 10000
-            if candidate_evals[i] >= SS_PLUS and rough_score_ss_plus == -1:
-                rough_score_ss_plus = (i + 1) * 10000
-
-        final_score_ss_optimistic = -1
-        if rough_score_ss != -1:
-            for score in range(rough_score_ss - 9000, rough_score_ss + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, False) >= SS:
-                    final_score_ss_optimistic = score
-                    break
-
-        final_score_ss_plus_optimistic = -1
-        if rough_score_ss_plus != -1:
-            for score in range(rough_score_ss_plus - 9000, rough_score_ss_plus + 1, 1000):
-                if nia_estimate_eval(base_param, votes, score, False) >= SS_PLUS:
-                    final_score_ss_plus_optimistic = score
-                    break
-
-        # End of optimistic estimation
+        score_ss_optimistic = -1
+        score_ss_plus_optimistic = -1
+        for candidate_score in candidates:
+            candidate_eval = nia_estimate_eval(base_param, votes, candidate_score, False)
+            if score_ss_optimistic == -1 and candidate_eval >= SS:
+                score_ss_optimistic = candidate_score
+            if score_ss_plus_optimistic == -1 and candidate_eval >= SS_PLUS:
+                score_ss_plus_optimistic = candidate_score
+                break
 
         message = (
             f"『N.I.A』オーディション「FINALE」の**推定**必須スコアはこちら！\n"
@@ -362,24 +331,24 @@ class GakumasCog(commands.Cog):
             f"「FINALE」前の投票数：`{ votes }`\t{ emoji_2 }\n"
         )
 
-        if final_score_ss_optimistic == -1:
-            message += "* SS：無理かも……（`200000`以上？）\n"
+        if score_ss_optimistic == -1:
+            message += "* SS：無理かも……（`700000`以上？）\n"
         else:
-            message += f"* SS：`{ final_score_ss_optimistic }`～"
-            if final_score_ss_pessimistic != -1:
-                message += f"`{ final_score_ss_pessimistic }`"
+            message += f"* SS：`{ score_ss_optimistic }`～"
+            if score_ss_pessimistic != -1:
+                message += f"`{ score_ss_pessimistic }`"
             else:
-                message += "`200000+`？"
+                message += "`700000+`？"
             message += "\n"
 
-        if final_score_ss_plus_optimistic == -1:
-            message += "* SS+：無理かも……（`200000`以上？）\n"
+        if score_ss_plus_optimistic == -1:
+            message += "* SS+：無理かも……（`700000`以上？）\n"
         else:
-            message += f"* SS+：`{ final_score_ss_plus_optimistic }`～"
-            if final_score_ss_plus_pessimistic != -1:
-                message += f"`{ final_score_ss_plus_pessimistic }`"
+            message += f"* SS+：`{ score_ss_plus_optimistic }`～"
+            if score_ss_plus_pessimistic != -1:
+                message += f"`{ score_ss_plus_pessimistic }`"
             else:
-                message += "`200000+`？"
+                message += "`700000+`？"
             message += "\n"
 
         message += (
