@@ -77,7 +77,7 @@ def nia_estimate_eval(
     if score <= 199203:
         new_param = param + score / ratio_score_to_param
         new_votes = votes + (35133 - 16000) * (score - votes_bottleneck) / (199203 - votes_bottleneck) + 16000
-        new_votes = min(new_votes, 16000)
+        new_votes = max(new_votes, 16000)
         return nia_param_to_eval(new_param, new_votes)
 
     score = min(score, 796481)
