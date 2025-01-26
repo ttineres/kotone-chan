@@ -618,6 +618,27 @@ content:
     - Pポイント+50
     - （プロデュース中1回）
 
+  - title: トレーナーの優しさ
+    origin:
+      card_name: 目指すはテッペン
+    effect:
+    - ダンスSPレッスン終了時、ランダムなPドリンク（SR以上）を獲得
+    - （プロデュース中2回）
+
+  - title: 体ほぐしローラー
+    origin:
+      card_name: まだまだのばしてー
+    effect:
+    - ビジュアルSPレッスン終了時、ランダムなPドリンク（SR以上）を獲得
+    - （プロデュース中2回）
+
+  - title: うるおいのどケア
+    origin:
+      card_name: 基礎＞応用
+    effect:
+    - ボーカルSPレッスン終了時、ランダムなPドリンク（SR以上）を獲得
+    - （プロデュース中2回）
+
   # SR Support Sense
 
   - title: ダブルボトル
