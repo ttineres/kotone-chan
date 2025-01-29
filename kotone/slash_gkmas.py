@@ -81,15 +81,14 @@ def nia_estimate_eval(
         naive_estimation = nia_param_to_eval(new_param, new_votes)
 
         # Compare estimation with another realistic value
-        new_param = param + 550
+        new_param = param + (400 if is_pessimistic else 500)
         new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
         bottleneck_estimation = nia_param_to_eval(new_param, new_votes)
 
         return min(naive_estimation, bottleneck_estimation)
 
     score = min(score, 796481)
-    param_increase = (157 + 130 + 106) * 1.35 if is_pessimistic else (172 + 142 + 116) * 1.4
-    new_param = param + param_increase
+    new_param = param + (400 if is_pessimistic else 500 if score < 400000 else 550)
     new_votes = votes + (38001 - 35133) * (score - 199203) / (796481 - 199203) + 35133
     return nia_param_to_eval(new_param, new_votes)
 
@@ -250,9 +249,9 @@ class GakumasCog(commands.Cog):
         emoji_3 = get_emoji(p_item_emoji)
 
         base_param = (
-            min(vo, 1900)
-            + min(da, 1900)
-            + min(vi, 1900)
+            min(vo, 1850)
+            + min(da, 1850)
+            + min(vi, 1850)
         )
         estimate_eval_pessimistic = nia_estimate_eval(base_param, votes, score, True)
         estimate_eval_optimistic = nia_estimate_eval(base_param, votes, score, False)
@@ -298,9 +297,9 @@ class GakumasCog(commands.Cog):
         emoji_2 = get_emoji(p_item_emoji)
 
         base_param = (
-            min(vo, 1900)
-            + min(da, 1900)
-            + min(vi, 1900)
+            min(vo, 1850)
+            + min(da, 1850)
+            + min(vi, 1850)
         )
 
         # Candidate scores 10000, 20000, ..., 200000, 300000, ..., 700000
