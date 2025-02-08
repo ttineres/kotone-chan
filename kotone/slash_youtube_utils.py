@@ -50,7 +50,7 @@ class YouTubeUtilsCog(commands.Cog):
         discord.app_commands.Choice(name="紫雲清夏", value="Sumika Shiun"),
         discord.app_commands.Choice(name="篠澤広", value="Hiro Shinosawa"),
         discord.app_commands.Choice(name="花海佑芽", value="Ume Hanami"),
-        #discord.app_commands.Choice(name="秦谷美鈴", value="Misuzu Hataya"),
+        discord.app_commands.Choice(name="秦谷美鈴", value="Misuzu Hataya"),
         discord.app_commands.Choice(name="十王星南", value="Sena Juo"),
         discord.app_commands.Choice(name="姫崎莉波", value="Rinami Himesaki"),
     ])
@@ -178,6 +178,14 @@ class MediaTypeView(View):
     async def sena_button(self, interaction: discord.Interaction, button: Button):
         await interaction.response.send_message(
             get_music("Sena Juo"),
+            ephemeral=True,
+            suppress_embeds=True,
+        )
+
+    @discord.ui.button(label="秦谷美鈴", emoji=IDOL_EMOJI["misuzu1"], style=discord.ButtonStyle.grey, row=4)
+    async def misuzu_button(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.send_message(
+            get_music("Misuzu Hataya"),
             ephemeral=True,
             suppress_embeds=True,
         )
